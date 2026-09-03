@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sana Kamiya | Portafolio</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="js/lang.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filterValue = btn.getAttribute('data-filter');
+          
+          cards.forEach(card => {
+            if (filterValue === 'all' || card.classList.contains(filterValue)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</head>
+<body class="lang-es">
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">Sana Kamiya</a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">
+              <span data-lang="es">Inicio</span>
+              <span data-lang="ca">Inici</span>
+              <span data-lang="en">Home</span>
+              <span data-lang="ja">ホーム</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              <span data-lang="es">Sobre Mí</span>
+              <span data-lang="ca">Sobre Mí</span>
+              <span data-lang="en">About Me</span>
+              <span data-lang="ja">自己紹介</span>
+            </a>
+          </li>
+          <li>
+            <a href="resume.html">
+              <span data-lang="es">Currículum</span>
+              <span data-lang="ca">Currículum</span>
+              <span data-lang="en">Resume</span>
+              <span data-lang="ja">履歴書</span>
+            </a>
+          </li>
+          <li>
+            <a href="portfolio.html" class="active">
+              <span data-lang="es">Portafolio</span>
+              <span data-lang="ca">Portafoli</span>
+              <span data-lang="en">Portfolio</span>
+              <span data-lang="ja">ポートフォリオ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang-select="es">ES</button>
+        <button class="lang-btn" data-lang-select="ca">CA</button>
+        <button class="lang-btn" data-lang-select="en">EN</button>
+        <button class="lang-btn" data-lang-select="ja">JA</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Portfolio Main -->
+  <main class="container">
+    
+    <!-- Intro Title -->
+    <div class="portfolio-intro">
+      <h2 class="font-serif">
+        <span data-lang="es">Proyectos de Análisis GIS y Planificación Urbana</span>
+        <span data-lang="ca">Projectes d'Anàlisi GIS i Planificació Urbana</span>
+        <span data-lang="en">GIS Spatial Analysis & Urban Planning Projects</span>
+        <span data-lang="ja">GIS空間解析・都市計画プロジェクト</span>
+      </h2>
+      <p style="color: var(--text-muted); font-size: 1.05rem;">
+        <span data-lang="es">Selección de proyectos de teledetección, simulación microclimática 3D, evaluación ambiental y regeneración urbana desarrollados en Cataluña.</span>
+        <span data-lang="ca">Selecció de projectes de teledetecció, simulació microclimàtica 3D, avaluació ambiental i regeneració urbana desenvolupats a Catalunya.</span>
+        <span data-lang="en">A portfolio of remote sensing, 3D microclimate simulation, environmental risk assessment, and metropolitan regeneration projects in Catalonia.</span>
+        <span data-lang="ja">バルセロナ大都市圏およびカタルーニャ各地を対象に実施したGIS空間解析・3D微気候モデリング・環境影響評価・都市再生プロジェクト。</span>
+      </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">
+        <span data-lang="es">Todos</span>
+        <span data-lang="ca">Tots</span>
+        <span data-lang="en">All</span>
+        <span data-lang="ja">すべて</span>
+      </button>
+      <button class="filter-btn" data-filter="sig">
+        <span data-lang="es">SIG & Teledetección</span>
+        <span data-lang="ca">SIG & Teledetecció</span>
+        <span data-lang="en">GIS & Remote Sensing</span>
+        <span data-lang="ja">GIS・リモートセンシング</span>
+      </button>
+      <button class="filter-btn" data-filter="clima">
+        <span data-lang="es">Clima & Microclima</span>
+        <span data-lang="ca">Clima & Microclima</span>
+        <span data-lang="en">Climate & Microclimate</span>
+        <span data-lang="ja">都市気候・微気候</span>
+      </button>
+      <button class="filter-btn" data-filter="urban">
+        <span data-lang="es">Diseño & Regeneración</span>
+        <span data-lang="ca">Disseny & Regeneració</span>
+        <span data-lang="en">Design & Masterplans</span>
+        <span data-lang="ja">都市デザイン・再生計画</span>
+      </button>
+    </div>
+
+    <!-- Projects Grid (3 Columns) -->
+    <div class="project-grid">
+      
+      <!-- Project 1: AMB Raster -->
+      <article class="project-card sig">
+        <div class="project-image">
+          <img src="images/slide_14.png" alt="Análisis Ráster AMB NDVI">
+        </div>
+        <div class="project-info">
+          <div class="project-card-badges">
+            <span class="badge">SIG & Teledetección</span>
+            <span class="badge">AMB (2026)</span>
+          </div>
+          <h3 class="project-title">
+            <a href="projects/barcelona-raster-analysis.html">
+              <span data-lang="es">Taller de Análisis Ráster: Área Metropolitana de Barcelona</span>
+              <span data-lang="ca">Taller d'Anàlisi Ràster: Àrea Metropolitana de Barcelona</span>
+              <span data-lang="en">Metropolitan Raster Analysis: Barcelona Metropolitan Area</span>
+              <span data-lang="ja">ラスター分析ワークショップ：バルセロナ大都市圏（AMB）</span>
+            </a>
+          </h3>
+          <p class="project-desc">
+            <span data-lang="es">Cálculo de NDVI (Landsat 9 y Sentinel 2), suelo artificializado (CLC18) y verificación del estándar de 10 m²/hab en 36 municipios.</span>
+            <span data-lang="ca">Càlcul de NDVI (Landsat 9 i Sentinel 2), sòl artificialitzat (CLC18) i verificació de l'estàndard de 10 m²/hab a 36 municipis.</span>
+            <span data-lang="en">NDVI vegetation mapping (January 2024 satellite imagery), zoning discrepancy, and municipal green ratio verification (10 m²/hab standard).</span>
+            <span data-lang="ja">2024年1月観測の衛星画像を用いたNDVI植生指標算出、都市計画指定緑地との差異分析、および市町村別緑地基準（10m²/人）の検証。</span>
+          </p>
+          <div class="project-footer">
+            <span class="project-status status-completed">
+              <span data-lang="es">Completado</span>
+              <span data-lang="ca">Completat</span>
+              <span data-lang="en">Completed</span>
+              <span data-lang="ja">完了</span>
+            </span>
+            <a href="projects/barcelona-raster-analysis.html" class="read-more">
+              <span data-lang="es">Ver Proyecto &rarr;</span>
+              <span data-lang="ca">Veure Projecte &rarr;</span>
+              <span data-lang="en">View Project &rarr;</span>
+              <span data-lang="ja">詳細を見る &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: UPC TFM Sant Adria - Badalona -->
+      <article class="project-card urban sig">
+        <div class="project-image">
+          <img src="images/projects/tfm_upc/tfm_page_20.png" alt="Plan de Mejora Sant Adrià - Badalona">
+        </div>
+        <div class="project-info">
+          <div class="project-card-badges">
+            <span class="badge">TFM UPC (9.0/10 Excelente)</span>
+            <span class="badge">Planificación Metropolitana</span>
+          </div>
+          <h3 class="project-title">
+            <a href="projects/sant-adria-badalona-regeneration.html">
+              <span data-lang="es">Plan de Mejora de Barrios: Transformación de la AAE Sant Adrià - Badalona</span>
+              <span data-lang="ca">Pla de Millora de Barris: Transformació de l'AAE Sant Adrià - Badalona</span>
+              <span data-lang="en">Neighborhood Regeneration Master Plan: Sant Adrià - Badalona</span>
+              <span data-lang="ja">地区改善計画マスタープラン：サント・アドリア〜バダロナ地区再生</span>
+            </a>
+          </h3>
+          <p class="project-desc">
+            <span data-lang="es">Master plan para la reconversión del tejido industrial litoral en un distrito mixto dotado de corredores ecológicos fluviales y costeros.</span>
+            <span data-lang="ca">Màster plan per a la reconversió del teixit industrial litoral en un districte mixt dotat de corredors ecològics fluvials i costaners.</span>
+            <span data-lang="en">Comprehensive master plan transforming a degraded coastal industrial zone into a vibrant, mixed-use, climate-resilient district.</span>
+            <span data-lang="ja">臨海部工業地域を、職住近接の複合用途・河川沿岸グリーンコリドー・公共交通網が調和した大都市圏拠点へ再編する総合マスタープラン。</span>
+          </p>
+          <div class="project-footer">
+            <span class="project-status status-completed">
+              <span data-lang="es">Completado</span>
+              <span data-lang="ca">Completat</span>
+              <span data-lang="en">Completed</span>
+              <span data-lang="ja">完了</span>
+            </span>
+            <a href="projects/sant-adria-badalona-regeneration.html" class="read-more">
+              <span data-lang="es">Ver Proyecto &rarr;</span>
+              <span data-lang="ca">Veure Projecte &rarr;</span>
+              <span data-lang="en">View Project &rarr;</span>
+              <span data-lang="ja">詳細を見る &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: Campus Nord Microclimate (ENVI-met) -->
+      <article class="project-card clima urban">
+        <div class="project-image">
+          <img src="images/projects/climate/clim_page_25.png" alt="Microclima Campus Nord ENVI-met">
+        </div>
+        <div class="project-info">
+          <div class="project-card-badges">
+            <span class="badge">ENVI-met 3D</span>
+            <span class="badge" style="background: rgba(184, 115, 51, 0.15); color: var(--accent-terracotta);">Trabajo en Grupo (UPC)</span>
+          </div>
+          <h3 class="project-title">
+            <a href="projects/campus-nord-climate-adaptation.html">
+              <span data-lang="es">Adaptación Climática y Simulación Microclimática: Campus Nord UPC</span>
+              <span data-lang="ca">Adaptació Climàtica i Simulació Microclimàtica: Campus Nord UPC</span>
+              <span data-lang="en">Microclimate Modeling & Adaptation: UPC Campus Nord</span>
+              <span data-lang="ja">気候変動適応型都市デザイン・3D微気候シミュレーション：Campus Nord</span>
+            </a>
+          </h3>
+          <p class="project-desc">
+            <span data-lang="es">Diagnóstico in situ, modelado ENVI-met (confort térmico PET) y diseño bioclimático mediante jardines de lluvia SUDS y arbolado.</span>
+            <span data-lang="ca">Diagnòstic in situ, modelització ENVI-met (confort tèrmic PET) i disseny bioclimàtic mitjançant jardins de pluja SUDS i arbrat.</span>
+            <span data-lang="en">Fieldwork measurements, 3D ENVI-met simulation (PET thermal stress), and adaptation redesign with SUDS and shade canopies.</span>
+            <span data-lang="ja">現地実測調査とENVI-metによる3D微気候解析（気温・体感温度PET）、およびSUDSレインガーデン・緑陰による温熱改善実証。</span>
+          </p>
+          <div class="project-footer">
+            <span class="project-status status-completed">
+              <span data-lang="es">Completado</span>
+              <span data-lang="ca">Completat</span>
+              <span data-lang="en">Completed</span>
+              <span data-lang="ja">完了</span>
+            </span>
+            <a href="projects/campus-nord-climate-adaptation.html" class="read-more">
+              <span data-lang="es">Ver Proyecto &rarr;</span>
+              <span data-lang="ca">Veure Projecte &rarr;</span>
+              <span data-lang="en">View Project &rarr;</span>
+              <span data-lang="ja">詳細を見る &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Sant Quinti EAE -->
+      <article class="project-card sig clima">
+        <div class="project-image">
+          <img src="images/projects/eae/eae_page_05.png" alt="Evaluación Ambiental Sant Quintí">
+        </div>
+        <div class="project-info">
+          <div class="project-card-badges">
+            <span class="badge">Evaluación Ambiental (EAE)</span>
+            <span class="badge" style="background: rgba(184, 115, 51, 0.15); color: var(--accent-terracotta);">Trabajo en Grupo (UPC)</span>
+          </div>
+          <h3 class="project-title">
+            <a href="projects/sant-quinti-environmental-assessment.html">
+              <span data-lang="es">Evaluación Ambiental Estratégica: Riesgos Naturales y Tecnológicos</span>
+              <span data-lang="ca">Avaluació Ambiental Estratègica: Riscos Naturals i Tecnològics</span>
+              <span data-lang="en">Strategic Environmental Assessment: Multi-Risk Modeling</span>
+              <span data-lang="ja">戦略的環境影響評価（EAE）：自然・産業複合リスク評価</span>
+            </a>
+          </h3>
+          <p class="project-desc">
+            <span data-lang="es">Inundabilidad fluvial (ACA), vulnerabilidad de acuíferos (Método COP) y zonificación acústica para la ordenación municipal.</span>
+            <span data-lang="ca">Inundabilitat fluvial (ACA), vulnerabilitat d'aqüífers (Mètode COP) i zonificació acústica per a l'ordenació municipal.</span>
+            <span data-lang="en">Fluvial flood hazard (ACA), aquifer vulnerability (COP method), and acoustic capacity zoning for municipal master planning.</span>
+            <span data-lang="ja">カタルーニャ水庁（ACA）河川洪水、COP法地下水汚染脆弱性、騒音容量評価に基づくPOUM（都市計画）環境基準策定。</span>
+          </p>
+          <div class="project-footer">
+            <span class="project-status status-completed">
+              <span data-lang="es">Completado</span>
+              <span data-lang="ca">Completat</span>
+              <span data-lang="en">Completed</span>
+              <span data-lang="ja">完了</span>
+            </span>
+            <a href="projects/sant-quinti-environmental-assessment.html" class="read-more">
+              <span data-lang="es">Ver Proyecto &rarr;</span>
+              <span data-lang="ca">Veure Projecte &rarr;</span>
+              <span data-lang="en">View Project &rarr;</span>
+              <span data-lang="ja">詳細を見る &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5: UB Besòs TFM -->
+      <article class="project-card urban sig">
+        <div class="project-image">
+          <img src="images/projects/besos_ub/ub_page_15.png" alt="Diseño Urbano Río Besòs">
+        </div>
+        <div class="project-info">
+          <div class="project-card-badges">
+            <span class="badge">Tesis de Máster (UB)</span>
+            <span class="badge">Diseño Urbano Fluvial</span>
+          </div>
+          <h3 class="project-title">
+            <a href="projects/besos-riverfront-urban-design.html">
+              <span data-lang="es">El Diseño Urbano y el Entorno del Agua: El Corredor del Río Besòs</span>
+              <span data-lang="ca">El Disseny Urbà i l'Entorn de l'Aigua: El Corredor del Riu Besòs</span>
+              <span data-lang="en">Urban Design & Riverfront Regeneration: The Besòs River</span>
+              <span data-lang="ja">都市デザインと水環境：ベソス川流域の都市再生研究</span>
+            </a>
+          </h3>
+          <p class="project-desc">
+            <span data-lang="es">Análisis morfológico del Parque Fluvial del Besòs y estrategias para superar barreras de infraestructura entre barrios.</span>
+            <span data-lang="ca">Anàlisi morfològic del Parc Fluvial del Besòs i estratègies per superar barreres d'infraestructura entre barris.</span>
+            <span data-lang="en">Morphological analysis of the Besòs Fluvial Park and civic strategies overcoming physical infrastructure severance.</span>
+            <span data-lang="ja">【修士論文】ベソス河川公園の空間形態調査と、高架インフラによる周辺住宅街との空間的分断を解消する歩行者アクセス・水辺都市再生デザイン研究。</span>
+          </p>
+          <div class="project-footer">
+            <span class="project-status status-completed">
+              <span data-lang="es">Completado</span>
+              <span data-lang="ca">Completat</span>
+              <span data-lang="en">Completed</span>
+              <span data-lang="ja">完了</span>
+            </span>
+            <a href="projects/besos-riverfront-urban-design.html" class="read-more">
+              <span data-lang="es">Ver Proyecto &rarr;</span>
+              <span data-lang="ca">Veure Projecte &rarr;</span>
+              <span data-lang="en">View Project &rarr;</span>
+              <span data-lang="ja">詳細を見る &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="padding: 0;">
+      <p>&copy; 2026 Sana Kamiya. GIS & Urban Design Portfolio.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="resume.html">Resume</a>
+        <a href="portfolio.html">Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

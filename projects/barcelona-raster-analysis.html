@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sana Kamiya | Análisis Ráster AMB</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../js/lang.js" defer></script>
+</head>
+<body class="lang-es">
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="../index.html">Sana Kamiya</a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html">
+              <span data-lang="es">Inicio</span>
+              <span data-lang="ca">Inici</span>
+              <span data-lang="en">Home</span>
+              <span data-lang="ja">ホーム</span>
+            </a>
+          </li>
+          <li>
+            <a href="../about.html">
+              <span data-lang="es">Sobre Mí</span>
+              <span data-lang="ca">Sobre Mí</span>
+              <span data-lang="en">About Me</span>
+              <span data-lang="ja">自己紹介</span>
+            </a>
+          </li>
+          <li>
+            <a href="../resume.html">
+              <span data-lang="es">Currículum</span>
+              <span data-lang="ca">Currículum</span>
+              <span data-lang="en">Resume</span>
+              <span data-lang="ja">履歴書</span>
+            </a>
+          </li>
+          <li>
+            <a href="../portfolio.html">
+              <span data-lang="es">Portafolio</span>
+              <span data-lang="ca">Portafoli</span>
+              <span data-lang="en">Portfolio</span>
+              <span data-lang="ja">ポートフォリオ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang-select="es">ES</button>
+        <button class="lang-btn" data-lang-select="ca">CA</button>
+        <button class="lang-btn" data-lang-select="en">EN</button>
+        <button class="lang-btn" data-lang-select="ja">JA</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Header Banner -->
+  <section class="project-detail-header">
+    <h1 class="font-serif">
+      <span data-lang="es">Taller de Análisis Ráster: Área Metropolitana de Barcelona</span>
+      <span data-lang="ca">Taller d'Anàlisi Ràster: Àrea Metropolitana de Barcelona</span>
+      <span data-lang="en">Raster Analysis Workshop: Barcelona Metropolitan Area</span>
+      <span data-lang="ja">ラスター分析ワークショップ：バルセロナ大都市圏（AMB）</span>
+    </h1>
+    
+    <div class="project-meta-badges">
+      <span class="badge">GIS & Remote Sensing</span>
+      <span class="badge">UPC Barcelona</span>
+      <span class="badge">Enero 2024 (Observación Satelital)</span>
+      <span class="badge">Prof. Josep Roca Cladera</span>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container project-layout">
+    
+    <article class="project-body">
+      
+      <!-- Project Context & Objectives -->
+      <section>
+        <h2>
+          <span data-lang="es">Contexto y Objetivos del Proyecto</span>
+          <span data-lang="ca">Context i Objectius del Projecte</span>
+          <span data-lang="en">Project Context & Objectives</span>
+          <span data-lang="ja">プロジェクト概要と研究背景</span>
+        </h2>
+        
+        <p data-lang="es">
+          Este proyecto de análisis ráster se desarrolló en el marco del <em>Máster en Planificación Urbana y Sostenibilidad</em> de la <strong>Universitat Politècnica de Catalunya (UPC)</strong>, bajo la dirección del Catedrático Dr. Josep Roca Cladera. El objetivo principal fue realizar un diagnóstico territorial exhaustivo de la infraestructura verde y el suelo artificializado del <strong>Área Metropolitana de Barcelona (AMB)</strong> (652.38 km² y 36 municipios) mediante el tratamiento y análisis espacial de imágenes satelitales multiespectrales capturadas en <strong>enero de 2024</strong> (Landsat 9 y Sentinel-2).
+        </p>
+        <p data-lang="ca">
+          Aquest projecte d'anàlisi ràster es va desenvolupar en el marc del <em>Màster en Planificació Urbana i Sostenibilitat</em> de la <strong>Universitat Politècnica de Catalunya (UPC)</strong>, sota la direcció del Catedràtic Dr. Josep Roca Cladera. L'objectiu principal va ser realitzar un diagnòstic territorial exhaustiu de la infraestructura verda i el sòl artificialitzat de l'<strong>Àrea Metropolitana de Barcelona (AMB)</strong> (652.38 km² i 36 municipis) mitjançant el tractament i anàlisi espacial d'imatges satel·litàries multiespectrals capturades al <strong>gener de 2024</strong> (Landsat 9 i Sentinel-2).
+        </p>
+        <p data-lang="en">
+          This raster analysis project was conducted as part of the <em>Master's in Urban Planning and Sustainability</em> at the <strong>Polytechnic University of Catalonia (UPC)</strong>, mentored by Professor Dr. Josep Roca Cladera. The study provides an empirical spatial evaluation of green infrastructure and soil artificialization across the <strong>Barcelona Metropolitan Area (AMB)</strong> (652.38 km², 36 municipalities) through multispectral satellite imagery captured in <strong>January 2024</strong> (Landsat 9 and Sentinel-2).
+        </p>
+        <p data-lang="ja">
+          本プロジェクトは、<strong>カタルーニャ工科大学（UPC）</strong>の都市計画・持続可能性修士課程において、ホセップ・ロカ・クラデラ（Josep Roca Cladera）教授の指導のもと実施されたラスター空間解析研究です。<strong>2024年1月観測</strong>のマルチスペクトル人工衛星画像（Landsat 9およびSentinel-2）を活用し、バルセロナ大都市圏（AMB：36市町村、総面積652.38km²）における実質的な緑地インフラの分布、都市計画指定緑地との乖離、および土地の人工化度合を実証的に分析・評価しました。
+        </p>
+
+        <div class="slide-container">
+          <img src="../images/slide_08_hd.png" alt="Ámbito de Estudio AMB" class="slide-image">
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 1:</strong> Proceso metodológico de delimitación, disolución (dissolve) y recorte (clip) de las bandas satelitales a los límites municipales de la AMB en QGIS.</span>
+            <span data-lang="ca"><strong>Figura 1:</strong> Procés metodològic de delimitació, dissolució (dissolve) i retall (clip) de les bandes satel·litàries als límits municipals de l'AMB a QGIS.</span>
+            <span data-lang="en"><strong>Figure 1:</strong> Methodological workflow showing municipal selection, dissolve operation, and spatial clipping of satellite bands to the AMB boundaries in QGIS.</span>
+            <span data-lang="ja"><strong>図1：</strong>AMB 36市町村境界の選定・ディゾルブ（統合）処理および衛星画像バンドの空間クリップ工程（QGIS）</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section>
+        <h2>
+          <span data-lang="es">Metodología y Procesamiento de Imágenes Satelitales</span>
+          <span data-lang="ca">Metodologia i Processament d'Imatges Satel·litàries</span>
+          <span data-lang="en">Methodology & Satellite Image Processing</span>
+          <span data-lang="ja">データ処理および空間解析手法</span>
+        </h2>
+        
+        <p data-lang="es">
+          La metodología integró dos fases de trabajo:
+        </p>
+        <p data-lang="ca">
+          La metodologia va integrar dues fases de treball:
+        </p>
+        <p data-lang="en">
+          The workflow consisted of two key analytical phases:
+        </p>
+        <p data-lang="ja">
+          本研究では以下の2つの主要フェーズに沿って空間データ処理を行いました：
+        </p>
+
+        <ul>
+          <li>
+            <span data-lang="es"><strong>Fase 1: Adquisición y Pansharpening:</strong> Descarga de datos satelitales (Landsat 9 del USGS y Sentinel-2 de Copernicus con nubosidad &lt; 3%). Fusión pancromática (Pansharpening) de las bandas RGB de 30m con la banda 8 pancromática de 15m para aumentar la resolución espacial de los detalles metropolitanos.</span>
+            <span data-lang="ca"><strong>Fase 1: Adquisició i Pansharpening:</strong> Descàrrega de dades satel·litàries (Landsat 9 de l'USGS i Sentinel-2 de Copernicus amb nuvolositat &lt; 3%). Fusió pancromàtica (Pansharpening) de les bandes RGB de 30m amb la banda 8 pancromàtica de 15m per millorar la resolució espacial dels detalls metropolitans.</span>
+            <span data-lang="en"><strong>Phase 1: Acquisition & Pansharpening:</strong> Download of sensor data (USGS Landsat 9 and Copernicus Sentinel-2 with &lt;3% cloud cover). Pansharpening fusion combining 30m multispectral bands with 15m panchromatic Band 8 to enhance spatial resolution across urban fabrics.</span>
+            <span data-lang="ja"><strong>フェーズ1：データ取得とパンシャープニング処理：</strong>USGS（Landsat 9）およびCopernicus（Sentinel-2）より雲量3%未満の高品質データをダウンロード。30m解像度のマルチスペクトルバンドと15m解像度のパンクロマティック（Band 8）を合成（パンシャープニング）し、微細な都市空間の解像度を向上。</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Fase 2: Cálculo y Clasificación de Índices Ráster:</strong> Generación del Índice de Vegetación de Diferencia Normalizada (NDVI = (NIR - RED) / (NIR + RED)). Aplicación de umbrales cuantitativos (NDVI &gt; 0.3) para aislar la cobertura vegetal real frente a superficies inertes y edificación.</span>
+            <span data-lang="ca"><strong>Fase 2: Càlcul i Classificació d'Índexs Ràster:</strong> Generació de l'Índex de Vegetació de Diferència Normalitzada (NDVI = (NIR - RED) / (NIR + RED)). Aplicació d'umbrals quantitatius (NDVI &gt; 0.3) per aïllar la cobertura vegetal real enfront de superfícies inertes i edificació.</span>
+            <span data-lang="en"><strong>Phase 2: NDVI Index Calculation & Thresholding:</strong> Normalized Difference Vegetation Index calculation (NDVI = (NIR - RED) / (NIR + RED)) and thresholding (NDVI &gt; 0.3) to isolate active photosynthetic canopy from artificial and mineral surfaces.</span>
+            <span data-lang="ja"><strong>フェーズ2：NDVI指標の算出と分類：</strong>近赤外（NIR）および赤色（RED）バンドから正規化植生指数（NDVI）を算出。閾値（NDVI &gt; 0.3）を設定し、人工建造物や不透水面から真に光合成活動を行う実質緑地を正確に抽出。</span>
+          </li>
+        </ul>
+
+        <div class="slide-container">
+          <img src="../images/slide_10.png" alt="True Color Landsat" class="slide-image">
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 2:</strong> Composición de color verdadero (True Color RGB 4-3-2) del AMB tras el preprocesamiento y recorte territorial.</span>
+            <span data-lang="ca"><strong>Figura 2:</strong> Composició de color veritable (True Color RGB 4-3-2) de l'AMB després del preprocessament i retall territorial.</span>
+            <span data-lang="en"><strong>Figure 2:</strong> True Color composite (RGB 4-3-2) of the AMB following atmospheric radiometric preprocessing and metropolitan clipping.</span>
+            <span data-lang="ja"><strong>図2：</strong>データ前処理およびAMB境界クリッピング後のトゥルーカラー合成画像（RGB 4-3-2）。</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results & Contrast -->
+      <section>
+        <h2>
+          <span data-lang="es">Resultados: NDVI vs Planeamiento Urbanístico Oficial</span>
+          <span data-lang="ca">Resultats: NDVI vs Planejament Urbanístic Oficial</span>
+          <span data-lang="en">Key Results: Physical NDVI vs Official Masterplan Zoning</span>
+          <span data-lang="ja">分析結果：NDVI実質植生 vs 公式都市計画緑地の乖離</span>
+        </h2>
+        
+        <p data-lang="es">
+          El análisis reveló datos cruciales para la toma de decisiones territoriales:
+        </p>
+        <p data-lang="ca">
+          L'anàlisi va revelar dades crucials per a la presa de decisions territorials:
+        </p>
+        <p data-lang="en">
+          The spatial analysis yielded striking findings regarding metropolitan green coverage:
+        </p>
+        <p data-lang="ja">
+          空間解析によって得られた主要な定量データは以下の通りです：
+        </p>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-number">45.27%</span>
+            <span class="metric-label">
+              <span data-lang="es">Cobertura verde total AMB (295.35 km²)</span>
+              <span data-lang="ca">Cobertura verda total AMB (295.35 km²)</span>
+              <span data-lang="en">Total AMB Green Canopy (295.35 km²)</span>
+              <span data-lang="ja">AMB全体の総緑地比率（295.35 km²）</span>
+            </span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-number">19.45%</span>
+            <span class="metric-label">
+              <span data-lang="es">Verde real Municipio de Barcelona</span>
+              <span data-lang="ca">Verd real Municipi de Barcelona</span>
+              <span data-lang="en">Real Green Area in Barcelona City</span>
+              <span data-lang="ja">バルセロナ市の実質緑地比率</span>
+            </span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-number">71.53%</span>
+            <span class="metric-label">
+              <span data-lang="es">Concordancia con planeamiento oficial</span>
+              <span data-lang="ca">Concordança amb planejament oficial</span>
+              <span data-lang="en">Alignment with Official Zoning Plans</span>
+              <span data-lang="ja">都市計画指定緑地との実質一致率</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="slide-container">
+          <img src="../images/slide_14.png" alt="Cálculo del NDVI" class="slide-image">
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 3:</strong> Mapa del Índice NDVI del AMB (Enero 2024). Destacan los macizos de Collserola, Serralada de Marina y Garraf como murallas naturales protectoras frente a la mancha urbana densa.</span>
+            <span data-lang="ca"><strong>Figura 3:</strong> Mapa de l'Índex NDVI de l'AMB (Gener 2024). Destaquen els massissos de Collserola, Serralada de Marina i Garraf com a muralles naturals protectores enfront de la taca urbana densa.</span>
+            <span data-lang="en"><strong>Figure 3:</strong> AMB NDVI Index Map (January 2024). The natural massifs (Collserola, Marina, Garraf) clearly act as ecological boundaries against dense urbanization.</span>
+            <span data-lang="ja"><strong>図3：</strong>AMBのNDVI植生指数マップ（2024年1月観測）。コルセローラ、マリーナ山地、ガラフ山塊が、沿岸部の稠密な市街地拡大を食い止める自然の防壁として機能している様子を明示。</span>
+          </div>
+        </div>
+
+        <div class="slide-container">
+          <img src="../images/slide_16.png" alt="Zonas Verdes Planeamiento vs NDVI" class="slide-image">
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 4:</strong> Mapa de discrepancia entre Planeamiento Oficial vs Vegetación Real (71.53% de solapamiento). Numerosas zonas calificadas administrativamente como parques carecen de biomasa real vegetal en el invierno, mientras que vegetación espontánea florece en áreas no calificadas.</span>
+            <span data-lang="ca"><strong>Figura 4:</strong> Mapa de discrepància entre Planejament Oficial vs Vegetació Real (71.53% de solapament). Nombroses zones qualificades administrativament com a parcs manquen de biomassa real vegetal a l'hivern, mentre que vegetació espontània floreix en àrees no qualificades.</span>
+            <span data-lang="en"><strong>Figure 4:</strong> Urban Zoning vs Physical Vegetation Discrepancy Map (71.53% spatial overlap). Significant areas zoned as public green spaces lack physical canopy in winter, while spontaneous vegetation exists outside official boundaries.</span>
+            <span data-lang="ja"><strong>図4：</strong>都市計画指定緑地 vs 実質植生（NDVI）の差異分析マップ（空間整合率71.53%）。緑地に指定されているにもかかわらず植生が存在しない地域（白地）や、計画指定外の自生植生地域が浮き彫りに。</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Municipal Analysis & Standard per Inhabitant (Graph & Table) -->
+      <section>
+        <h2>
+          <span data-lang="es">Análisis Municipal: Estándar de 10 m² de Verde Urbano por Habitante</span>
+          <span data-lang="ca">Anàlisi Municipal: Estàndard de 10 m² de Verd Urbà per Habitant</span>
+          <span data-lang="en">Municipal Breakdown: The 10 m² Green Space per Capita Standard</span>
+          <span data-lang="ja">市町村別分析：住民1人あたり10m²都市緑地基準の検証</span>
+        </h2>
+        
+        <p data-lang="es">
+          La Organización Mundial de la Salud (OMS) y los estándares europeos recomiendan un mínimo de <strong>10 m² de espacio verde por habitante</strong> en entornos urbanos. Al cruzar los datos de suelo artificializado (CLC18) con el censo poblacional del IDESCAT (3.535.590 habitantes en el AMB), se calculó la disponibilidad real de verde urbano en cada uno de los 36 municipios metropolitanos.
+        </p>
+        <p data-lang="ca">
+          L'Organització Mundial de la Salut (OMS) i els estàndards europeus recomanen un mínim de <strong>10 m² d'espai verd per habitant</strong> en entorns urbans. En creuar les dades de sòl artificialitzat (CLC18) amb el cens poblacional de l'IDESCAT (3.535.590 habitants a l'AMB), es va calcular la disponibilitat real de verd urbà a cadascun dels 36 municipis metropolitans.
+        </p>
+        <p data-lang="en">
+          The World Health Organization (WHO) and European guidelines recommend a minimum benchmark of <strong>10 m² of accessible urban green space per inhabitant</strong>. By overlaying Corine Land Cover artificialized surfaces with IDESCAT population censuses (3,535,590 inhabitants in the AMB), the effective green ratio per capita was calculated for all 36 metropolitan municipalities.
+        </p>
+        <p data-lang="ja">
+          世界保健機関（WHO）および欧州の都市計画基準では、都市住民1人あたり最低<strong>10m²のアクセス可能な緑地空間</strong>の確保が推奨されています。Corine Land Cover（CLC18）の人工被覆データとIDESCATの市町村人口データ（AMB総人口：3,535,590人）を空間結合し、36市町村それぞれの住民1人あたり実質緑地面積を定量算出・比較しました。
+        </p>
+
+        <div class="slide-container">
+          <img src="../images/slide_18.png" alt="Mapa de Verde Urbano sobre Suelo Artificial" class="slide-image">
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 5:</strong> Distribución espacial del verde urbano real sobre suelo artificializado en los 36 municipios del AMB.</span>
+            <span data-lang="ca"><strong>Figura 5:</strong> Distribució espacial del verd urbà real sobre sòl artificialitzat als 36 municipis de l'AMB.</span>
+            <span data-lang="en"><strong>Figure 5:</strong> Spatial distribution of actual urban green canopy over artificial land across the 36 AMB municipalities.</span>
+            <span data-lang="ja"><strong>図5：</strong>AMB36市町村における人工被覆地上の実質都市緑地の空間分布マップ。</span>
+          </div>
+        </div>
+
+        <div class="slide-container">
+          <img src="../images/slide_19.png" alt="Tabla y Gráfica del Estándar Verde Urbano por Municipio" class="slide-image">
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 6:</strong> Tabla e indicador comparativo del estándar de 10 m²/hab en los municipios del AMB. La media metropolitana es de solo 3.92 m²/hab, con un déficit acumulado de 21.10 km² de áreas verdes necesarias.</span>
+            <span data-lang="ca"><strong>Figura 6:</strong> Taula i indicador comparatiu de l'estàndard de 10 m²/hab als municipis de l'AMB. La mitjana metropolitana és de només 3.92 m²/hab, amb un dèficit acumulat de 21.10 km² d'àrees verdes necessàries.</span>
+            <span data-lang="en"><strong>Figure 6:</strong> Quantitative comparison table and standard analysis for 10 m²/capita across AMB municipalities. The metropolitan average stands at only 3.92 m²/capita, showing a cumulative deficit of 21.10 km² of needed green infrastructure.</span>
+            <span data-lang="ja"><strong>図6：</strong>AMB各市町村の住民1人あたり緑地面積（10m²/人基準）の比較表および算出データ。AMB全体の平均はわずか3.92m²/人にとどまり、基準達成には合計21.10km²もの緑地拡充が不足している実態を定量化。</span>
+          </div>
+        </div>
+
+        <!-- Interactive Visual Breakdown Table of Key Municipalities -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
+          <h4 class="font-serif" style="margin-bottom: 1rem; color: var(--accent-terracotta);">
+            <span data-lang="es">Muestra Comparativa Municipal (m² de Verde por Habitante)</span>
+            <span data-lang="ca">Mostra Comparativa Municipal (m² de Verd per Habitant)</span>
+            <span data-lang="en">Comparative Municipal Sample (m² Green Space per Inhabitant)</span>
+            <span data-lang="ja">主要市町村の比較データ（住民1人あたり緑地面積）</span>
+          </h4>
+
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--border-color); text-align: left;">
+                  <th style="padding: 0.6rem;">Municipio / City</th>
+                  <th style="padding: 0.6rem;">Población (Hab)</th>
+                  <th style="padding: 0.6rem;">Verde Real (m²/hab)</th>
+                  <th style="padding: 0.6rem;">Estándar (10 m²/hab)</th>
+                  <th style="padding: 0.6rem;">Déficit / Superávit (km²)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border-color); font-weight: bold; background: rgba(184, 115, 51, 0.08);">
+                  <td style="padding: 0.6rem;">AMB (Media Metropolitana)</td>
+                  <td style="padding: 0.6rem;">3.535.590</td>
+                  <td style="padding: 0.6rem; color: var(--accent-terracotta);">3.92 m²</td>
+                  <td style="padding: 0.6rem;"><span style="color: red;">✕ Déficit (-6.08 m²)</span></td>
+                  <td style="padding: 0.6rem; color: red;">+21.10 km² necesarios</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 0.6rem;">Barcelona</td>
+                  <td style="padding: 0.6rem;">1.731.649</td>
+                  <td style="padding: 0.6rem;">1.58 m²</td>
+                  <td style="padding: 0.6rem;"><span style="color: red;">✕ Déficit</span></td>
+                  <td style="padding: 0.6rem; color: red;">+14.57 km²</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 0.6rem;">L'Hospitalet de Llobregat</td>
+                  <td style="padding: 0.6rem;">289.510</td>
+                  <td style="padding: 0.6rem;">0.64 m²</td>
+                  <td style="padding: 0.6rem;"><span style="color: red;">✕ Déficit Severo</span></td>
+                  <td style="padding: 0.6rem; color: red;">+2.71 km²</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 0.6rem;">Badalona</td>
+                  <td style="padding: 0.6rem;">231.542</td>
+                  <td style="padding: 0.6rem;">1.08 m²</td>
+                  <td style="padding: 0.6rem;"><span style="color: red;">✕ Déficit</span></td>
+                  <td style="padding: 0.6rem; color: red;">+2.07 km²</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 0.6rem;">Cornellà de Llobregat</td>
+                  <td style="padding: 0.6rem;">92.237</td>
+                  <td style="padding: 0.6rem;">0.86 m²</td>
+                  <td style="padding: 0.6rem;"><span style="color: red;">✕ Déficit</span></td>
+                  <td style="padding: 0.6rem; color: red;">+0.84 km²</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 0.6rem;">Santa Coloma de Gramenet</td>
+                  <td style="padding: 0.6rem;">123.981</td>
+                  <td style="padding: 0.6rem;">9.39 m²</td>
+                  <td style="padding: 0.6rem;"><span style="color: orange;">~ Casi cumple</span></td>
+                  <td style="padding: 0.6rem;">+0.08 km²</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 0.6rem;">Gavà</td>
+                  <td style="padding: 0.6rem;">48.243</td>
+                  <td style="padding: 0.6rem;">11.71 m²</td>
+                  <td style="padding: 0.6rem;"><span style="color: var(--accent-sage);">✓ Cumple</span></td>
+                  <td style="padding: 0.6rem; color: var(--accent-sage);">Superávit (-0.08 km²)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 0.6rem;">El Papiol</td>
+                  <td style="padding: 0.6rem;">4.404</td>
+                  <td style="padding: 0.6rem;">46.25 m²</td>
+                  <td style="padding: 0.6rem;"><span style="color: var(--accent-sage);">✓ Cumple</span></td>
+                  <td style="padding: 0.6rem; color: var(--accent-sage);">Superávit (-0.16 km²)</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0.6rem;">Castellbisbal</td>
+                  <td style="padding: 0.6rem;">13.061</td>
+                  <td style="padding: 0.6rem;">84.83 m²</td>
+                  <td style="padding: 0.6rem;"><span style="color: var(--accent-sage);">✓ Cumple Alto</span></td>
+                  <td style="padding: 0.6rem; color: var(--accent-sage);">Superávit (-0.98 km²)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusions -->
+      <section>
+        <h2>
+          <span data-lang="es">Conclusiones y Recomendaciones de Planificación</span>
+          <span data-lang="ca">Conclusions i Recomanacions de Planificació</span>
+          <span data-lang="en">Key Conclusions & Urban Planning Recommendations</span>
+          <span data-lang="ja">結論・提言</span>
+        </h2>
+        
+        <p data-lang="es">
+          Los resultados demuestran que los instrumentos tradicionales de planeamiento en el AMB pueden estar sobreestimando la dotación real de espacios verdes. Se sugiere revisar la clasificación de usos de suelo en el POUM para priorizar intervenciones de renaturalización urbana y fortalecer la red de refugios climáticos en las zonas más industrializadas y vulnerables de la periferia barcelonesa.
+        </p>
+        <p data-lang="ca">
+          Els resultats试点 demuestran que els instruments tradicionals de planejament a l'AMB poden estar sobreestimant la dotació real d'espais verds. Es suggereix revisar la classificació d'usos de sòl al POUM per prioritzar intervencions de renaturalització urbana i enfortir la xarxa de refugis climàtics a les zones més industrialitzades i vulnerables de la perifèria barcelonina.
+        </p>
+        <p data-lang="en">
+          The study confirms that traditional planning tools in the AMB likely overestimate functional green space availability. Revising POUM land-use zoning is essential to prioritize urban re-naturalization and reinforce climate shelters network (<em>Refugis Climàtics</em>) in the most industrialized, dense, and vulnerable sectors.
+        </p>
+        <p data-lang="ja">
+          本解析により、AMBにおける従来の紙の都市計画は、実質的に機能している緑地量を過大評価している可能性が証明されました。極端な熱ストレスや気候変動に立ち向かうため、POUM（都市整備計画）の土地利用区分を見直し、都市の再自然化計画や、特に人工化が進んだ脆弱な工業・住宅密集地域における気候シェルター計画の拡充を優先すべきであると提言します。
+        </p>
+      </section>
+
+    </article>
+
+    <!-- Sidebar Card Info -->
+    <aside class="project-sidebar">
+      <div class="project-sidebar-card">
+        <h3>
+          <span data-lang="es">Ficha Técnica</span>
+          <span data-lang="ca">Fitxa Tècnica</span>
+          <span data-lang="en">Technical Spec Sheet</span>
+          <span data-lang="ja">テクニカルシート</span>
+        </h3>
+        
+        <ul class="sidebar-bullets">
+          <li>
+            <strong>Software:</strong> ArcGIS Pro / QGIS 3.x
+          </li>
+          <li>
+            <strong>Data Sources:</strong> USGS (Landsat 9), Copernicus (Sentinel 2), ACA (Cartografía Limits AMB), IDESCAT (Población 2024).
+          </li>
+          <li>
+            <strong>Observation Date:</strong> Enero 2024 (2024年1月観測)
+          </li>
+          <li>
+            <strong>Spatial Resolution:</strong> 10m (Sentinel 2), 15m (Pansharpened Landsat).
+          </li>
+          <li>
+            <strong>Coordinate System:</strong> ETRS89 / UTM 31N (EPSG:25831)
+          </li>
+          <li>
+            <strong>Project Evaluation:</strong> TFM Grade 9.0/10 (Excelente)
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="padding: 0;">
+      <p>&copy; 2026 Sana Kamiya. GIS & Urban Design Portfolio.</p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About Me</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../portfolio.html">Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

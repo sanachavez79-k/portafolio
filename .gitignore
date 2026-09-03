@@ -1,0 +1,7 @@
+libs/
+.DS_Store
+*.pyc
+__pycache__/
+ocr_pdf
+ocr_pdf.m
+*.pdf
