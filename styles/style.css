@@ -543,6 +543,7 @@ body.lang-ja .flex-lang[data-lang="ja"] {
 .resume-item {
   background-color: var(--bg-white);
   border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-terracotta);
   padding: 2rem;
   border-radius: 6px;
   margin-bottom: 1.5rem;
