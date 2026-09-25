@@ -6,6 +6,7 @@
   <title>Sana Kamiya | Adaptación Climática Campus Nord</title>
   <link rel="stylesheet" href="../styles/style.css">
   <script src="../js/lang.js" defer></script>
+  <script src="../js/slider.js" defer></script>
 </head>
 <body class="lang-es">
 
@@ -126,12 +127,94 @@
         </p>
 
         <div class="slide-container">
-          <img src="../images/projects/climate/clim_slide_09.png" alt="Toma de datos in situ Plaza de Constelaciones" class="slide-image">
+          <div class="slide-viewer-box" title="Clic para ampliar en alta resolución / Click to zoom">
+            <img src="../images/projects/climate/clim_slide_09.png" alt="Toma de datos in situ Plaza de Constelaciones" class="slide-image">
+            <div class="slide-zoom-pill">
+              <span data-lang="es">🔍 Clic para ampliar en alta resolución</span>
+              <span data-lang="ca">🔍 Clic per ampliar en alta resolució</span>
+              <span data-lang="en">🔍 Click to zoom fieldwork map</span>
+              <span data-lang="ja">🔍 クリックで高解像度拡大表示</span>
+            </div>
+          </div>
           <div class="slide-caption">
             <span data-lang="es"><strong>Figura 1:</strong> Levantamiento de puntos críticos y mediciones de campo in situ en la Plaza de las Constelaciones.</span>
             <span data-lang="ca"><strong>Figura 1:</strong> Aixecament de punts crítics i mesuraments de camp in situ a la Plaça de les Constel·lacions.</span>
             <span data-lang="en"><strong>Figure 1:</strong> In situ measurement stations and thermal comfort critical points across the campus plaza.</span>
             <span data-lang="ja"><strong>図1：</strong>星座広場における現地実測ポイントと温熱環境クリティカルゾーンの特定。</span>
+          </div>
+        </div>
+
+        <!-- Interactive Slide Gallery for Fieldwork Climate Diagnosis (Pages 10 to 15) -->
+        <div class="project-slide-gallery climate-fieldwork-gallery" id="climate-fieldwork-gallery" tabindex="0" aria-label="Auditoría y mediciones in situ p.10-15">
+          <div class="gallery-top-bar">
+            <div class="gallery-title-group">
+              <span class="gallery-badge" style="background-color: var(--accent-terracotta);">
+                <span data-lang="es">Mediciones In Situ y Confort</span>
+                <span data-lang="ca">Mesuraments In Situ i Confort</span>
+                <span data-lang="en">In Situ Fieldwork & Comfort</span>
+                <span data-lang="ja">現地温熱実測・利用実態調査</span>
+              </span>
+              <span class="gallery-counter-text">1 / 6 (p.10)</span>
+            </div>
+            <div class="gallery-nav-controls">
+              <button class="gallery-nav-btn gallery-prev-btn" aria-label="Anterior / Previous">&larr;</button>
+              <button class="gallery-nav-btn gallery-next-btn" aria-label="Siguiente / Next">&rarr;</button>
+            </div>
+          </div>
+
+          <div class="gallery-viewer">
+            <div class="gallery-main-image-wrap">
+              <img src="../images/projects/climate/fieldwork_slides/slide_10.png" alt="Análisis del Calor: Comportamiento de pavimentos y fachadas (p.10)" class="gallery-main-image">
+              <div class="slide-zoom-pill">
+                <span data-lang="es">🔍 Clic para ampliar en alta resolución</span>
+                <span data-lang="ca">🔍 Clic per ampliar en alta resolució</span>
+                <span data-lang="en">🔍 Click to zoom full-screen</span>
+                <span data-lang="ja">🔍 クリックで高解像度拡大表示</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-caption-bar">
+            <div class="gallery-caption">
+              <span data-lang="es"><strong>Figura 1b (p.10):</strong> Análisis del Calor: Comportamiento térmico de pavimentos y fachadas.</span>
+              <span data-lang="ca"><strong>Figura 1b (p.10):</strong> Anàlisi de la Calor: Comportament tèrmic de paviments i façanes.</span>
+              <span data-lang="en"><strong>Figure 1b (p.10):</strong> Heat Analysis: Thermal Behaviour of Pavements & Facades.</span>
+              <span data-lang="ja"><strong>図1b (10ページ):</strong> 熱環境分析：舗装材料および建材ファサードの熱的挙動。</span>
+            </div>
+          </div>
+
+          <!-- Filmstrip Horizontal Thumbnail Ribbon -->
+          <div class="gallery-thumbnails-outer">
+            <button class="gallery-thumb-scroll-btn gallery-thumb-scroll-left" aria-label="Desplazar miniaturas a la izquierda">&lsaquo;</button>
+            <div class="gallery-thumbnails-wrapper">
+              <div class="gallery-thumbnails">
+                <button type="button" class="gallery-thumb-btn active" data-slide-index="0" aria-label="Slide p.10" title="p.10: Análisis del calor">
+                  <img src="../images/projects/climate/fieldwork_slides/slide_10.png" alt="Slide p.10" loading="lazy">
+                  <span class="thumb-page-badge">p.10</span>
+                </button>
+                <button type="button" class="gallery-thumb-btn" data-slide-index="1" aria-label="Slide p.11" title="p.11: Punto 01 Plaza Central">
+                  <img src="../images/projects/climate/fieldwork_slides/slide_11.png" alt="Slide p.11" loading="lazy">
+                  <span class="thumb-page-badge">p.11</span>
+                </button>
+                <button type="button" class="gallery-thumb-btn" data-slide-index="2" aria-label="Slide p.12" title="p.12: Punto 02 Mesas techadas">
+                  <img src="../images/projects/climate/fieldwork_slides/slide_12.png" alt="Slide p.12" loading="lazy">
+                  <span class="thumb-page-badge">p.12</span>
+                </button>
+                <button type="button" class="gallery-thumb-btn" data-slide-index="3" aria-label="Slide p.13" title="p.13: Punto 03 Jardín">
+                  <img src="../images/projects/climate/fieldwork_slides/slide_13.png" alt="Slide p.13" loading="lazy">
+                  <span class="thumb-page-badge">p.13</span>
+                </button>
+                <button type="button" class="gallery-thumb-btn" data-slide-index="4" aria-label="Slide p.14" title="p.14: Punto 04 Pasadizo 2do piso">
+                  <img src="../images/projects/climate/fieldwork_slides/slide_14.png" alt="Slide p.14" loading="lazy">
+                  <span class="thumb-page-badge">p.14</span>
+                </button>
+                <button type="button" class="gallery-thumb-btn" data-slide-index="5" aria-label="Slide p.15" title="p.15: Análisis de mobiliario">
+                  <img src="../images/projects/climate/fieldwork_slides/slide_15.png" alt="Slide p.15" loading="lazy">
+                  <span class="thumb-page-badge">p.15</span>
+                </button>
+              </div>
+            </div>
+            <button class="gallery-thumb-scroll-btn gallery-thumb-scroll-right" aria-label="Desplazar miniaturas a la derecha">&rsaquo;</button>
           </div>
         </div>
       </section>

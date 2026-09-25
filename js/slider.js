@@ -370,6 +370,57 @@
     }
   ];
 
+  const campusNordFieldworkSlidesData = [
+    {
+      page: 10,
+      file: '../images/projects/climate/fieldwork_slides/slide_10.png',
+      title_es: 'Análisis del Calor: Comportamiento térmico de pavimentos y fachadas (p.10)',
+      title_ca: 'Anàlisi de la Calor: Comportament tèrmic de paviments i façanes (p.10)',
+      title_en: 'Heat Analysis: Thermal Behaviour of Pavements & Facades (p.10)',
+      title_ja: '熱環境分析：舗装材料および建材ファサードの熱的挙動（p.10）'
+    },
+    {
+      page: 11,
+      file: '../images/projects/climate/fieldwork_slides/slide_11.png',
+      title_es: 'Punto de Medición 01: Plaza Central - Acumulación térmica en pavimentos expuestos (41-46°C, p.11)',
+      title_ca: 'Punt de Mesurament 01: Plaça Central - Acumulació tèrmica en paviments exposats (41-46°C, p.11)',
+      title_en: 'Measurement Station 01: Central Plaza - Thermal Accumulation on Exposed Pavements (41-46°C, p.11)',
+      title_ja: '実測地点01：中央広場 - 直射日光下での舗装材蓄熱と温熱環境実測（41〜46℃、p.11）'
+    },
+    {
+      page: 12,
+      file: '../images/projects/climate/fieldwork_slides/slide_12.png',
+      title_es: 'Punto de Medición 02: Mesas techadas - Efecto de la sombra en temperatura superficial (27.5°C vs 41.2°C, p.12)',
+      title_ca: 'Punt de Mesurament 02: Taules cobertes - Efecte de l\'ombra en temperatura superficial (27.5°C vs 41.2°C, p.12)',
+      title_en: 'Measurement Station 02: Covered Tables - Shading Effect on Surface Temperature (27.5°C vs 41.2°C, p.12)',
+      title_ja: '実測地点02：屋根付きベンチ・テーブル - 日陰による地表面温度低減効果（27.5℃ vs 41.2℃、p.12）'
+    },
+    {
+      page: 13,
+      file: '../images/projects/climate/fieldwork_slides/slide_13.png',
+      title_es: 'Punto de Medición 03: Jardín - Comportamiento de superficies permeables y césped (37.9°C, p.13)',
+      title_ca: 'Punt de Mesurament 03: Jardí - Comportament de superfícies permeables i gespa (37.9°C, p.13)',
+      title_en: 'Measurement Station 03: Garden Lawn - Permeable Surface & Grass Thermal Performance (37.9°C, p.13)',
+      title_ja: '実測地点03：緑地・芝生エリア - 透水面・植生による温熱緩和効果（37.9℃、p.13）'
+    },
+    {
+      page: 14,
+      file: '../images/projects/climate/fieldwork_slides/slide_14.png',
+      title_es: 'Punto de Medición 04: Pasadizo 2do piso - Radiación y acumulación térmica en pasarelas (p.14)',
+      title_ca: 'Punt de Mesurament 04: Passadís 2n pis - Radiació i acumulació tèrmica en passarel·les (p.14)',
+      title_en: 'Measurement Station 04: 2nd Floor Corridor - Radiation & Thermal Load on Elevated Walkways (p.14)',
+      title_ja: '実測地点04：2階連絡通路 - 人工ハード舗装面における熱放射と蓄熱（p.14）'
+    },
+    {
+      page: 15,
+      file: '../images/projects/climate/fieldwork_slides/slide_15.png',
+      title_es: 'Análisis y Confort del Mobiliario: Patrones de ocupación y estancias según sombra (p.15)',
+      title_ca: 'Anàlisi i Confort del Mobiliari: Patrons d\'ocupació i estades segons ombra (p.15)',
+      title_en: 'Urban Furniture & Comfort Audit: Occupancy Patterns Dictated by Solar Exposure (p.15)',
+      title_ja: 'ファニチャー温熱快適性と空間利用調査：日陰状況と広場滞在パターンの相関（p.15）'
+    }
+  ];
+
   // Universal Lightbox Modal Helper
   let modal = null;
   let modalImg = null;
@@ -596,9 +647,15 @@
     }
 
     // 2. Proposal Gallery (p.51-70)
-    const proposalGallery = document.getElementById('proposal-slide-gallery') || document.querySelector('.proposal-slide-gallery') || document.querySelector('.project-slide-gallery:not(#analysis-slide-gallery)');
-    if (proposalGallery) {
+    const proposalGallery = document.getElementById('proposal-slide-gallery') || document.querySelector('.proposal-slide-gallery') || document.querySelector('.project-slide-gallery:not(#analysis-slide-gallery):not(#climate-fieldwork-gallery)');
+    if (proposalGallery && proposalGallery.id !== 'climate-fieldwork-gallery') {
       initSingleGallery(proposalGallery, proposalSlidesData, 'Figura 4');
+    }
+
+    // 3. Campus Nord Fieldwork Gallery (p.10-15)
+    const climateGallery = document.getElementById('climate-fieldwork-gallery') || document.querySelector('.climate-fieldwork-gallery');
+    if (climateGallery) {
+      initSingleGallery(climateGallery, campusNordFieldworkSlidesData, 'Figura 1b');
     }
   }
 
