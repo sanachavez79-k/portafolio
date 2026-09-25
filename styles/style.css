@@ -1282,14 +1282,14 @@ footer .footer-links a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(10, 15, 25, 0.9);
+  background: rgba(10, 15, 25, 0.92);
   backdrop-filter: blur(6px);
 }
 
 .gallery-modal-content {
   position: relative;
   max-width: 95vw;
-  max-height: 92vh;
+  max-height: 94vh;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -1298,10 +1298,24 @@ footer .footer-links a:hover {
 
 .gallery-modal-img {
   max-width: 100%;
-  max-height: 90vh;
+  max-height: 84vh;
   object-fit: contain;
   border-radius: 6px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  background-color: #ffffff;
+}
+
+.gallery-modal-caption {
+  color: #ffffff;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.75rem;
+  max-width: 950px;
+  line-height: 1.45;
+  opacity: 0.95;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
 }
 
 .gallery-modal-close {
@@ -1319,5 +1333,152 @@ footer .footer-links a:hover {
 
 .gallery-modal-close:hover {
   color: var(--accent-terracotta);
+}
+
+/* ===================================================
+   GIS Workflow & Cartographic Presentation System
+   =================================================== */
+.gis-workflow-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-sage);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.75rem 0 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.gis-workflow-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.gis-workflow-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--primary-navy);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gis-tags-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.gis-tech-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
+  background-color: #EDF2F7;
+  color: var(--primary-navy);
+  border: 1px solid #CBD5E0;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.gis-tech-tag.primary {
+  background-color: rgba(91, 140, 115, 0.15);
+  color: var(--accent-sage);
+  border-color: rgba(91, 140, 115, 0.3);
+}
+
+.gis-tech-tag.accent {
+  background-color: rgba(208, 92, 56, 0.12);
+  color: var(--accent-terracotta);
+  border-color: rgba(208, 92, 56, 0.3);
+}
+
+.gis-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.gis-workflow-col {
+  background-color: var(--bg-cream);
+  padding: 1rem 1.1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.gis-workflow-col h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-navy);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.gis-workflow-col p,
+.gis-workflow-col ul {
+  font-size: 0.88rem;
+  color: var(--text-dark);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.gis-workflow-col ul {
+  padding-left: 1.1rem;
+  list-style-type: disc;
+}
+
+.gis-workflow-col li {
+  margin-bottom: 0.35rem;
+  font-size: 0.88rem;
+}
+
+.slide-viewer-box {
+  position: relative;
+  cursor: zoom-in;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.slide-zoom-pill {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(15, 30, 54, 0.85);
+  color: #ffffff;
+  padding: 0.4rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  transition: all 0.2s ease;
+  opacity: 0.9;
+}
+
+.slide-viewer-box:hover .slide-zoom-pill {
+  background: var(--accent-terracotta);
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .gis-workflow-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 

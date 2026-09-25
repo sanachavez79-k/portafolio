@@ -289,7 +289,7 @@
       }
     });
 
-    // Modal / Fullscreen Viewer
+    // Modal / Universal Fullscreen Viewer
     let modal = document.querySelector('.gallery-modal');
     if (!modal) {
       modal = document.createElement('div');
@@ -298,30 +298,66 @@
         <div class="gallery-modal-overlay"></div>
         <div class="gallery-modal-content">
           <button class="gallery-modal-close" aria-label="Cerrar">&times;</button>
-          <img src="" alt="Zoomed slide" class="gallery-modal-img">
+          <img src="" alt="Zoomed image" class="gallery-modal-img">
+          <div class="gallery-modal-caption"></div>
         </div>
       `;
       document.body.appendChild(modal);
     }
 
     const modalImg = modal.querySelector('.gallery-modal-img');
+    const modalCaption = modal.querySelector('.gallery-modal-caption');
     const modalClose = modal.querySelector('.gallery-modal-close');
     const modalOverlay = modal.querySelector('.gallery-modal-overlay');
+
+    function openModal(src, captionText) {
+      if (!modalImg) return;
+      modalImg.src = src;
+      if (modalCaption) {
+        if (captionText) {
+          modalCaption.textContent = captionText;
+          modalCaption.style.display = 'block';
+        } else {
+          modalCaption.style.display = 'none';
+        }
+      }
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      if (!modal) return;
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
 
     if (mainImage) {
       mainImage.style.cursor = 'zoom-in';
       mainImage.addEventListener('click', () => {
         const slide = slidesData[currentIndex];
-        modalImg.src = slide.file;
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        const currentLang = document.documentElement.lang || document.body.className.replace('lang-', '') || 'es';
+        let cap = slide.title_es;
+        if (currentLang === 'ca') cap = slide.title_ca;
+        else if (currentLang === 'en') cap = slide.title_en;
+        else if (currentLang === 'ja') cap = slide.title_ja;
+        openModal(slide.file, `p.${slide.page}: ${cap}`);
       });
     }
 
-    function closeModal() {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
+    // Universal Zoom for all .slide-viewer-box and .zoomable-map across the page
+    document.querySelectorAll('.slide-viewer-box, .zoomable-map').forEach(box => {
+      box.addEventListener('click', () => {
+        const img = box.querySelector('img');
+        if (!img) return;
+        const container = box.closest('.slide-container');
+        let capText = '';
+        if (container) {
+          const capSpan = container.querySelector('.slide-caption [data-lang="' + (document.body.className.replace('lang-', '') || 'es') + '"]') || container.querySelector('.slide-caption');
+          if (capSpan) capText = capSpan.textContent.trim();
+        }
+        openModal(img.src, capText);
+      });
+    });
 
     if (modalClose) modalClose.addEventListener('click', closeModal);
     if (modalOverlay) modalOverlay.addEventListener('click', closeModal);

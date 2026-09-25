@@ -111,13 +111,78 @@
           カタルーニャ工科大学（UPC）都市計画・持続可能性修士課程において<strong>9.0/10点（最高評価）</strong>を獲得し、カタルーニャ州の地区改善法（<em>Pla de Barris 2025-2029</em>）の枠組みに基づき策定した総合都市再生マスタープラン。サント・アドリア・ダ・ベソス市とバダロナ市の境界に位置する<strong>特別重点配慮地域（AAE）</strong>を対象に、高規格インフラによる空間分断と工業衰退を克服すべく、<strong>「空間・物理的再編」「気候適応・生態系移行」「社会コミュニティ包摂」</strong>の3軸を統合した計画を構築しました。
         </p>
 
+        <!-- Figure 1: Master Plan Overview (Large Zoomable Display) -->
         <div class="slide-container">
-          <img src="../images/projects/tfm_upc/tfm_masterplan_overview.png" alt="Propuesta General de Intervenciones AAE Sant Adrià - Badalona" class="slide-image">
+          <div class="slide-viewer-box" title="Clic para ampliar en alta resolución / Click to zoom">
+            <img src="../images/projects/tfm_upc/tfm_masterplan_overview.png" alt="Propuesta General de Intervenciones AAE Sant Adrià - Badalona" class="slide-image">
+            <div class="slide-zoom-pill">
+              <span data-lang="es">🔍 Clic para ampliar en alta resolución</span>
+              <span data-lang="ca">🔍 Clic per ampliar en alta resolució</span>
+              <span data-lang="en">🔍 Click to zoom high-res map</span>
+              <span data-lang="ja">🔍 クリックで高解像度拡大表示</span>
+            </div>
+          </div>
           <div class="slide-caption">
             <span data-lang="es"><strong>Figura 1:</strong> Master Plan de intervenciones estratégicas para la AAE de Sant Adrià - Badalona: Transformaciones físicas, transición ecológica y acciones sociocomunitarias con códigos de actuación territorial (ETRS89 / UTM Zone 31N, EPSG: 25831).</span>
             <span data-lang="ca"><strong>Figura 1:</strong> Màster Plan d'intervencions estratègiques per a l'AAE de Sant Adrià - Badalona: Transformacions físiques, transició ecològica i accions sociocomunitàries amb codis d'actuació territorial (ETRS89 / UTM Zone 31N, EPSG: 25831).</span>
             <span data-lang="en"><strong>Figure 1:</strong> Strategic Master Plan layout for the Sant Adrià - Badalona AAE: Physical transformations, ecological transition, and sociocommunity action codes (ETRS89 / UTM Zone 31N, EPSG: 25831).</span>
             <span data-lang="ja"><strong>図1：</strong>サント・アドリア〜バダロナAAE総合改善マスタープラン全体計画図：物理的変容、生態系移行、社会コミュニティ包摂の3軸と個別事業配置コード（ETRS89 / UTM Zone 31N, EPSG: 25831）。</span>
+          </div>
+        </div>
+
+        <!-- GIS Workflow Card for Section 2 -->
+        <div class="gis-workflow-card">
+          <div class="gis-workflow-header">
+            <div class="gis-workflow-title">
+              <span data-lang="es">🔬 Metodología SIG y Articulación del Plan</span>
+              <span data-lang="ca">🔬 Metodologia SIG i Articulació del Pla</span>
+              <span data-lang="en">🔬 GIS Methodology & Master Plan Synthesis</span>
+              <span data-lang="ja">🔬 GIS空間解析手法とマスタープラン体系</span>
+            </div>
+            <div class="gis-tags-group">
+              <span class="gis-tech-tag primary">QGIS 3.x</span>
+              <span class="gis-tech-tag">ETRS89 UTM 31N</span>
+              <span class="gis-tech-tag">EPSG: 25831</span>
+              <span class="gis-tech-tag accent">Escala 1:5.000</span>
+            </div>
+          </div>
+          <div class="gis-workflow-grid">
+            <div class="gis-workflow-col">
+              <h4>
+                <span data-lang="es">📥 Fuentes de Datos</span>
+                <span data-lang="ca">📥 Fonts de Dades</span>
+                <span data-lang="en">📥 Data Sources</span>
+                <span data-lang="ja">📥 データソース</span>
+              </h4>
+              <p data-lang="es">Cartografía PGM (AMB), Ortofoto ICGC, Red viaria y ferroviaria (DGT/Adif), Límites censales y municipales.</p>
+              <p data-lang="ca">Cartografia PGM (AMB), Ortofoto ICGC, Xarxa viària i ferroviària (DGT/Adif), Límits censals i municipals.</p>
+              <p data-lang="en">PGM Cartography (AMB), ICGC Orthophotos, Road & Rail Networks (DGT/Adif), Census & Municipal Boundaries.</p>
+              <p data-lang="ja">PGM大都市計画基図（AMB）、ICGCオルソ航空写真、道路・鉄道網（DGT/Adif）、国勢調査街区境界。</p>
+            </div>
+            <div class="gis-workflow-col">
+              <h4>
+                <span data-lang="es">⚙️ Análisis Espacial</span>
+                <span data-lang="ca">⚙️ Anàlisi Espacial</span>
+                <span data-lang="en">⚙️ Spatial Methods</span>
+                <span data-lang="ja">⚙️ 空間解析手法</span>
+              </h4>
+              <p data-lang="es">Superposición vectorial multicriterio, zonificación territorial en QGIS, buffers de isócronas peatonales (5-10 min) y cálculo de discontinuidades de trama.</p>
+              <p data-lang="ca">Superposició vectorial multicriteri, zonificació territorial en QGIS, buffers d'isòcrones per a vianants (5-10 min) i càlcul de discontinuïtats de trama.</p>
+              <p data-lang="en">Multi-criteria vector overlay, QGIS spatial zoning, pedestrian isochrone buffers (5-10 min walking reach), and urban fabric severance modeling.</p>
+              <p data-lang="ja">ベクター多層オーバーレイ解析、QGIS空間ゾーニング、徒歩等時線バッファ（5〜10分圏）、都市構造分断度の空間定量化。</p>
+            </div>
+            <div class="gis-workflow-col">
+              <h4>
+                <span data-lang="es">💡 Criterio Urbanístico</span>
+                <span data-lang="ca">💡 Criteri Urbanístic</span>
+                <span data-lang="en">💡 Planning Decision</span>
+                <span data-lang="ja">💡 計画・意思決定への反映</span>
+              </h4>
+              <p data-lang="es">Estructuración del plan en 3 ejes transversales (Físico, Ecológico, Social) georreferenciando 14 actuaciones estratégicas con códigos de proyecto.</p>
+              <p data-lang="ca">Estructuració del pla en 3 eixos transversals (Físic, Ecològic, Social) georreferenciant 14 actuacions estratègiques amb codis de projecte.</p>
+              <p data-lang="en">Tri-axial master plan architecture (Physical, Ecological, Social) mapping 14 geo-referenced catalytic intervention codes across municipal lines.</p>
+              <p data-lang="ja">3大推進軸（空間・環境・社会）による体系化と、自治体境界を越えた14の個別事業コード（A/B/C）の空間配置。</p>
+            </div>
           </div>
         </div>
       </section>
@@ -144,13 +209,77 @@
           20世紀中盤まで農業地帯であった当地区は、急激な産業化と人口流入によって劇的に変貌しました。1929年バルセロナ万博の労働力需要、戦後の農村からの集団移住、そして1962年のベソス川大洪水被災者のための緊急公営住宅建設（サン・ロック地区など）により、低コストな高密度団地群が急速に建設されました。その結果、C-31高速道路高架橋や鉄道線路が街を東西・南北に分断し、行政境界（サント・アドリア市／バダロナ市）による公共サービスの不連続が固定化されました。
         </p>
 
+        <!-- Figure 2: Historical Orthophoto (Large Zoomable Display) -->
         <div class="slide-container">
-          <img src="../images/projects/tfm_upc/tfm_slide_20.png" alt="Aerofotografía Antigua 1945 Sant Adrià - Badalona (ICGC)" class="slide-image">
+          <div class="slide-viewer-box" title="Clic para ampliar en alta resolución / Click to zoom">
+            <img src="../images/projects/tfm_upc/tfm_slide_20.png" alt="Aerofotografía Antigua 1945 Sant Adrià - Badalona (ICGC)" class="slide-image">
+            <div class="slide-zoom-pill">
+              <span data-lang="es">🔍 Clic para ampliar en alta resolución</span>
+              <span data-lang="ca">🔍 Clic per ampliar en alta resolució</span>
+              <span data-lang="en">🔍 Click to zoom historical aerial</span>
+              <span data-lang="ja">🔍 クリックで高解像度拡大表示</span>
+            </div>
+          </div>
           <div class="slide-caption">
             <span data-lang="es"><strong>Figura 2:</strong> Aerofotografía antigua (1945, Institut Cartogràfic i Geològic de Catalunya). La línea continua blanca delimita el Área de Atención Especial (AAE) y la línea discontinua marca el límite municipal entre Sant Adrià de Besòs y Badalona (ETRS89 / UTM Zone 31N, EPSG: 25831).</span>
             <span data-lang="ca"><strong>Figura 2:</strong> Aerofotografia antiga (1945, Institut Cartogràfic i Geològic de Catalunya). La línia contínua blanca delimita l'Àrea d'Atenció Especial (AAE) i la línia discontínua marca el límit municipal entre Sant Adrià de Besòs i Badalona (ETRS89 / UTM Zone 31N, EPSG: 25831).</span>
             <span data-lang="en"><strong>Figure 2:</strong> Historical aerial photograph (1945, Institut Cartogràfic i Geològic de Catalunya). The solid white line outlines the Special Attention Area (AAE) and the dashed line marks the municipal boundary between Sant Adrià de Besòs and Badalona (ETRS89 / UTM Zone 31N, EPSG: 25831).</span>
             <span data-lang="ja"><strong>図2：</strong>歴史的航空写真（1945年、カタルーニャ地図地質研究所 ICGC）。白実線は特別重点配慮地域（Àrea de Atención Especial: AAE）、白破線はサント・アドリア・ダ・ベソス市とバダロナ市の境界線を示す（ETRS89 / UTM Zone 31N, EPSG: 25831）。</span>
+          </div>
+        </div>
+
+        <!-- GIS Workflow Card for Section 3 -->
+        <div class="gis-workflow-card">
+          <div class="gis-workflow-header">
+            <div class="gis-workflow-title">
+              <span data-lang="es">📜 Fotogrametría Histórica y Diagnóstico de Barreras</span>
+              <span data-lang="ca">📜 Fotogrametria Històrica i Diagnòstic de Barreres</span>
+              <span data-lang="en">📜 Historical Photogrammetry & Barrier Analysis</span>
+              <span data-lang="ja">📜 歴史航空写真解析と都市分断要因の空間診断</span>
+            </div>
+            <div class="gis-tags-group">
+              <span class="gis-tech-tag primary">ICGC 1945</span>
+              <span class="gis-tech-tag">Georreferenciación</span>
+              <span class="gis-tech-tag">Análisis Morfológico</span>
+            </div>
+          </div>
+          <div class="gis-workflow-grid">
+            <div class="gis-workflow-col">
+              <h4>
+                <span data-lang="es">📥 Fuentes de Datos</span>
+                <span data-lang="ca">📥 Fonts de Dades</span>
+                <span data-lang="en">📥 Data Sources</span>
+                <span data-lang="ja">📥 データソース</span>
+              </h4>
+              <p data-lang="es">Vuelo fotogramétrico histórico de 1945 (ICGC), Catastro histórico y Planeamiento General Metropolitano (PGM 1976).</p>
+              <p data-lang="ca">Vol fotogramètric històric de 1945 (ICGC), Cadastre històric i Planejament General Metropolità (PGM 1976).</p>
+              <p data-lang="en">1945 Historical photogrammetric flight (ICGC), Historical Cadastre, and 1976 Metropolitan Master Plan (PGM).</p>
+              <p data-lang="ja">1945年歴史的空中写真測量データ（ICGC）、歴史地番図、1976年大都市マスタープラン（PGM）。</p>
+            </div>
+            <div class="gis-workflow-col">
+              <h4>
+                <span data-lang="es">⚙️ Análisis Espacial</span>
+                <span data-lang="ca">⚙️ Anàlisi Espacial</span>
+                <span data-lang="en">⚙️ Spatial Methods</span>
+                <span data-lang="ja">⚙️ 空間解析手法</span>
+              </h4>
+              <p data-lang="es">Ortorrectificación y georreferenciación en EPSG:25831, restitución fotogramétrica y digitalización vectorial de barreras infraestructurales (autopista C-31 y trazado ferroviario).</p>
+              <p data-lang="ca">Ortorrectificació i georreferenciació en EPSG:25831, restitució fotogramètrica i digitalització vectorial de barreres infraestructurals (autopista C-31 i traçat ferroviari).</p>
+              <p data-lang="en">Orthorectification and georeferencing in EPSG:25831, photogrammetric restitution, and vector extraction of heavy infrastructure barriers (C-31 viaduct and railway lines).</p>
+              <p data-lang="ja">EPSG:25831座標系での幾何補正・オルソ幾何補正、写真測量復元、高速道路C-31および鉄道線路等インフラ分断線のベクター抽出。</p>
+            </div>
+            <div class="gis-workflow-col">
+              <h4>
+                <span data-lang="es">💡 Diagnóstico Territorial</span>
+                <span data-lang="ca">💡 Diagnòstic Territorial</span>
+                <span data-lang="en">💡 Spatial Findings</span>
+                <span data-lang="ja">💡 診断結果と課題抽出</span>
+              </h4>
+              <p data-lang="es">Evidencia de la pérdida de continuidad agrícola y la segregación morfológica de los polígonos residenciales de Sant Roc y Artigues respecto al Besòs.</p>
+              <p data-lang="ca">Evidència de la pèrdua de continuïtat agrícola i la segregació morfològica dels polígons residencials de Sant Roc i Artigues respecte al Besòs.</p>
+              <p data-lang="en">Spatial evidence of delta agricultural loss and morphological isolation of modernist working-class estates (Sant Roc, Artigues) from the Besòs corridor.</p>
+              <p data-lang="ja">肥沃な農業デルタの急速な喪失と、サン・ロックおよびアルティゲス団地群の孤立・ベソス河川軸からの空間的分断を実証。</p>
+            </div>
           </div>
         </div>
       </section>
@@ -198,8 +327,17 @@
           </li>
         </ul>
 
+        <!-- Figure 3a: Demographic Growth Timeline -->
         <div class="slide-container">
-          <img src="../images/projects/tfm_upc/tfm_timeline_part1.png" alt="Análisis Histórico y Olas Migratorias" class="slide-image">
+          <div class="slide-viewer-box" title="Clic para ampliar en alta resolución / Click to zoom">
+            <img src="../images/projects/tfm_upc/tfm_timeline_part1.png" alt="Análisis Histórico y Olas Migratorias" class="slide-image">
+            <div class="slide-zoom-pill">
+              <span data-lang="es">🔍 Clic para ampliar en alta resolución</span>
+              <span data-lang="ca">🔍 Clic per ampliar en alta resolució</span>
+              <span data-lang="en">🔍 Click to zoom demographic chart</span>
+              <span data-lang="ja">🔍 クリックで高解像度拡大表示</span>
+            </div>
+          </div>
           <div class="slide-caption">
             <span data-lang="es"><strong>Figura 3a:</strong> Evolución demográfica y cronología de las grandes olas migratorias hacia Sant Adrià de Besòs y Badalona (1929 - Siglo XXI).</span>
             <span data-lang="ca"><strong>Figura 3a:</strong> Evolució demogràfica i cronologia de les grans onades migratòries cap a Sant Adrià de Besòs i Badalona (1929 - Segle XXI).</span>
@@ -208,8 +346,17 @@
           </div>
         </div>
 
+        <!-- Figure 3b: Cultural Diversity -->
         <div class="slide-container" style="margin-top: 2rem;">
-          <img src="../images/projects/tfm_upc/tfm_timeline_part2.png" alt="Diversidad Cultural y Población Extranjera en Sant Roc" class="slide-image">
+          <div class="slide-viewer-box" title="Clic para ampliar en alta resolución / Click to zoom">
+            <img src="../images/projects/tfm_upc/tfm_timeline_part2.png" alt="Diversidad Cultural y Población Extranjera en Sant Roc" class="slide-image">
+            <div class="slide-zoom-pill">
+              <span data-lang="es">🔍 Clic para ampliar en alta resolución</span>
+              <span data-lang="ca">🔍 Clic per ampliar en alta resolució</span>
+              <span data-lang="en">🔍 Click to zoom diversity chart</span>
+              <span data-lang="ja">🔍 クリックで高解像度拡大表示</span>
+            </div>
+          </div>
           <div class="slide-caption">
             <span data-lang="es"><strong>Figura 3b:</strong> Diversidad demográfica actual, procedencia de la población extranjera por continentes y consolidación del tejido social multicultural en Sant Roc.</span>
             <span data-lang="ca"><strong>Figura 3b:</strong> Diversitat demogràfica actual, procedència de la població estrangera per continents i consolidació del teixit social multicultural a Sant Roc.</span>
@@ -218,13 +365,77 @@
           </div>
         </div>
 
+        <!-- Figure 3c: Income Inequality Choropleth Map (Key GIS Map) -->
         <div class="slide-container" style="margin-top: 2rem;">
-          <img src="../images/projects/tfm_upc/tfm_slide_48.png" alt="Porcentaje de población con ingresos menores al 60% de la mediana (ATLAS INE 2023)" class="slide-image">
+          <div class="slide-viewer-box" title="Clic para ampliar en alta resolución / Click to zoom">
+            <img src="../images/projects/tfm_upc/tfm_slide_48.png" alt="Porcentaje de población con ingresos menores al 60% de la mediana (ATLAS INE 2023)" class="slide-image">
+            <div class="slide-zoom-pill">
+              <span data-lang="es">🔍 Clic para ampliar en alta resolución</span>
+              <span data-lang="ca">🔍 Clic per ampliar en alta resolució</span>
+              <span data-lang="en">🔍 Click to zoom GIS income map</span>
+              <span data-lang="ja">🔍 クリックで高解像度拡大表示</span>
+            </div>
+          </div>
           <div class="slide-caption">
-            <span data-lang="es"><strong>Figura 3c:</strong> Distribución espacial de la población con ingresos menores al 60% de la mediana nacional (Atlas INE 2023 / ETRS89 UTM Zone 31N).</span>
-            <span data-lang="ca"><strong>Figura 3c:</strong> Distribució espacial de la població amb ingressos inferiors al 60% de la mediana nacional (Atlas INE 2023 / ETRS89 UTM Zone 31N).</span>
-            <span data-lang="en"><strong>Figure 3c:</strong> Spatial distribution of residents earning below 60% of national median income (Atlas INE 2023 / ETRS89 UTM Zone 31N).</span>
-            <span data-lang="ja"><strong>図3c：</strong>所得中央値60%未満の人口比率分布マップ（相対的貧困リスクの空間的把握、ATLAS INE 2023 / ETRS89 UTM 31N）。</span>
+            <span data-lang="es"><strong>Figura 3c:</strong> Distribución espacial de la población con ingresos menores al 60% de la mediana nacional (Atlas INE 2023 / ETRS89 UTM Zone 31N, EPSG: 25831).</span>
+            <span data-lang="ca"><strong>Figura 3c:</strong> Distribució espacial de la població amb ingressos inferiors al 60% de la mediana nacional (Atlas INE 2023 / ETRS89 UTM Zone 31N, EPSG: 25831).</span>
+            <span data-lang="en"><strong>Figure 3c:</strong> Spatial distribution of residents earning below 60% of national median income (Atlas INE 2023 / ETRS89 UTM Zone 31N, EPSG: 25831).</span>
+            <span data-lang="ja"><strong>図3c：</strong>所得中央値60%未満の人口比率分布マップ（相対的貧困リスクの空間的把握、ATLAS INE 2023 / ETRS89 UTM 31N、EPSG: 25831）。</span>
+          </div>
+        </div>
+
+        <!-- GIS Workflow Card for Figure 3c -->
+        <div class="gis-workflow-card">
+          <div class="gis-workflow-header">
+            <div class="gis-workflow-title">
+              <span data-lang="es">📊 Análisis Espacial de Renta y Vulnerabilidad Multicriterio</span>
+              <span data-lang="ca">📊 Anàlisi Espacial de Renda i Vulnerabilitat Multicriteri</span>
+              <span data-lang="en">📊 Spatial Income Inequality & Multicriteria Vulnerability</span>
+              <span data-lang="ja">📊 所得格差の空間計量分析と多基準脆弱性モデリング</span>
+            </div>
+            <div class="gis-tags-group">
+              <span class="gis-tech-tag primary">ATLAS INE 2023</span>
+              <span class="gis-tech-tag">Jenks Natural Breaks</span>
+              <span class="gis-tech-tag accent">IDESCAT</span>
+            </div>
+          </div>
+          <div class="gis-workflow-grid">
+            <div class="gis-workflow-col">
+              <h4>
+                <span data-lang="es">📥 Fuentes de Datos</span>
+                <span data-lang="ca">📥 Fonts de Dades</span>
+                <span data-lang="en">📥 Data Sources</span>
+                <span data-lang="ja">📥 データソース</span>
+              </h4>
+              <p data-lang="es">ATLAS INE 2023 (Renta neta por persona/hogar), Secciones Censales IDESCAT, Datos de licencias de ascensor (CMH) e ICAEN.</p>
+              <p data-lang="ca">ATLAS INE 2023 (Renda neta per persona/llar), Seccions Censals IDESCAT, Dades de llicències d'ascensor (CMH) i ICAEN.</p>
+              <p data-lang="en">ATLAS INE 2023 (Household Net Income), IDESCAT Census Tracts, CMH Building Elevator Licences, and ICAEN Energy Performance Registry.</p>
+              <p data-lang="ja">スペイン国立統計局 ATLAS INE 2023（世帯所得）、IDESCAT国勢調査区、CMH住宅エレベーター普及データ、ICAEN建築物省エネ等級。</p>
+            </div>
+            <div class="gis-workflow-col">
+              <h4>
+                <span data-lang="es">⚙️ Análisis Espacial</span>
+                <span data-lang="ca">⚙️ Anàlisi Espacial</span>
+                <span data-lang="en">⚙️ Spatial Methods</span>
+                <span data-lang="ja">⚙️ 空間解析手法</span>
+              </h4>
+              <p data-lang="es">Clasificación por cortes naturales (Jenks Natural Breaks) en QGIS, cálculo de ratios de renta &lt;60% de la mediana, álgebra de mapas ráster/vectorial ponderada.</p>
+              <p data-lang="ca">Classificació per talls naturals (Jenks Natural Breaks) en QGIS, càlcul de ràtios de renda &lt;60% de la mediana, àlgebra de mapes ràster/vectorial ponderada.</p>
+              <p data-lang="en">Jenks Natural Breaks classification in QGIS, poverty risk indexing (&lt;60% national median), weighted raster/vector map algebra for multi-vulnerability scoring.</p>
+              <p data-lang="ja">QGISでのジェンクス自然分類法（Jenks Natural Breaks）、中央値60%未満の相対的貧困率の空間集計、加重オーバーレイ解析による複合脆弱性評価。</p>
+            </div>
+            <div class="gis-workflow-col">
+              <h4>
+                <span data-lang="es">💡 Aplicación Urbanística</span>
+                <span data-lang="ca">💡 Aplicació Urbanística</span>
+                <span data-lang="en">💡 Planning Impact</span>
+                <span data-lang="ja">💡 計画への反映</span>
+              </h4>
+              <p data-lang="es">Focalización prioritaria de las inversiones del Pla de Barris en los sectores más vulnerables (rehabilitación de envolventes y pasarelas de conexión).</p>
+              <p data-lang="ca">Focalització prioritària de les inversions del Pla de Barris en els sectors més vulnerables (rehabilitació d'envolupants i passarel·les de connexió).</p>
+              <p data-lang="en">Precision spatial targeting of Catalan Neighborhood Plan public funds toward extreme-vulnerability clusters (envelope retrofits and civic bridge connectors).</p>
+              <p data-lang="ja">複合脆弱性が最も深刻な街区への公的投資（住宅断熱改修・外付けエレベーター助成・歩行者連絡橋整備）の重点配分を根拠付け。</p>
+            </div>
           </div>
         </div>
       </section>
