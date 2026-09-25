@@ -421,6 +421,220 @@
     }
   ];
 
+  const campusNordBaselineSlidesData = [
+    {
+      page: 24,
+      file: '../images/projects/climate/baseline_slides/slide_24.png',
+      title_es: 'Bloque 3: Análisis en ENVI-met - Introducción al modelado 3D del estado actual (p.24)',
+      title_ca: 'Bloc 3: Anàlisi a ENVI-met - Introducció a la modelització 3D de l\'estat actual (p.24)',
+      title_en: 'Block 3: 3D Microclimate Modeling - Baseline Simulation Setup (p.24)',
+      title_ja: 'ブロック3：ENVI-met 3D微気候シミュレーション - 現況モデル設定概要（p.24）'
+    },
+    {
+      page: 25,
+      file: '../images/projects/climate/baseline_slides/slide_25.png',
+      title_es: 'Estado Actual: Temperatura del Aire Potencial a 1,4 m (22/04 y 13/08, p.25)',
+      title_ca: 'Estat Actual: Temperatura de l\'Aire Potencial a 1,4 m (22/04 i 13/08, p.25)',
+      title_en: 'Baseline: Potential Air Temperature at 1.4 m (April 22 & August 13, p.25)',
+      title_ja: '現況解析：歩行者高（1.4m）における気温分布（4月22日実測日 vs 8月13日夏季代表日、p.25）'
+    },
+    {
+      page: 26,
+      file: '../images/projects/climate/baseline_slides/slide_26.png',
+      title_es: 'Estado Actual: Temperatura del Aire - Cortes transversales día y verano (p.26)',
+      title_ca: 'Estat Actual: Temperatura de l\'Aire - Seccions transversals dia i estiu (p.26)',
+      title_en: 'Baseline: Air Temperature - Cross-Section Profiles (p.26)',
+      title_ja: '現況解析：気温断面プロファイル（実測日 vs 夏季ピーク時、p.26）'
+    },
+    {
+      page: 27,
+      file: '../images/projects/climate/baseline_slides/slide_27.png',
+      title_es: 'Estado Actual: Velocidad del Viento a 1,4 m - Comportamiento aerodinámico (p.27)',
+      title_ca: 'Estat Actual: Velocitat del Vent a 1,4 m - Comportament aerodinàmic (p.27)',
+      title_en: 'Baseline: Wind Speed at 1.4 m - Aerodynamic Flow & Stagnation Zones (p.27)',
+      title_ja: '現況解析：歩行者高（1.4m）風速分布と大気循環・滞留ゾーン（p.27）'
+    },
+    {
+      page: 28,
+      file: '../images/projects/climate/baseline_slides/slide_28.png',
+      title_es: 'Estado Actual: Flujo de Viento - Cortes transversales de ventilación (p.28)',
+      title_ca: 'Estat Actual: Flux de Vent - Seccions transversals de ventilació (p.28)',
+      title_en: 'Baseline: Wind Flow Vectors - Cross-Sectional Ventilation Dynamics (p.28)',
+      title_ja: '現況解析：風の流れベクトルと垂直断面風速プロファイル（p.28）'
+    },
+    {
+      page: 29,
+      file: '../images/projects/climate/baseline_slides/slide_29.png',
+      title_es: 'Estado Actual: Humedad Relativa a 1,4 m - Distribución espacial (p.29)',
+      title_ca: 'Estat Actual: Humitat Relativa a 1,4 m - Distribució espacial (p.29)',
+      title_en: 'Baseline: Relative Humidity at 1.4 m - Spatial Distribution (p.29)',
+      title_ja: '現況解析：歩行者高（1.4m）相対湿度分布（p.29）'
+    },
+    {
+      page: 30,
+      file: '../images/projects/climate/baseline_slides/slide_30.png',
+      title_es: 'Estado Actual: Humedad Relativa en Verano - Cortes transversales (p.30)',
+      title_ca: 'Estat Actual: Humitat Relativa a l\'Estiu - Seccions transversals (p.30)',
+      title_en: 'Baseline: Summer Relative Humidity - Cross-Sectional Dynamics (p.30)',
+      title_ja: '現況解析：夏季相対湿度の空間断面解析（p.30）'
+    },
+    {
+      page: 31,
+      file: '../images/projects/climate/baseline_slides/slide_31.png',
+      title_es: 'Estado Actual: Confort Térmico PET a 1,4 m - Estrés térmico extremo (p.31)',
+      title_ca: 'Estat Actual: Confort Tèrmic PET a 1,4 m - Estrès tèrmic extrem (p.31)',
+      title_en: 'Baseline: PET Thermal Comfort at 1.4 m - Severe Heat Stress Conditions (p.31)',
+      title_ja: '現況解析：体感温度（PET）分布 - 直射日光下の極端な温熱ストレス（p.31）'
+    },
+    {
+      page: 32,
+      file: '../images/projects/climate/baseline_slides/slide_32.png',
+      title_es: 'Estado Actual: Confort PET en Verano - Cortes transversales y carga térmica (p.32)',
+      title_ca: 'Estat Actual: Confort PET a l\'Estiu - Seccions transversals i càrrega tèrmica (p.32)',
+      title_en: 'Baseline: Summer PET Comfort - Cross-Sectional Heat Load (p.32)',
+      title_ja: '現況解析：夏季体感温度PETの空間断面プロファイル（p.32）'
+    }
+  ];
+
+  const campusNordSimulationSlidesData = [
+    {
+      page: 52,
+      file: '../images/projects/climate/simulation_slides/slide_52.png',
+      title_es: 'Bloque 5: Análisis Comparativo de la Propuesta en ENVI-met (p.52)',
+      title_ca: 'Bloc 5: Anàlisi Comparativa de la Proposta a ENVI-met (p.52)',
+      title_en: 'Block 5: Comparative Analysis of Adaptation Proposal in ENVI-met (p.52)',
+      title_ja: 'ブロック5：改修提案のENVI-metシミュレーション比較検証（p.52）'
+    },
+    {
+      page: 53,
+      file: '../images/projects/climate/simulation_slides/slide_53.png',
+      title_es: 'Propuesta (22/04): Temperatura del Aire a 1,4 m - Efecto de la sombra (p.53)',
+      title_ca: 'Proposta (22/04): Temperatura de l\'Aire a 1,4 m - Efecte de l\'ombra (p.53)',
+      title_en: 'Proposal (Apr 22): Air Temperature at 1.4 m - Shading Cooling Impact (p.53)',
+      title_ja: '提案シミュレーション（4月22日）：歩行者高気温 - 緑陰による気温低減効果（p.53）'
+    },
+    {
+      page: 54,
+      file: '../images/projects/climate/simulation_slides/slide_54.png',
+      title_es: 'Propuesta (22/04): Temperatura del Aire - Cortes transversales comparativos (p.54)',
+      title_ca: 'Proposta (22/04): Temperatura de l\'Aire - Seccions transversals comparatives (p.54)',
+      title_en: 'Proposal (Apr 22): Air Temperature - Comparative Cross-Sections (p.54)',
+      title_ja: '提案シミュレーション（4月22日）：気温断面の比較プロファイル（p.54）'
+    },
+    {
+      page: 55,
+      file: '../images/projects/climate/simulation_slides/slide_55.png',
+      title_es: 'Propuesta (22/04): Velocidad del Viento a 1,4 m (p.55)',
+      title_ca: 'Proposta (22/04): Velocitat del Vent a 1,4 m (p.55)',
+      title_en: 'Proposal (Apr 22): Wind Speed at 1.4 m - Pedestrian Comfort (p.55)',
+      title_ja: '提案シミュレーション（4月22日）：歩行者高風速分布（p.55）'
+    },
+    {
+      page: 56,
+      file: '../images/projects/climate/simulation_slides/slide_56.png',
+      title_es: 'Propuesta (22/04): Velocidad del Viento - Cortes transversales (E. Omega - Aulas) (p.56)',
+      title_ca: 'Proposta (22/04): Velocitat del Vent - Seccions transversals (E. Omega - Aules) (p.56)',
+      title_en: 'Proposal (Apr 22): Wind Speed - Cross-Sections (p.56)',
+      title_ja: '提案シミュレーション（4月22日）：風速断面プロファイル（オメガ棟〜講義棟間、p.56）'
+    },
+    {
+      page: 57,
+      file: '../images/projects/climate/simulation_slides/slide_57.png',
+      title_es: 'Propuesta (22/04): Humedad Relativa a 1,4 m - Aporte de vegetación y SUDS (p.57)',
+      title_ca: 'Proposta (22/04): Humitat Relativa a 1,4 m - Aportació de vegetació i SUDS (p.57)',
+      title_en: 'Proposal (Apr 22): Relative Humidity at 1.4 m - Vegetation & SUDS Moisture Contribution (p.57)',
+      title_ja: '提案シミュレーション（4月22日）：相対湿度 - 植栽・SUDSによる湿度改善（p.57）'
+    },
+    {
+      page: 58,
+      file: '../images/projects/climate/simulation_slides/slide_58.png',
+      title_es: 'Propuesta (22/04): Humedad Relativa - Cortes transversales comparativos (p.58)',
+      title_ca: 'Proposta (22/04): Humitat Relativa - Seccions transversals comparatives (p.58)',
+      title_en: 'Proposal (Apr 22): Relative Humidity - Comparative Cross-Sections (p.58)',
+      title_ja: '提案シミュレーション（4月22日）：相対湿度の空間断面比較（p.58）'
+    },
+    {
+      page: 59,
+      file: '../images/projects/climate/simulation_slides/slide_59.png',
+      title_es: 'Propuesta (22/04): Confort Térmico PET a 1,4 m - Reducción drástica del estrés térmico (p.59)',
+      title_ca: 'Proposta (22/04): Confort Tèrmic PET a 1,4 m - Reducció dràstica de l\'estrès tèrmic (p.59)',
+      title_en: 'Proposal (Apr 22): PET Thermal Comfort at 1.4 m - Dramatic Heat Stress Reduction (p.59)',
+      title_ja: '提案シミュレーション（4月22日）：体感温度PET - 温熱快適域への改善（p.59）'
+    },
+    {
+      page: 60,
+      file: '../images/projects/climate/simulation_slides/slide_60.png',
+      title_es: 'Propuesta (22/04): Confort PET - Cortes transversales (E. Omega y Plaza) (p.60)',
+      title_ca: 'Proposta (22/04): Confort PET - Seccions transversals (E. Omega i Plaça) (p.60)',
+      title_en: 'Proposal (Apr 22): PET Comfort - Cross-Section Profiles (p.60)',
+      title_ja: '提案シミュレーション（4月22日）：体感温度PETの空間断面プロファイル（p.60）'
+    },
+    {
+      page: 61,
+      file: '../images/projects/climate/simulation_slides/slide_61.png',
+      title_es: 'Propuesta (Verano 13/08): Temperatura del Aire a 1,4 m en pico de calor (p.61)',
+      title_ca: 'Proposta (Estiu 13/08): Temperatura de l\'Aire a 1,4 m en pic de calor (p.61)',
+      title_en: 'Proposal (Summer Aug 13): Air Temperature at 1.4 m During Peak Heat (p.61)',
+      title_ja: '提案シミュレーション（夏季8月13日）：ピーク時気温分布（p.61）'
+    },
+    {
+      page: 62,
+      file: '../images/projects/climate/simulation_slides/slide_62.png',
+      title_es: 'Propuesta (Verano 13/08): Temperatura del Aire - Cortes transversales (p.62)',
+      title_ca: 'Proposta (Estiu 13/08): Temperatura de l\'Aire - Seccions transversals (p.62)',
+      title_en: 'Proposal (Summer Aug 13): Air Temperature - Cross-Section Profiles (p.62)',
+      title_ja: '提案シミュレーション（夏季8月13日）：気温断面プロファイル（p.62）'
+    },
+    {
+      page: 63,
+      file: '../images/projects/climate/simulation_slides/slide_63.png',
+      title_es: 'Propuesta (Verano 13/08): Velocidad del Viento a 1,4 m (p.63)',
+      title_ca: 'Proposta (Estiu 13/08): Velocitat del Vent a 1,4 m (p.63)',
+      title_en: 'Proposal (Summer Aug 13): Wind Speed at 1.4 m (p.63)',
+      title_ja: '提案シミュレーション（夏季8月13日）：歩行者高風速分布（p.63）'
+    },
+    {
+      page: 64,
+      file: '../images/projects/climate/simulation_slides/slide_64.png',
+      title_es: 'Propuesta (Verano 13/08): Flujo de Viento - Cortes transversales (p.64)',
+      title_ca: 'Proposta (Estiu 13/08): Flux de Vent - Seccions transversals (p.64)',
+      title_en: 'Proposal (Summer Aug 13): Wind Flow - Cross-Section Profiles (p.64)',
+      title_ja: '提案シミュレーション（夏季8月13日）：風速断面プロファイル（p.64）'
+    },
+    {
+      page: 65,
+      file: '../images/projects/climate/simulation_slides/slide_65.png',
+      title_es: 'Propuesta (Verano 13/08): Humedad Relativa a 1,4 m (p.65)',
+      title_ca: 'Proposta (Estiu 13/08): Humitat Relativa a 1,4 m (p.65)',
+      title_en: 'Proposal (Summer Aug 13): Relative Humidity at 1.4 m (p.65)',
+      title_ja: '提案シミュレーション（夏季8月13日）：歩行者高相対湿度（p.65）'
+    },
+    {
+      page: 66,
+      file: '../images/projects/climate/simulation_slides/slide_66.png',
+      title_es: 'Propuesta (Verano 13/08): Humedad Relativa - Comparativa Estado Actual vs Propuesta (p.66)',
+      title_ca: 'Proposta (Estiu 13/08): Humitat Relativa - Comparativa Estat Actual vs Proposta (p.66)',
+      title_en: 'Proposal (Summer Aug 13): Relative Humidity - Baseline vs Proposal Cross-Sections (p.66)',
+      title_ja: '提案シミュレーション（夏季8月13日）：相対湿度 現状 vs 提案 断面比較（p.66）'
+    },
+    {
+      page: 67,
+      file: '../images/projects/climate/simulation_slides/slide_67.png',
+      title_es: 'Propuesta (Verano 13/08): Confort Térmico PET a 1,4 m - Comparativa de reducción de estrés térmico (p.67)',
+      title_ca: 'Proposta (Estiu 13/08): Confort Tèrmic PET a 1,4 m - Comparativa de reducció d\'estrès térmic (p.67)',
+      title_en: 'Proposal (Summer Aug 13): PET Comfort at 1.4 m - Direct Baseline vs Proposal Comparison (p.67)',
+      title_ja: '提案シミュレーション（夏季8月13日）：体感温度PET 現状 vs 提案 比較検証（p.67）'
+    },
+    {
+      page: 68,
+      file: '../images/projects/climate/simulation_slides/slide_68.png',
+      title_es: 'Propuesta (Verano 13/08): Confort PET - Cortes transversales comparativos Actual vs Propuesta (p.68)',
+      title_ca: 'Proposta (Estiu 13/08): Confort PET - Seccions transversals comparatives Actual vs Proposta (p.68)',
+      title_en: 'Proposal (Summer Aug 13): PET Comfort - Cross-Sections Baseline vs Proposal (p.68)',
+      title_ja: '提案シミュレーション（夏季8月13日）：体感温度PET 空間断面比較 現状 vs 提案（p.68）'
+    }
+  ];
+
   // Universal Lightbox Modal Helper
   let modal = null;
   let modalImg = null;
@@ -640,22 +854,34 @@
   function initAllGalleries() {
     setupUniversalModal();
 
-    // 1. Analysis Gallery (p.24-48)
-    const analysisGallery = document.getElementById('analysis-slide-gallery') || document.querySelector('.analysis-slide-gallery');
+    // 1. TFM Analysis Gallery (p.24-48)
+    const analysisGallery = document.getElementById('analysis-slide-gallery');
     if (analysisGallery) {
       initSingleGallery(analysisGallery, analysisSlidesData, 'Figura 3');
     }
 
-    // 2. Proposal Gallery (p.51-70)
-    const proposalGallery = document.getElementById('proposal-slide-gallery') || document.querySelector('.proposal-slide-gallery') || document.querySelector('.project-slide-gallery:not(#analysis-slide-gallery):not(#climate-fieldwork-gallery)');
-    if (proposalGallery && proposalGallery.id !== 'climate-fieldwork-gallery') {
+    // 2. TFM Proposal Gallery (p.51-70)
+    const proposalGallery = document.getElementById('proposal-slide-gallery');
+    if (proposalGallery) {
       initSingleGallery(proposalGallery, proposalSlidesData, 'Figura 4');
     }
 
     // 3. Campus Nord Fieldwork Gallery (p.10-15)
-    const climateGallery = document.getElementById('climate-fieldwork-gallery') || document.querySelector('.climate-fieldwork-gallery');
-    if (climateGallery) {
-      initSingleGallery(climateGallery, campusNordFieldworkSlidesData, 'Figura 1b');
+    const climateFieldworkGallery = document.getElementById('climate-fieldwork-gallery');
+    if (climateFieldworkGallery) {
+      initSingleGallery(climateFieldworkGallery, campusNordFieldworkSlidesData, 'Figura 1b');
+    }
+
+    // 4. Campus Nord Baseline ENVI-met Gallery (p.24-32)
+    const climateBaselineGallery = document.getElementById('climate-baseline-gallery');
+    if (climateBaselineGallery) {
+      initSingleGallery(climateBaselineGallery, campusNordBaselineSlidesData, 'Figura 3b');
+    }
+
+    // 5. Campus Nord Simulation Proposal Gallery (p.52-68)
+    const climateSimulationGallery = document.getElementById('climate-simulation-gallery');
+    if (climateSimulationGallery) {
+      initSingleGallery(climateSimulationGallery, campusNordSimulationSlidesData, 'Figura 6b');
     }
   }
 
