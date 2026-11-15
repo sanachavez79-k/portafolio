@@ -750,19 +750,25 @@
       });
     });
 
-    function updateSlide(index) {
+    function updateSlide(index, isInitial = false) {
       if (index < 0) index = slidesData.length - 1;
       if (index >= slidesData.length) index = 0;
       currentIndex = index;
       const slide = slidesData[currentIndex];
 
       if (mainImage) {
-        mainImage.style.opacity = '0.3';
-        setTimeout(() => {
+        if (isInitial) {
           mainImage.src = slide.file;
           mainImage.alt = slide.title_en;
           mainImage.style.opacity = '1';
-        }, 120);
+        } else {
+          mainImage.style.opacity = '0.3';
+          setTimeout(() => {
+            mainImage.src = slide.file;
+            mainImage.alt = slide.title_en;
+            mainImage.style.opacity = '1';
+          }, 120);
+        }
       }
 
       // Update captions
@@ -780,13 +786,20 @@
         counterText.textContent = `${currentIndex + 1} / ${slidesData.length} (p.${slide.page})`;
       }
 
-      // Update active thumbnail
+      // Update active thumbnail without causing the entire page window to scroll
       if (thumbnailsContainer) {
         const allThumbs = thumbnailsContainer.querySelectorAll('.gallery-thumb-btn');
         allThumbs.forEach((tb, i) => {
           if (i === currentIndex) {
             tb.classList.add('active');
-            tb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            if (thumbnailsWrapper) {
+              const targetLeft = tb.offsetLeft - (thumbnailsWrapper.clientWidth / 2) + (tb.offsetWidth / 2);
+              if (isInitial) {
+                thumbnailsWrapper.scrollLeft = Math.max(0, targetLeft);
+              } else {
+                thumbnailsWrapper.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+              }
+            }
           } else {
             tb.classList.remove('active');
           }
@@ -795,7 +808,7 @@
     }
 
     function goToSlide(index) {
-      updateSlide(index);
+      updateSlide(index, false);
     }
 
     if (prevBtn) {
@@ -848,7 +861,7 @@
     }
 
     // Initial state
-    updateSlide(0);
+    updateSlide(0, true);
   }
 
   function initAllGalleries() {
@@ -882,6 +895,11 @@
     const climateSimulationGallery = document.getElementById('climate-simulation-gallery');
     if (climateSimulationGallery) {
       initSingleGallery(climateSimulationGallery, campusNordSimulationSlidesData, 'Figura 6b');
+    }
+
+    // Ensure page stays at the top on initial load unless an anchor hash is requested
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
     }
   }
 
