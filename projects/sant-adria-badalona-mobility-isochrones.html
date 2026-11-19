@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sana Kamiya | Modelització d'Isòcrones i Accessibilitat Peatonal (Sant Adrià - Badalona)</title>
+  <meta name="description" content="Modelització espacial d'accessibilitat peatonal per isòcrones en l'Àrea d'Atenció Especial (Sant Adrià de Besòs - Badalona) amb Python i QGIS. #30DayMapChallenge 2026.">
+  <link rel="canonical" href="https://sanachavez79-k.github.io/portafolio/projects/sant-adria-badalona-mobility-isochrones.html">
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sanachavez79-k.github.io/portafolio/projects/sant-adria-badalona-mobility-isochrones.html">
+  <meta property="og:title" content="Modelització d'Isòcrones i Accessibilitat Peatonal (Sant Adrià - Badalona) | Sana Kamiya">
+  <meta property="og:description" content="Anàlisi de mobilitat activa, barreres d'infraestructura (C-31, tren) i cobertura universal amb autobús urbà (TFM UPC). #30DayMapChallenge 2026.">
+  <meta property="og:image" content="https://sanachavez79-k.github.io/portafolio/images/projects/mobility/isocronas_sant_adria_badalona_web.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Modelització d'Isòcrones i Accessibilitat Peatonal | Sana Kamiya">
+  <meta name="twitter:description" content="Modelització d'accessibilitat per a col·lectius vulnerables i cobertura de transport públic amb QGIS i Python.">
+  <meta name="twitter:image" content="https://sanachavez79-k.github.io/portafolio/images/projects/mobility/isocronas_sant_adria_badalona_web.png">
+
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../js/lang.js" defer></script>
+</head>
+<body class="lang-es">
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="../index.html">Sana Kamiya</a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html">
+              <span data-lang="es">Inicio</span>
+              <span data-lang="ca">Inici</span>
+              <span data-lang="en">Home</span>
+              <span data-lang="ja">ホーム</span>
+            </a>
+          </li>
+          <li>
+            <a href="../about.html">
+              <span data-lang="es">Sobre Mí</span>
+              <span data-lang="ca">Sobre Mí</span>
+              <span data-lang="en">About Me</span>
+              <span data-lang="ja">自己紹介</span>
+            </a>
+          </li>
+          <li>
+            <a href="../resume.html">
+              <span data-lang="es">Currículum</span>
+              <span data-lang="ca">Currículum</span>
+              <span data-lang="en">Resume</span>
+              <span data-lang="ja">履歴書</span>
+            </a>
+          </li>
+          <li>
+            <a href="../portfolio.html" class="active">
+              <span data-lang="es">Portafolio</span>
+              <span data-lang="ca">Portafoli</span>
+              <span data-lang="en">Portfolio</span>
+              <span data-lang="ja">ポートフォリオ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang-select="es">ES</button>
+        <button class="lang-btn" data-lang-select="ca">CA</button>
+        <button class="lang-btn" data-lang-select="en">EN</button>
+        <button class="lang-btn" data-lang-select="ja">JA</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Header Banner -->
+  <section class="project-detail-header">
+    <h1 class="font-serif">
+      <span data-lang="es">Modelado Espacial de Isócronas y Accesibilidad Peatonal al Transporte Público</span>
+      <span data-lang="ca">Modelització Espacial d'Isòcrones i Accessibilitat Peatonal al Transport Públic</span>
+      <span data-lang="en">Spatial Isochrone Modeling & Pedestrian Accessibility to Public Transit</span>
+      <span data-lang="ja">歩行等時線（イソクロン）空間モデリングと公共交通アクセシビリティ解析</span>
+    </h1>
+    
+    <div class="project-meta-badges">
+      <span class="badge">QGIS & PyQGIS Engine</span>
+      <span class="badge">Python (Shapely & GeoPandas)</span>
+      <span class="badge">Movilidad Activa & Ciudad 15 Min</span>
+      <span class="badge">TFM Màster Urbanisme UPC</span>
+      <span class="badge">#30DayMapChallenge 2026 (Day 3)</span>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container project-layout">
+    
+    <article class="project-body">
+      
+      <!-- Project Context -->
+      <section>
+        <h2>
+          <span data-lang="es">Contexto del Proyecto y Pregunta de Investigación</span>
+          <span data-lang="ca">Context del Projecte i Pregunta d'Investigació</span>
+          <span data-lang="en">Project Context & Research Framework</span>
+          <span data-lang="ja">研究背景と課題意識</span>
+        </h2>
+        
+        <p data-lang="es">
+          Este estudio forma parte del análisis de movilidad para el <strong>Plan de Mejora Integral (PMII)</strong> en el marco del <em>Pla de Barris</em>, centrado en el <strong>Área de Atención Especial (AAE)</strong> entre <strong>Sant Adrià de Besòs y Badalona</strong> (desarrollado en el Máster de Urbanismo de la UPC). Partiendo del paradigma contemporáneo de la <em>"Ciudad de los 15 minutos"</em>, la investigación evalúa cómo las grandes barreras físicas metropolitanas —la autopista C-31 elevada, la vía ferroviaria de Cercanías y el río Besòs— distorsionan la accesibilidad peatonal real entre diferentes colectivos demográficos.
+        </p>
+        <p data-lang="ca">
+          Aquest estudi forma part de l'anàlisi de mobilitat per al <strong>Pla de Millora Integral (PMII)</strong> en el marc del <em>Pla de Barris</em>, centrat en l'<strong>Àrea d'Atenció Especial (AAE)</strong> entre <strong>Sant Adrià de Besòs i Badalona</strong> (desenvolupat en el Màster d'Urbanisme de la UPC). Partint del paradigma contemporani de la <em>"Ciutat dels 15 minuts"</em>, la recerca avalua com les grans barreres físiques metropolitanes —l'autopista C-31 elevada, la traça ferroviària de Rodalies i el riu Besòs— distorsionen l'accessibilitat peatonal real entre diferents col·lectius demogràfics.
+        </p>
+        <p data-lang="en">
+          This project stems from the sustainable mobility framework for the <strong>Comprehensive Neighborhood Improvement Plan (PMII / Pla de Barris)</strong> in the <strong>Special Attention Area (AAE)</strong> between <strong>Sant Adrià de Besòs and Badalona</strong> (developed within the Master in Urbanism at UPC ETSAB). Rooted in the <em>"15-Minute City"</em> paradigm, this research examines how major metropolitan severance barriers —the elevated C-31 highway, the suburban rail corridor, and the Besòs river— warp real-world pedestrian accessibility across vulnerable versus standard population groups.
+        </p>
+        <p data-lang="ja">
+          本研究は、バルセロナ工科大学（UPC ETSAB）都市計画修士課程において、<strong>サント・アドリア・デ・ベソス市とバダロナ市</strong>の境界に跨る<strong>重点特別地区（AAE）</strong>を対象に策定した「地区総合改善計画（PMII / Pla de Barris）」の交通・モビリティ解析を発展させたものです。現代都市計画の重要指針である<strong>「15分都市（La ciutat dels 15 minuts）」</strong>の理念を軸に、高架高速道路C-31、国鉄セルカニアス線路、ベソス川という3大インフラバリアが、移動制約者（高齢者・子ども）と健常成人の歩行アクセシビリティにどのような格差と空間的分断をもたらしているかを定量的に検証しました。
+        </p>
+      </section>
+
+      <!-- Cartographic Plate -->
+      <section>
+        <h2>
+          <span data-lang="es">Lámina Cartográfica Oficial (ETRS89 / UTM 31N)</span>
+          <span data-lang="ca">Làmina Cartogràfica Oficial (ETRS89 / UTM 31N)</span>
+          <span data-lang="en">Official Cartographic Plate (ETRS89 / UTM 31N)</span>
+          <span data-lang="ja">完成版図面レイアウト（ETRS89 / UTM Zone 31N）</span>
+        </h2>
+
+        <div class="slide-container">
+          <a href="../images/projects/mobility/isocronas_sant_adria_badalona.png" target="_blank" title="Veure en alta resolució">
+            <img src="../images/projects/mobility/isocronas_sant_adria_badalona_web.png" alt="Anàlisi d'Isòcrones i Accessibilitat Peatonal - Sant Adrià de Besòs i Badalona" class="slide-image">
+          </a>
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 1:</strong> Composición de impresión profesional elaborada en QGIS a escala 1:8.000 con formato editorial UPC (300 DPI). Muestra la cobertura en 5 min (azul), las zonas aisladas &gt;10 min solo con estaciones (rosa) y los 127 equipamientos clave (MUC). Clic para ampliar a máxima resolución.</span>
+            <span data-lang="ca"><strong>Figura 1:</strong> Composició d'impressió professional elaborada en QGIS a escala 1:8.000 amb format editorial UPC (300 DPI). Mostra la cobertura en 5 min (blau), les zones aïllades &gt;10 min només amb estacions (rosa) i els 127 equipaments clau (MUC). Clic per ampliar a màxima resolució.</span>
+            <span data-lang="en"><strong>Figure 1:</strong> High-resolution cartographic board designed in QGIS at 1:8,000 scale adhering to UPC master thesis editorial standards (300 DPI). Contrasts 5-min adult reach (blue) with &gt;10 min elderly transit isolation pockets (pink) and 127 land use amenities (MUC). Click to open full resolution.</span>
+            <span data-lang="ja"><strong>図1：</strong>QGISにて1:8,000縮尺で作成したA4横ポートフォリオ図面（300 DPI）。成人徒歩5分圏（青色）、鉄道駅のみを起点とした高齢者・子どもの10分以上孤立エリア（ピンク色）、およびMUC土地利用・施設レイヤーを表示。画像クリックでフル解像度表示。</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mathematical Formulation -->
+      <section>
+        <h2>
+          <span data-lang="es">Formulación Matemática y Parámetros de Red</span>
+          <span data-lang="ca">Formulació Matemàtica i Paràmetres de Xarxa</span>
+          <span data-lang="en">Mathematical Formulation & Network Parameters</span>
+          <span data-lang="ja">計算式とネットワークモデルのパラメータ</span>
+        </h2>
+
+        <p data-lang="es">
+          La distancia de servicio real a lo largo de la red de grafos peatonales se modeló considerando la velocidad diferencial de desplazamiento y un factor de sinuosidad urbana (&Omega; &approx; 1,25 - 1,30) respecto a la distancia euclidiana directa:
+        </p>
+        <p data-lang="ca">
+          La distància de servei real al llarg de la xarxa de grafs peatonals es va modelitzar considerant la velocitat diferencial de desplaçament i un factor de sinuositat urbana (&Omega; &approx; 1,25 - 1,30) respecte a la distància euclidiana directa:
+        </p>
+        <p data-lang="en">
+          Actual service catchment along the pedestrian topological graph was computed accounting for group-specific velocities and urban grid circuity factor (&Omega; &approx; 1.25 - 1.30):
+        </p>
+        <p data-lang="ja">
+          街路ネットワーク上の実質到達可能距離は、対象者の歩行速度と、都市グリッドによる迂回率（サーキュイティ係数 &Omega; &approx; 1.25〜1.30）を考慮して算出しました：
+        </p>
+
+        <div style="background: #F4F6F5; border-left: 4px solid #2C4A3E; padding: 16px 20px; border-radius: 4px; margin: 20px 0; font-family: monospace; font-size: 0.95rem; line-height: 1.6;">
+          <strong>d(t) = v &times; t</strong><br>
+          &bull; <strong>Col·lectius vulnerables (Gent gran / infants):</strong> v = 3,0 km/h (0,833 m/s)<br>
+          &nbsp;&nbsp;&rarr; d(10 min) &approx; 500 m &nbsp;|&nbsp; d(5 min) &approx; 250 m<br>
+          &bull; <strong>Adult estàndard de referència:</strong> v = 4,5 ~ 5,0 km/h (1,25 ~ 1,39 m/s)<br>
+          &nbsp;&nbsp;&rarr; d(15 min) &approx; 1.125 ~ 1.250 m &nbsp;|&nbsp; d(5 min) &approx; 375 ~ 400 m
+        </div>
+
+        <p data-lang="es">
+          La velocidad de 3,0 km/h adoptada para personas mayores e infancia constituye el <em>criterio de accesibilidad universal más restrictivo</em>, garantizando que el diseño del espacio público responda a los colectivos con menor radio de acción motriz.
+        </p>
+        <p data-lang="ca">
+          La velocitat de 3,0 km/h adoptada per a persones grans i infància constitueix el <em>criteri d'accessibilitat universal més restrictiu</em>, garantint que el disseny de l'espai públic respongui als col·lectius amb menor radi d'acció motriu.
+        </p>
+        <p data-lang="en">
+          The 3.0 km/h threshold applied to elderly and child demographics establishes the <em>most stringent universal accessibility baseline</em>, ensuring that public realm diagnostics capture the mobility boundaries of the most constrained urban actors.
+        </p>
+        <p data-lang="ja">
+          高齢者・子どもに適用した時速3.0kmという基準は、都市における<strong>ユニバーサル・アクセシビリティの最も厳格な評価基準</strong>です。この基準を用いることで、健常な大人には見落とされがちな「日常移動の限界線」を浮き彫りにすることができます。
+        </p>
+      </section>
+
+      <!-- Challenges Encountered & Solutions -->
+      <section>
+        <h2>
+          <span data-lang="es">Desafíos Técnicos Encontrados y Soluciones Implementadas</span>
+          <span data-lang="ca">Reptes Tècnics Trobats i Solucions Implementades</span>
+          <span data-lang="en">Technical Challenges Encountered & Spatial Solutions</span>
+          <span data-lang="ja">直面した技術的課題と解決プロセス</span>
+        </h2>
+
+        <div style="margin-top: 15px;">
+          <h3 style="color: #2C4A3E; margin-bottom: 8px;">
+            <span data-lang="es">1. Sobresaturación de Iconos en el Diseñador de Impresión (QGIS Symbology)</span>
+            <span data-lang="ca">1. Sobresaturació d'Icones al Dissenyador d'Impressió (QGIS Symbology)</span>
+            <span data-lang="en">1. Cartographic Symbol Bloat in Print Layout Engine</span>
+            <span data-lang="ja">1. 印刷レイアウトにおけるシンボルの肥大化・重複問題</span>
+          </h3>
+          <p data-lang="es">
+            <strong>Problema:</strong> Al configurar la lámina de impresión a escala 1:8.000, las 431 paradas de autobús urbano se representaban con un símbolo fijo de 5,1 mm y un icono SVG de 10,2 pt en unidades de papel (MM). Al alejar el zoom, los cientos de círculos se solapaban formando una masa roja gigante e ilegible que ocultaba la trama urbana.<br>
+            <strong>Solución:</strong> Mediante script de edición del XML del proyecto QGIS (.qgz), se reestructuró la simbología como micro-puntos de 1,3 mm de diámetro con contorno blanco ultrafino (0,15 mm), 82% de opacidad y glyph SVG centrado a 0,8 mm. Esto permitió mantener una legibilidad exquisita tanto en pantalla como en exportaciones vectoriales PDF a 300 DPI.
+          </p>
+          <p data-lang="ca">
+            <strong>Problema:</strong> En configurar la làmina d'impressió a escala 1:8.000, les 431 parades d'autobús urbà es representaven amb un símbol fix de 5,1 mm i una icona SVG de 10,2 pt en unitats de paper (MM). En allunyar el zoom, els centenars de cercles se solapaven formant una massa vermella gegant i il·legible que tapava tota la trama urbana.<br>
+            <strong>Solució:</strong> Mitjançant un script d'edició del XML del projecte QGIS (.qgz), es va reestructurar la simbologia com a micro-punts d'1,3 mm de diàmetre amb perfil blanc ultrafí (0,15 mm), 82% d'opacitat i glyph SVG centrat a 0,8 mm. Això va permetre mantenir una llegibilitat exquisida tant en pantalla com en exportacions vectorials PDF a 300 DPI.
+          </p>
+          <p data-lang="en">
+            <strong>Issue:</strong> When configuring the print layout at 1:8,000 scale, the 431 urban bus stops were rendered with fixed paper units of 5.1 mm diameter circles and 10.2 pt SVG markers. Zoomed out to an A4 layout, hundreds of bus stops coalesced into massive red blobs, completely occluding the road network.<br>
+            <strong>Solution:</strong> Edited the internal QGIS project XML (.qgz) via Python to refactor the symbology into micro-markers of 1.3 mm diameter with 0.15 mm crisp white halos, 82% opacity, and 0.8 mm centered SVG glyphs. This achieved refined, publication-grade clarity in both vector PDF and 300 DPI raster exports.
+          </p>
+          <p data-lang="ja">
+            <strong>課題：</strong>印刷レイアウト（1:8,000縮尺）で広域を表示した際、431か所のバス停シンボルが用紙固定単位（直径5.1mm・SVG 10.2pt）で設定されていたため、ズームアウトすると巨大な赤い丸が重なり合って街路全体を覆い隠してしまう問題が発生しました。<br>
+            <strong>解決法：</strong>Pythonを用いてQGISプロジェクトファイル（.qgz）のXMLを直接編集し、シンボルを「直径1.3mm、白縁0.15mm、透過度82%のマイクロマーカー ＋ 中央0.8mm SVGバスアイコン」へと最適化。地図の視認性とベクター印刷品質を両立させました。
+          </p>
+        </div>
+
+        <div style="margin-top: 25px;">
+          <h3 style="color: #2C4A3E; margin-bottom: 8px;">
+            <span data-lang="es">2. Artefactos Curvos y Alineación Topológica con Manzanas (Python Shapely)</span>
+            <span data-lang="ca">2. Artefactes Curbs i Alineació Topològica amb Mançanes (Python Shapely)</span>
+            <span data-lang="en">2. Geometric Scalloping & Street-Manzana Topological Alignment</span>
+            <span data-lang="ja">2. バッファの丸い食い跡の解消と街区形状への幾何学整合</span>
+          </h3>
+          <p data-lang="es">
+            <strong>Problema:</strong> Las uniones geométricas simples generaban contornos circulares en forma de mordedura ("arcos de festón") y falsos vacíos en patios interiores de manzanas residenciales que no reflejaban la realidad del espacio público peatonal.<br>
+            <strong>Solución:</strong> Se implementó un algoritmo en Python con Shapely que ejecutó un cierre morfológico (buffer positivo/negativo compensado), eliminación de anillos interiores (islands & holes) y simplificación topológica Douglas-Peucker (tolerancia 12,0 m), produciendo geometrías angulares ortogonales fieles a las alineaciones viarias.
+          </p>
+          <p data-lang="ca">
+            <strong>Problema:</strong> Les unions geomètriques simples generaven contorns circulars en forma de mossegada ("arcs de festó") i falsos buits en patis interiors de mançanes residencials que no reflectien la realitat de l'espai públic peatonal.<br>
+            <strong>Solució:</strong> Es va implementar un algorisme en Python amb Shapely que va executar un tancament morfològic (buffer positiu/negatiu compensat), eliminació d'anells interiors (islands & holes) i simplificació topològica Douglas-Peucker (tolerància 12,0 m), produint geometries angulars ortogonals fidels a les alineacions viàries.
+          </p>
+          <p data-lang="en">
+            <strong>Issue:</strong> Raw buffer unions generated unnatural scalloped arcs and spurious void pockets inside private residential courtyards that misrepresented pedestrian public realm behavior.<br>
+            <strong>Solution:</strong> Deployed a Python Shapely script applying morphological closing, interior ring dissolution (hole-filling), and Douglas-Peucker topological simplification (12.0 m tolerance). This transformed rounded artifacts into crisp, street-aligned angular contours that match actual block fronts.
+          </p>
+          <p data-lang="ja">
+            <strong>課題：</strong>単純な距離バッファの結合では、円弧が重なり合った「丸い食い跡」や、住宅街区の中庭に生じる不自然な穴が生じ、実際の街路歩行空間と乖離していました。<br>
+            <strong>解決法：</strong>Python（Shapely）によるモルフォロジー閉口演算、街区内部ホール（閉鎖中庭）の自動穴埋め、およびダグラス・ポイカー法（許容値12.0m）による幾何学単純化を実施。街路の線形に沿ったシャープで角張ったポリゴンへと整形しました。
+          </p>
+        </div>
+
+        <div style="margin-top: 25px;">
+          <h3 style="color: #2C4A3E; margin-bottom: 8px;">
+            <span data-lang="es">3. Revelación Diagnóstica: Red Ferroviaria vs. Cobertura Universal en Autobús</span>
+            <span data-lang="ca">3. Revelació Diagnòstica: Xarxa Ferroviària vs. Cobertura Universal amb Autobús</span>
+            <span data-lang="en">3. Key Diagnostic Finding: Rail Severance vs. Universal Bus Coverage</span>
+            <span data-lang="ja">3. 分析結果の発見：鉄道単体の空間分断と、路線バス網による100%全域カバー</span>
+          </h3>
+          <p data-lang="es">
+            <strong>Diagnóstico:</strong> Al analizar únicamente las estaciones ferroviarias (Metro, Tramvia y Cercanías Renfe), se evidenciaron profundas bolsas de aislamiento (&gt;10 min a pie) para personas mayores en el sector industrial de Badalona Sud y el margen de la autopista C-31 (capa 02c). Sin embargo, <strong>al integrar las 431 paradas de la red capilar de autobuses urbanos (AMB/TMB), el 100,0% del ámbito de estudio queda cubierto en menos de 10 minutos para cualquier colectivo demográfico (capa 05a, 0,0 m² de vacío residual)</strong>. Esto demuestra empíricamente que el autobús actúa como el ecualizador social decisivo de la "última milla".
+          </p>
+          <p data-lang="ca">
+            <strong>Diagnòstic:</strong> En analitzar únicament les estacions ferroviàries (Metro, Tramvia i Rodalies Renfe), es van evidenciar profundes bosses d'aïllament (&gt;10 min a peu) per a la gent gran al sector industrial de Badalona Sud i el marge de l'autopista C-31 (capa 02c). Tanmateix, <strong>en integrar les 431 parades de la xarxa capil·lar d'autobusos urbans (AMB/TMB), el 100,0% de l'àmbit d'estudi queda cobert en menys de 10 minuts per a qualsevol col·lectiu demogràfic (capa 05a, 0,0 m² de buit residual)</strong>. Això demostra empíricament que l'autobús actua com l'equalitzador social decisiu de la "darrera milla".
+          </p>
+          <p data-lang="en">
+            <strong>Diagnostic Takeaway:</strong> Isolating rail stations (Metro, Tram, Renfe) revealed acute accessibility voids (&gt;10 min walk) for vulnerable elderly residents in the industrial wholesale district of Badalona Sud and along the C-31 corridor (layer 02c). However, <strong>integrating the capillary network of 431 urban bus stops (AMB/TMB) proved that 100.0% of the study area is fully covered within 10 minutes for all groups (layer 05a, 0.0 m² void)</strong>. This empirically validates that the metropolitan bus system functions as the indispensable social equalizer for last-mile territorial cohesion.
+          </p>
+          <p data-lang="ja">
+            <strong>分析の核心：</strong>メトロ、トラム、Renfeなど「鉄道駅のみ」を起点とすると、バダロナ南部の問屋街や高速道路沿道において、高齢者・子どもが10分以上歩かなければ駅にたどり着けない深刻な孤立ゾーン（ピンク色 / 02c）が浮き彫りになりました。しかし、<strong>地域に高密度に張り巡らされた431か所の路線バス網（AMB/TMB）を統合して解析した結果、スタディエリア全域の100.0%が徒歩10分以内で完全にカバーされていること（05a、未カバー面積0.0㎡）が実証されました</strong>。これにより、路線バスが鉄道の結節点と市民生活をつなぐ決定的な「ラストワンマイルの安全網」として機能していることが空間データによって証明されました。
+          </p>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- Sidebar Technical Spec Sheet -->
+    <aside class="project-sidebar">
+      <div class="project-sidebar-card">
+        <h3>
+          <span data-lang="es">Ficha Técnica</span>
+          <span data-lang="ca">Fitxa Tècnica</span>
+          <span data-lang="en">Technical Spec Sheet</span>
+          <span data-lang="ja">テクニカルシート</span>
+        </h3>
+        
+        <ul class="sidebar-bullets">
+          <li>
+            <strong>Àmbit d'Estudi:</strong> Àrea d'Atenció Especial (AAE) Sant Adrià de Besòs - Badalona (117,3 ha).
+          </li>
+          <li>
+            <strong>Tecnologia:</strong> QGIS 3.44+ (Print Layout Engine), Python (Shapely, GeoPandas, GDAL).
+          </li>
+          <li>
+            <strong>Algorismes:</strong> Network Isochrone Analysis, Morphological Closing, Douglas-Peucker Simplification.
+          </li>
+          <li>
+            <strong>Fonts de Dades:</strong> AMB (Xarxa Bus), TMB, ICGC Topogràfic, MUC (Usos del Sòl 2024), OpenStreetMap.
+          </li>
+          <li>
+            <strong>Sistema de Coordenades:</strong> ETRS89 / UTM zone 31N (EPSG:25831).
+          </li>
+          <li>
+            <strong>Resolució de Sortida:</strong> 300 DPI (Làmina Editorial A4 Paisatge).
+          </li>
+          <li>
+            <strong>Marc Acadèmic:</strong> TFM Màster Universitari en Urbanisme (UPC ETSAB) / #30DayMapChallenge 2026.
+          </li>
+          <li>
+            <strong>Autoria:</strong> Sana Kamiya.
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="padding: 0;">
+      <p>&copy; 2026 Sana Kamiya. GIS & Urban Design Portfolio.</p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About Me</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../portfolio.html">Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
