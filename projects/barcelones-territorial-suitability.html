@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sana Kamiya | Idoneidad Territorial Barcelonès</title>
+  <meta name="description" content="Evaluación espacial multicriterio (MCDA) para la identificación de suelo residencial apto en el Barcelonès integrando topografía (DEM 5m), cuencas visuales del litoral y planeamiento MUC (UPC).">
+  <link rel="canonical" href="https://sanachavez79-k.github.io/portafolio/projects/barcelones-territorial-suitability.html">
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sanachavez79-k.github.io/portafolio/projects/barcelones-territorial-suitability.html">
+  <meta property="og:title" content="Análisis de Idoneidad Territorial en el Barcelonès | Sana Kamiya">
+  <meta property="og:description" content="Evaluación multicriterio (MCDA) para identificar áreas aptas para el desarrollo residencial según pendientes, cuencas visuales costeras y planeamiento MUC.">
+  <meta property="og:image" content="https://sanachavez79-k.github.io/portafolio/images/projects/barcelones-suitability/identificacion-areas-aptas.png">
+  <meta property="og:image:secure_url" content="https://sanachavez79-k.github.io/portafolio/images/projects/barcelones-suitability/identificacion-areas-aptas.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Análisis de Idoneidad Territorial en el Barcelonès | Sana Kamiya">
+  <meta name="twitter:description" content="Evaluación multicriterio para el desarrollo residencial sostenible en el Barcelonès (UPC).">
+  <meta name="twitter:image" content="https://sanachavez79-k.github.io/portafolio/images/projects/barcelones-suitability/identificacion-areas-aptas.png">
+  <link rel="stylesheet" href="../styles/style.css?v=2.1">
+  <script src="../js/lang.js" defer></script>
+</head>
+<body class="lang-es">
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="../index.html">Sana Kamiya</a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html">
+              <span data-lang="es">Inicio</span>
+              <span data-lang="ca">Inici</span>
+              <span data-lang="en">Home</span>
+              <span data-lang="ja">ホーム</span>
+            </a>
+          </li>
+          <li>
+            <a href="../about.html">
+              <span data-lang="es">Sobre Mí</span>
+              <span data-lang="ca">Sobre Mí</span>
+              <span data-lang="en">About Me</span>
+              <span data-lang="ja">自己紹介</span>
+            </a>
+          </li>
+          <li>
+            <a href="../resume.html">
+              <span data-lang="es">Currículum</span>
+              <span data-lang="ca">Currículum</span>
+              <span data-lang="en">Resume</span>
+              <span data-lang="ja">履歴書</span>
+            </a>
+          </li>
+          <li>
+            <a href="../portfolio.html">
+              <span data-lang="es">Portafolio</span>
+              <span data-lang="ca">Portafoli</span>
+              <span data-lang="en">Portfolio</span>
+              <span data-lang="ja">ポートフォリオ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang-select="es">ES</button>
+        <button class="lang-btn" data-lang-select="ca">CA</button>
+        <button class="lang-btn" data-lang-select="en">EN</button>
+        <button class="lang-btn" data-lang-select="ja">JA</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Header Banner -->
+  <section class="project-detail-header">
+    <h1 class="font-serif">
+      <span data-lang="es">Evaluación Territorial Multicriterio: Idoneidad Residencial en el Barcelonès</span>
+      <span data-lang="ca">Avaluació Territorial Multicriteri: Idoneïtat Residencial al Barcelonès</span>
+      <span data-lang="en">Multi-Criteria Territorial Suitability Analysis: Residential Development in Barcelonès</span>
+      <span data-lang="ja">多基準空間評価（MCDA）による住宅開発適地分析：バルセロネス（バルセロナ大都市圏）</span>
+    </h1>
+    
+    <div class="project-meta-badges">
+      <span class="badge">SIG & Planificación Territorial</span>
+      <span class="badge">Barcelonès (Àrea Metropolitana de Barcelona)</span>
+      <span class="badge">UPC Barcelona (2026)</span>
+      <span class="badge" style="background: rgba(46, 125, 50, 0.15); color: #2e7d32; font-weight: bold;">
+        <span data-lang="es">Taller Territorial - Prof. Francesc Valls</span>
+        <span data-lang="ca">Taller Territorial - Prof. Francesc Valls</span>
+        <span data-lang="en">Territorial Workshop - Prof. Francesc Valls</span>
+        <span data-lang="ja">領土分析演習 - フランセスク・バルス教授</span>
+      </span>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container project-layout">
+    
+    <article class="project-body">
+      
+      <!-- Overview Section -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">1. Objeto y Alcance del Estudio</span>
+          <span data-lang="ca">1. Objecte i Abast de l'Estudi</span>
+          <span data-lang="en">1. Purpose and Scope</span>
+          <span data-lang="ja">1. 研究の目的と対象範囲</span>
+        </h2>
+        <p>
+          <span data-lang="es">
+            El presente estudio aborda la identificación de áreas con aptitud para el desarrollo residencial en la comarca del Barcelonès (integrada por los municipios de Barcelona, L'Hospitalet de Llobregat, Badalona, Santa Coloma de Gramenet y Sant Adrià de Besòs). En un territorio de máxima densidad urbana encajado entre la sierra de Collserola y el mar Mediterráneo, la selección de suelo para nuevo desarrollo debe satisfacer simultáneamente criterios de viabilidad topográfica, preservación del paisaje costero y coherencia con el marco normativo urbanístico supramunicipal.
+          </span>
+          <span data-lang="ca">
+            Aquest estudi aborda la identificació d'àrees amb aptitud per al desenvolupament residencial a la comarca del Barcelonès (integrada per Barcelona, l'Hospitalet de Llobregat, Badalona, Santa Coloma de Gramenet i Sant Adrià de Besòs). En un territori d'alta densitat urbana encaixat entre la serra de Collserola i el mar Mediterrani, la selecció de sòl ha de satisfer simultàniament criteris de viabilitat topogràfica, preservació del paisatge litoral i coherència amb el planejament urbanístic.
+          </span>
+          <span data-lang="en">
+            This study addresses the identification of land suitable for residential development in the Barcelonès county (comprising Barcelona, L'Hospitalet, Badalona, Santa Coloma, and Sant Adrià). In a highly densified metropolitan area framed between the Collserola coastal range and the Mediterranean Sea, new urban expansion must simultaneously satisfy criteria of topographical feasibility, coastal landscape protection, and regulatory planning compliance.
+          </span>
+          <span data-lang="ja">
+            本研究は、カタルーニャ州バルセロネス郡（バルセロナ、ルスピタレート、バダロナ、サンタ・クローマ、サント・アドリアの5基礎自治体）における持続可能な住宅開発適地の抽出を目的とした空間分析である。コイセローラ山脈と地中海に挟まれた高密度な大都市圏において、地形的造成容易性、海岸景観の保全（沿岸ファサードからの視覚的配慮）、および広域都市計画制度との整合性を同時に満たす区域を多基準意思決定分析（MCDA）により同定した。
+          </span>
+        </p>
+      </section>
+
+      <!-- Main Map Visual Display -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">2. Cartografía de Síntesis: Áreas Aptas para el Desarrollo</span>
+          <span data-lang="ca">2. Cartografia de Síntesi: Àrees Aptes per al Desenvolupament</span>
+          <span data-lang="en">2. Master Synthesis Map: Suitable Development Areas</span>
+          <span data-lang="ja">2. 総合空間解析図：開発適地（住宅適合区域）の特定</span>
+        </h2>
+        
+        <div class="slide-container">
+          <img src="../images/projects/barcelones-suitability/identificacion-areas-aptas.png" alt="Identificación de las áreas aptas para el desarrollo - Barcelonès" class="slide-image">
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 1:</strong> Cartografía final de aptitud territorial en el Barcelonès. Rotación de 45° (línea de costa horizontal). Superposición de pendientes óptimas (≤ 8%), cuencas visuales del frente litoral (Viewshed = 0, sombra visual) y clasificación urbanística MUC (Sòl Urbanitzable SUD/SND y Sòl Urbà SUC).</span>
+            <span data-lang="ca"><strong>Figura 1:</strong> Cartografia final d'idoneïtat territorial al Barcelonès (rotació +45°, costa horitzontal). Superposició de pendents òptims (≤ 8%), conca visual del litoral (Viewshed = 0, zona d'ombra) i règim del MUC (SUD/SND i SUC).</span>
+            <span data-lang="en"><strong>Figure 1:</strong> Master Territorial Suitability Map of Barcelonès (+45° rotation, horizontal coastline). Integration of optimal slopes (≤ 8%), coastal visual shadow (Viewshed = 0), and MUC statutory zoning (developable land SUD/SND and urban fabric SUC).</span>
+            <span data-lang="ja"><strong>図1：</strong>バルセロネスにおける総合適地判定図（海岸線を水平に合わせた45°回転表示）。造成適性傾斜（8%以下）、海岸線からの景観死角（Viewshed＝0）、およびMUC都市計画指定（開発可能地SUD/SND・市街地SUC）の統合レイヤ。</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Methodology & Criteria Section -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">3. Metodología: Criterios Espaciales y Álgebra de Mapas</span>
+          <span data-lang="ca">3. Metodologia: Criteris Espacials i Àlgebra de Mapes</span>
+          <span data-lang="en">3. Methodology: Spatial Criteria & Map Algebra</span>
+          <span data-lang="ja">3. 分析手法：空間基準とマップ代数（ラスタ・ベクタ演算）</span>
+        </h2>
+        
+        <p>
+          <span data-lang="es">
+            La determinación de la aptitud territorial se estructuró en cinco fases metodológicas consecutivas mediante software GIS de código abierto (QGIS y librerías GDAL):
+          </span>
+          <span data-lang="ca">
+            La determinació de la idoneïtat territorial s'ha estructurat en cinc fases metodològiques consecutives mitjançant programari SIG (QGIS i llibreries GDAL):
+          </span>
+          <span data-lang="en">
+            The multi-criteria land suitability assessment was structured across five consecutive analytical phases using open-source GIS software (QGIS & GDAL algorithms):
+          </span>
+          <span data-lang="ja">
+            開発適地の抽出は、オープンソースGIS（QGIS 3.34およびGDALアルゴリズム）を用いた以下の5段階の空間演算フローにより実施した：
+          </span>
+        </p>
+
+        <ul class="article-list">
+          <li>
+            <span data-lang="es">
+              <strong>Fase 1 · Modelo Digital de Elevaciones (DEM 5m) y Pendientes:</strong> A partir del modelo de elevaciones de alta resolución de 5 metros del Institut Cartogràfic i Geològic de Catalunya (ICGC), se calculó la pendiente continua expresada en porcentaje (%). Se categorizó en 4 umbrales técnicos: <em>0-8% (Óptimo para urbanización sin sobrecostes)</em>, <em>8-15% (Apto con movimientos de tierras moderados)</em>, <em>15-25% (Limitado por costes geotécnicos)</em> y <em>> 25% (Inadecuado por riesgos y preservación)</em>.
+            </span>
+            <span data-lang="ca">
+              <strong>Fase 1 · Model Digital d'Elevacions (DEM 5m) i Pendents:</strong> A partir del DEM de 5m de l'ICGC, es va calcular el pendent continu en percentatge (%). Es va dividir en 4 llindars: <em>0-8% (Òptim)</em>, <em>8-15% (Apto)</em>, <em>15-25% (Limitat)</em> i <em>> 25% (Inadequat)</em>.
+            </span>
+            <span data-lang="en">
+              <strong>Phase 1 · High-Resolution DEM (5m) & Slope Analysis:</strong> Derived from the ICGC 5-meter terrain model, slope gradients were calculated in percent (%) using GDAL algorithms. Classified into 4 engineering tiers: <em>0-8% (Optimal for residential development)</em>, <em>8-15% (Feasible with moderate earthworks)</em>, <em>15-25% (Constrained by geotechnical costs)</em>, and <em>> 25% (Unsuitable / protected)</em>.
+            </span>
+            <span data-lang="ja">
+              <strong>フェーズ1・高解像度DEM（5m）と傾斜解析：</strong>カタルーニャ地理地質研究所（ICGC）の5mメッシュDEMを用い、GDALアルゴリズムによりパーセント（%）傾斜を算出。土工・造成コストの観点から4段階に区分：<em>0-8%（造成最適・低コスト）</em>、<em>8-15%（適地・軽微な造成）</em>、<em>15-25%（制約あり）</em>、<em>>25%（急傾斜・開発不適）</em>。
+            </span>
+          </li>
+          <li>
+            <span data-lang="es">
+              <strong>Fase 2 · Análisis de Intervisibilidad Litoral (Viewshed):</strong> Para simular la percepción del territorio desde el mar y las playas, se emplazaron 22 puntos de observación homogéneos a lo largo del frente marítimo del Barcelonès. Mediante el algoritmo <em>Visibility Analysis</em>, se configuró una altura de observador de 2,0 metros y un radio de alcance visual de 5.000 metros (5 km). Se computó la frecuencia de visibilidad acumulada, aislando las <strong>áreas de sombra visual (Visibilidad = 0)</strong> donde cualquier edificación no produce impacto en la silueta marítima.
+            </span>
+            <span data-lang="ca">
+              <strong>Fase 2 · Anàlisi de Visibilitat Litoral (Viewshed):</strong> Es van distribuir 22 punts d'observació al llarg de la línia de costa. Mitjançant <em>Visibility Analysis</em>, es va fixar una alçada d'observador de 2,0m i un radi de 5.000m, identificant les <strong>zones d'ombra visual (Visibilitat = 0)</strong> protegides des del mar.
+            </span>
+            <span data-lang="en">
+              <strong>Phase 2 · Coastal Viewshed & Visual Impact Analysis:</strong> To evaluate visual exposure from maritime approaches and beachfronts, 22 observation points were placed along the Mediterranean coastline. Using the <em>Visibility Analysis</em> plugin (observer height: 2.0m, search radius: 5,000m), cumulative visibility frequencies were calculated, isolating <strong>visual shadow zones (Viewshed = 0)</strong> where building heights do not disrupt coastal skylines.
+            </span>
+            <span data-lang="ja">
+              <strong>フェーズ2・海岸線からの累積可視性解析（Viewshed）：</strong>海およびビーチからの視覚的影響をシミュレートするため、バルセロネスの海岸線に沿って22箇所の観測点を均等配置。<em>Visibility Analysis</em> ツールを用い、観測者視高2.0m・視線到達半径5,000m（5km）の累積可視度を算出。海から一切視認されない<strong>景観死角（Viewshed＝0）</strong>を特定。
+            </span>
+          </li>
+          <li>
+            <span data-lang="es">
+              <strong>Fase 3 · Álgebra de Mapas (Raster Calculator):</strong> Se implementó la intersección booleana entre la viabilidad topográfica y la protección visual mediante la expresión:
+              <br><code>("Pendiente@1" &lt;= 8) AND ("Viewshed@1" = 0)</code>
+              <br>Dando como resultado la capa raster binaria <strong>Apto DEM</strong> (1 = Apto, 0 = No Apto).
+            </span>
+            <span data-lang="ca">
+              <strong>Fase 3 · Àlgebra de Mapes (Calculadora Ràster):</strong> Es va executar la intersecció booleana:
+              <br><code>("Pendent@1" &lt;= 8) AND ("Viewshed@1" = 0)</code>
+              <br>generant la capa ràster binària <strong>Apto DEM</strong>.
+            </span>
+            <span data-lang="en">
+              <strong>Phase 3 · Raster Map Algebra:</strong> Boolean combination executed via QGIS Raster Calculator:
+              <br><code>("Slope@1" &lt;= 8) AND ("Viewshed@1" = 0)</code>
+              <br>outputting the binary surface layer <strong>Apto DEM</strong>.
+            </span>
+            <span data-lang="ja">
+              <strong>フェーズ3・マップ代数（ラスタ計算機）：</strong>地形適合性と景観保全の論理積（AND）をラスタ計算機で実行：
+              <br><code>("傾斜@1" &lt;= 8) AND ("Viewshed@1" = 0)</code>
+              <br>平坦かつ海から見えない理想領域を抽出した二値ラスタ <strong>Apto DEM</strong> を生成。
+            </span>
+          </li>
+          <li>
+            <span data-lang="es">
+              <strong>Fase 4 · Vectorización y Cruce con el Mapa Urbanístico de Cataluña (MUC):</strong> La capa Apto DEM fue convertida a geometría vectorial y cruzada espacialmente con la base de datos oficial del MUC (Generalitat de Catalunya). Se discriminaron las parcelas según su régimen legal:
+              <em>Suelo Urbanizable Delimitado (SUD)</em>, <em>Suelo Urbanizable No Delimitado (SND)</em>, <em>Suelo Urbano Consolidado (SUC)</em> y <em>Suelo No Urbanizable (SNU - excluído)</em>.
+            </span>
+            <span data-lang="ca">
+              <strong>Fase 4 · Vectorització i Creuament amb el MUC:</strong> Es va vectoritzar Apto DEM i es va creuar amb la base de dades oficial del MUC, discriminant entre <em>SUD, SND, SUC i SNU (parc natural exclòs)</em>.
+            </span>
+            <span data-lang="en">
+              <strong>Phase 4 · Vectorization & Statutory Zoning Overlay (MUC):</strong> The Apto DEM raster was polygonized and spatially intersected with the official Land Use Register of Catalonia (MUC). Parcels were categorized into statutory planning regimes: <em>SUD (Delimited Developable)</em>, <em>SND (Non-Delimited Developable)</em>, <em>SUC (Consolidated Urban Fabric)</em>, and <em>SNU (Protected / Excluded)</em>.
+            </span>
+            <span data-lang="ja">
+              <strong>フェーズ4・ベクタ変換とMUC都市計画の空間交差：</strong>Apto DEMをポリゴン化し、カタルーニャ州都市計画マスターデータ（MUC）と空間交差（Intersection）。法定区分（開発可能地SUD/SND、既成市街地SUC、自然保護地SNU［開発除外］）ごとに適合区域を厳密に抽出。
+            </span>
+          </li>
+          <li>
+            <span data-lang="es">
+              <strong>Fase 5 · Análisis Cuantitativo de Superficies:</strong> Cálculo métrico de las superficies resultantes (en hectáreas) para evaluar el potencial real de crecimiento metropolitano sin degradación ambiental ni de la fachada costera.
+            </span>
+            <span data-lang="ca">
+              <strong>Fase 5 · Anàlisi Quantitativa de Superfícies:</strong> Càlcul mètric de superfícies en hectàrees per avaluar el potencial real de creixement residencial lliure d'impacte ambiental.
+            </span>
+            <span data-lang="en">
+              <strong>Phase 5 · Quantitative Surface Analytics:</strong> Exact geometric surface computation (hectares) to assess metropolitan development capacity with zero coastal visual degradation.
+            </span>
+            <span data-lang="ja">
+              <strong>フェーズ5・定量的面積集計と開発ポテンシャル評価：</strong>抽出されたポリゴンの幾何面積（ha）を集計し、環境・景観負荷のない大都市圏の真の開発余力を数値的に解明。
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Key Findings Section -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">4. Resultados Cuantitativos e Insights Urbanísticos</span>
+          <span data-lang="ca">4. Resultats Quantitatius i Insights Urbanístics</span>
+          <span data-lang="en">4. Quantitative Findings & Urban Planning Insights</span>
+          <span data-lang="ja">4. 定量分析結果と都市計画的知見（インサイト）</span>
+        </h2>
+        
+        <div class="metrics-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+          <div style="background: var(--bg-card); padding: 1.25rem; border: 1px solid var(--border-color); border-radius: 8px;">
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: bold;">SUPERFICIE APTA TOTAL</div>
+            <div style="font-size: 2rem; font-weight: 800; color: var(--accent-terracotta);">6.284 ha</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Área con pendiente &le; 8% e invisibilidad costera</div>
+          </div>
+          <div style="background: var(--bg-card); padding: 1.25rem; border: 1px solid var(--border-color); border-radius: 8px;">
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: bold;">SÒL URBANITZABLE APTO</div>
+            <div style="font-size: 2rem; font-weight: 800; color: #2e7d32;">145,3 ha</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">64,0% de las 227,3 ha de suelo de expansión</div>
+          </div>
+          <div style="background: var(--bg-card); padding: 1.25rem; border: 1px solid var(--border-color); border-radius: 8px;">
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: bold;">SÒL URBÀ CONSOLIDAT</div>
+            <div style="font-size: 2rem; font-weight: 800; color: var(--text-main);">6.186 ha</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Tejido urbano en sombra visual (54,4%)</div>
+          </div>
+        </div>
+
+        <p>
+          <span data-lang="es">
+            El análisis reveló un hallazgo territorial de singular relevancia: de las 227,3 hectáreas de suelo legalmente clasificado como <em>Urbanizable (SUD + SND)</em> en el Barcelonès, <strong>145,3 hectáreas (el 64,0%)</strong> superan con éxito los requerimientos combinados de baja pendiente e integración paisajística, consolidándose como áreas prioritarias para absorber la demanda residencial metropolitana. Por el contrario, en el corazón del Eixample barcelonés, la estricta retícula ortogonal diseñada por Cerdà combinada con la suave pendiente descendente hacia el mar genera extensos conos de visibilidad directa desde el litoral, desaconsejando sobreelevaciones o alteraciones volumétricas en el frente urbano interior.
+          </span>
+          <span data-lang="ca">
+            L'anàlisi va revelar una troballa d'alta rellevància: de les 227,3 hectàrees classificades com a <em>Urbanitzable (SUD + SND)</em>, <strong>145,3 hectàrees (64,0%)</strong> superen amb èxit els criteris de baixa pendent i integració visual. Contràriament, al centre de l'Eixample, la retícula ortogonal de Cerdà genera cons de visibilitat directa des del mar, desaconsellant alteracions volumètriques a la façana interior.
+          </span>
+          <span data-lang="en">
+            The study yielded a remarkable planning insight: out of 227.3 hectares officially designated as <em>Developable Land (SUD + SND)</em> in Barcelonès, <strong>145.3 hectares (64.0%)</strong> strictly comply with both low slope thresholds and coastal visual concealment, representing prime parcels for sustainable metropolitan residential expansion. Conversely, in the heart of Barcelona's Eixample district, Cerdà's orthogonal grid and gentle sea-sloping topography create extensive direct visual corridors towards the sea, arguing against vertical additions that could disrupt the historic coastal interface.
+          </span>
+          <span data-lang="ja">
+            本分析は、大都市圏計画において極めて重要な実証的知見を提示した：バルセロネス郡内に指定された法定開発可能地（SUD＋SND）計227.3haのうち、<strong>64.0%に相当する145.3ha</strong>が「平坦（8%以下）かつ海岸からの死角」という厳格な複合条件を満たし、景観調和型住宅開発の最優先候補地として特定された。一方で、セルダ設計によるアシャンプラ地区の直交格子状街路と海への緩斜面地形は、海岸線から内陸深くまで直通する広範な視線回廊（可視領域）を生み出しており、都市スカイラインの保全上、内陸部における高層化が厳しく制限されるべき根拠が実証された。
+          </span>
+        </p>
+      </section>
+
+    </article>
+
+    <!-- Sidebar Technical Spec Card -->
+    <aside class="project-sidebar">
+      <div class="project-sidebar-card">
+        <h3>
+          <span data-lang="es">Ficha Técnica</span>
+          <span data-lang="ca">Fitxa Tècnica</span>
+          <span data-lang="en">Technical Spec Sheet</span>
+          <span data-lang="ja">テクニカルシート</span>
+        </h3>
+        
+        <ul class="sidebar-bullets">
+          <li>
+            <span data-lang="es"><strong>Ámbito:</strong> Comarca del Barcelonès (Barcelona, L'Hospitalet, Badalona, Santa Coloma, Sant Adrià).</span>
+            <span data-lang="ca"><strong>Àmbit:</strong> Comarca del Barcelonès (AMB).</span>
+            <span data-lang="en"><strong>Scope:</strong> Barcelonès County, Barcelona Metropolitan Area.</span>
+            <span data-lang="ja"><strong>対象地域：</strong>バルセロネス郡（バルセロナ大都市圏5市）</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Software:</strong> QGIS 3.34 LTR, GDAL/OGR, Plugin Visibility Analysis, GeoPandas, Python.</span>
+            <span data-lang="ca"><strong>Programari:</strong> QGIS 3.34 LTR, GDAL, Visibility Analysis, GeoPandas, Python.</span>
+            <span data-lang="en"><strong>Software:</strong> QGIS 3.34 LTR, GDAL/OGR, Visibility Analysis Plugin, GeoPandas, Python.</span>
+            <span data-lang="ja"><strong>使用ツール：</strong>QGIS 3.34 LTR、GDAL、Visibility Analysis プラグイン、GeoPandas、Python</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Fuentes de Datos:</strong> DEM 5m (ICGC), Base Topográfica 1:5.000 (ICGC), Mapa Urbanístico de Cataluña (MUC).</span>
+            <span data-lang="ca"><strong>Fonts de Dades:</strong> DEM 5m (ICGC), Base 1:5.000 (ICGC), Mapa Urbanístic de Catalunya (MUC).</span>
+            <span data-lang="en"><strong>Data Sources:</strong> 5m DTM (ICGC), Topographic Base 1:5k (ICGC), MUC Statutory Planning (Generalitat de Catalunya).</span>
+            <span data-lang="ja"><strong>データ出典：</strong>5m DEM（ICGC）、1:5,000基盤地図（ICGC）、カタルーニャ州都市計画マスター（MUC）</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Metodologías:</strong> Evaluación Multicriterio (MCDA), Análisis de Intervisibilidad Costera (Viewshed), Álgebra Booleana de Mapas.</span>
+            <span data-lang="ca"><strong>Metodologies:</strong> Avaluació Multicriteri (MCDA), Conques Visuals Litorals (Viewshed), Àlgebra Booleana.</span>
+            <span data-lang="en"><strong>Methodologies:</strong> Multi-Criteria Decision Analysis (MCDA), Coastal Viewshed Simulation, Boolean Map Algebra.</span>
+            <span data-lang="ja"><strong>解析手法：</strong>多基準空間意思決定分析（MCDA）、海岸可視領域解析（Viewshed）、ブール代数ラスタ演算</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Docencia:</strong> Prof. Francesc Valls Dalmau — Màster Universitari (UPC Barcelona).</span>
+            <span data-lang="ca"><strong>Docència:</strong> Prof. Francesc Valls Dalmau — Màster Universitari (UPC Barcelona).</span>
+            <span data-lang="en"><strong>Supervision:</strong> Prof. Francesc Valls Dalmau — Master's Degree (UPC Barcelona).</span>
+            <span data-lang="ja"><strong>指導教官：</strong>フランセスク・バルス・ダルマウ教授（カタルーニャ工科大学 UPC）</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Autora:</strong> Sana Kamiya.</span>
+            <span data-lang="ca"><strong>Autora:</strong> Sana Kamiya.</span>
+            <span data-lang="en"><strong>Author:</strong> Sana Kamiya.</span>
+            <span data-lang="ja"><strong>分析・作成：</strong>神谷 さな（Sana Kamiya）</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="padding: 0;">
+      <p>&copy; 2026 Sana Kamiya. GIS & Urban Design Portfolio.</p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About Me</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../portfolio.html">Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
