@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sana Kamiya | Simulación Basada en Agentes de las Superilles de Barcelona (NetLogo)</title>
+  <meta name="description" content="Simulación multiagente del modelo de Superilles (Superblocks) en la trama Cerdà de Barcelona con NetLogo. Análisis de congestión perimetral y evaporación de tráfico.">
+  <link rel="canonical" href="https://sanachavez79-k.github.io/portafolio/projects/barcelona-superblocks-simulation.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sanachavez79-k.github.io/portafolio/projects/barcelona-superblocks-simulation.html">
+  <meta property="og:title" content="Simulación Basada en Agentes de las Superilles de Barcelona | Sana Kamiya">
+  <meta property="og:description" content="Evaluación de la pacificación urbana, congestión en arterias perimetrales y dinámica de evaporación de tráfico en el Eixample Cerdà mediante NetLogo.">
+  <meta property="og:image" content="https://sanachavez79-k.github.io/portafolio/images/projects/barcelona-superblocks/simulation_coverage_100.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Simulación de Superilles en NetLogo | Sana Kamiya">
+  <meta name="twitter:description" content="Modelización multiagente de la trama Cerdà: equilibrio entre pacificación interior y fluidez perimetral.">
+  <meta name="twitter:image" content="https://sanachavez79-k.github.io/portafolio/images/projects/barcelona-superblocks/simulation_coverage_100.png">
+
+  <link rel="stylesheet" href="../styles/style.css?v=2.1">
+  <script src="../js/lang.js" defer></script>
+</head>
+<body class="lang-es">
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="../index.html">Sana Kamiya</a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html">
+              <span data-lang="es">Inicio</span>
+              <span data-lang="ca">Inici</span>
+              <span data-lang="en">Home</span>
+              <span data-lang="ja">ホーム</span>
+            </a>
+          </li>
+          <li>
+            <a href="../about.html">
+              <span data-lang="es">Sobre Mí</span>
+              <span data-lang="ca">Sobre Mí</span>
+              <span data-lang="en">About Me</span>
+              <span data-lang="ja">自己紹介</span>
+            </a>
+          </li>
+          <li>
+            <a href="../resume.html">
+              <span data-lang="es">Currículum</span>
+              <span data-lang="ca">Currículum</span>
+              <span data-lang="en">Resume</span>
+              <span data-lang="ja">履歴書</span>
+            </a>
+          </li>
+          <li>
+            <a href="../portfolio.html">
+              <span data-lang="es">Portafolio</span>
+              <span data-lang="ca">Portafoli</span>
+              <span data-lang="en">Portfolio</span>
+              <span data-lang="ja">ポートフォリオ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang-select="es">ES</button>
+        <button class="lang-btn" data-lang-select="ca">CA</button>
+        <button class="lang-btn" data-lang-select="en">EN</button>
+        <button class="lang-btn" data-lang-select="ja">JA</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Header Banner -->
+  <section class="project-detail-header">
+    <h1 class="font-serif">
+      <span data-lang="es">Simulación Basada en Agentes de las Superilles de Barcelona: Evaluación del Tráfico Perimetral y Evaporación de la Demanda</span>
+      <span data-lang="ca">Simulació Basada en Agents de les Superilles de Barcelona: Avaluació del Trànsit Perimetral i Evaporació de la Demanda</span>
+      <span data-lang="en">Agent-Based Simulation of Barcelona's Superblocks: Evaluating Arterial Congestion and Traffic Evaporation</span>
+      <span data-lang="ja">マルチエージェントシミュレーションによるバルセロナ・スーパーブロック（Superilles）の交通流動・需要蒸発分析</span>
+    </h1>
+    
+    <div class="project-meta-badges">
+      <span class="badge">Modelización Multiagente (ABM)</span>
+      <span class="badge">NetLogo 7.0 & Python</span>
+      <span class="badge">Eixample Cerdà (Barcelona)</span>
+      <span class="badge" style="background: rgba(3, 105, 161, 0.15); color: #0284c7; font-weight: bold;">
+        <span data-lang="es">Movilidad Urbana & Urbanismo Ecosistémico</span>
+        <span data-lang="ca">Mobilitat Urbana & Urbanisme Ecosistèmic</span>
+        <span data-lang="en">Urban Mobility & Ecosystemic Urbanism</span>
+        <span data-lang="ja">都市モビリティ・生態学的都市計画</span>
+      </span>
+      <span class="badge">UPC Barcelona (2026)</span>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container project-layout">
+    
+    <article class="project-body">
+      
+      <!-- Section 1: Introduction -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">1. Objeto y Planteamiento del Conflicto Urbano</span>
+          <span data-lang="ca">1. Objecte i Plantejament del Conflicte Urbà</span>
+          <span data-lang="en">1. Context & The Urban Mobility Dilemma</span>
+          <span data-lang="ja">1. 研究の背景と都市交通のジレンマ</span>
+        </h2>
+        <p>
+          <span data-lang="es">
+            La trama ortogonal del Eixample de Barcelona, proyectada por Ildefons Cerdà en 1859 con manzanas de 133 &times; 133 m y chaflanes achaflanados a 45&deg; (ochavas), constituye un hito del urbanismo higienista. Sin embargo, en el siglo XXI, su regularidad geométrica convirtió cada calle residencial en un atajo para el tráfico rodado pasante, provocando elevados niveles de contaminación acústica, emisiones de NO<sub>2</sub>/PM<sub>2.5</sub> y fragmentación peatonal.
+          </span>
+          <span data-lang="ca">
+            La trama ortogonal de l'Eixample de Barcelona, projectada per Ildefons Cerdà el 1859 amb illes de 133 &times; 133 m i xamfrans a 45&deg;, és una icona de l'urbanisme higienista. No obstant això, la seva uniformitat ha propiciat que qualsevol carrer residencial sigui utilitzat com a drecera pel trànsit de pas, generant greus problemes de contaminació per NO<sub>2</sub> i fragmentació urbana.
+          </span>
+          <span data-lang="en">
+            Ildefons Cerdà's iconic 1859 Eixample grid in Barcelona (133 &times; 133 m blocks with 45&deg; chamfered corners) was conceived for egalitarian light and air. In modern times, however, this isotropic grid caused vehicular through-traffic to invade every local residential street, triggering chronic NO<sub>2</sub> air pollution, urban heat island effects, and high pedestrian accident rates.
+          </span>
+          <span data-lang="ja">
+            1859年にイルデフォンス・セルダが設計したバルセロナ・アシャンプラ地区（Eixample）の133m &times; 133m格子街区と八角形角切り交差点（Ochavas）は、都市衛生学の金字塔です。しかし現代において、この均質かつ対称的なグリッド構造は「あらゆる生活道路が通過交通の抜け道として使われる」という弊害を生み、深刻な大気汚染（NO<sub>2</sub>/PM<sub>2.5</sub>）、騒音、交通事故をもたらしました。
+          </span>
+        </p>
+        <p>
+          <span data-lang="es">
+            El modelo de las <strong>Superilles (Superblocks)</strong>, formulado por el ecólogo urbano Salvador Rueda, propone agrupar 3 &times; 3 manzanas convencionales (aproximadamente 400 &times; 400 m) en una unidad básica de convivencia. Las vías interiores se pacifican (velocidad máxima de 10 km/h, tráfico pasante estrictamente vetado, bucle de retorno para residentes y carga/descarga), liberando más del 70% del espacio vial para plazas públicas, vegetación y estancia peatonal. Frente a esta transformación, la principal controversia formulada por ingenieros de tráfico y detractores radica en el temor a una <strong>parálisis por colapso en las arterias perimetrales</strong> (calles Aragó, Gran Via, València, etc.). El presente proyecto modeliza experimentalmente este conflicto mediante simulación de agentes en NetLogo.
+          </span>
+          <span data-lang="ca">
+            El model de les <strong>Superilles</strong>, impulsat per Salvador Rueda, agrupa 3 &times; 3 illes convencionals (400 &times; 400 m) en una unitat pacificada. Els carrers interiors es limiten a 10 km/h amb bucles de retorn exclusius per a veïnat i serveis, alliberant més del 70% de l'espai públic per a vianants. La principal controvèrsia és el risc de <strong>col·lapse per congestió a les artèries perimetrals</strong> (Carrer d'Aragó, Gran Via). Aquest estudi avalua computacionalment aquesta fricció espacial mitjançant simulació multiagent en NetLogo.
+          </span>
+          <span data-lang="en">
+            Salvador Rueda's <strong>Superblocks (Superilles)</strong> model clusters 3 &times; 3 Cerdà blocks (~400 &times; 400 m) into a pacified cell: through-traffic is expelled, interior speeds are capped at 10 km/h with one-way return loops, reclaiming over 70% of street surfaces for civic plazas and green infrastructure. Opponents constantly argue that closing interior streets triggers **systemic gridlock across perimeter arterials** (e.g., Carrer d'Aragó, Gran Via). This project tests this core hypothesis through an agent-based simulation in NetLogo.
+          </span>
+          <span data-lang="ja">
+            サルバドール・ルエダが提唱した<strong>「スーパーブロック（Superilles）」構想</strong>は、3 &times; 3の街区（約400m四方）を1生活圏単位とし、内側道路を歩行者優先・最高速度10km/h・通過禁止・ループ動線に制限することで、街路の7割以上を市民の広場や緑地へと転換する都市モデルです。これに対する最大の批判・懸念は<strong>「内側を塞げば、通過交通が外周の幹線道路（アラゴ通りやグランビアなど）に集中して都市全体が大渋滞で麻痺するのではないか？」</strong>という点でした。本プロジェクトは、この動的力学をマルチエージェントシミュレーション（NetLogo）により空間的・定量的に検証したものです。
+          </span>
+        </p>
+      </section>
+
+      <!-- Section 2: Model Architecture -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">2. Arquitectura de Simulación y Reglas Multiagente</span>
+          <span data-lang="ca">2. Arquitectura de Simulació i Regles Multiagent</span>
+          <span data-lang="en">2. Agent-Based Model Architecture in NetLogo</span>
+          <span data-lang="ja">2. NetLogoモデルの空間構造とエージェント行動規則</span>
+        </h2>
+        <p>
+          <span data-lang="es">
+            El modelo digital reproduce un sector representativo de <strong>9 &times; 9 manzanas de Cerdà (81 manzanas en total)</strong>, estructurable en una matriz de 3 &times; 3 superilles (9 superbloques potenciales).
+          </span>
+          <span data-lang="ca">
+            El model digital reprodueix un sector de <strong>9 &times; 9 illes de Cerdà (81 illes)</strong>, estructurable en una matriu de 3 &times; 3 superilles (9 superilles potencials).
+          </span>
+          <span data-lang="en">
+            The simulation workspace models a representative sector of <strong>9 &times; 9 Cerdà blocks (81 blocks in total)</strong>, accommodating a 3 &times; 3 matrix of potential superblocks.
+          </span>
+          <span data-lang="ja">
+            シミュレーション空間は、アシャンプラの代表的な<strong>9 &times; 9街区（計81街区）</strong>で構築され、最大9基のスーパーブロック（3 &times; 3配置）を展開可能なグリッド道路網として設計されています。
+          </span>
+        </p>
+
+        <ul class="article-list">
+          <li>
+            <span data-lang="es">
+              <strong>Sentidos Únicos Alternados (Cerdà One-Way System):</strong> Se modelizó rigurosamente la regla histórica de Barcelona: las vías verticales alternan su flujo Norte (Muntanya) o Sur (Mar) cada calle, y las horizontales alternan Este (Besòs) u Oeste (Llobregat). Los vehículos respetan estrictamente la dirección de circulación vectorial.
+            </span>
+            <span data-lang="ca">
+              <strong>Sentits Únics Alternats (Sistema Cerdà):</strong> Es modelitza el flux real de Barcelona: els carrers verticals alternen sentit Muntanya/Mar i els horitzontals Besòs/Llobregat. Els agents respecten estrictament la direccionalitat permesa.
+            </span>
+            <span data-lang="en">
+              <strong>Alternating One-Way Grid (Cerdà Vector Flow):</strong> Faithfully encodes Barcelona's real-world traffic system: vertical streets alternate North (Mountain) / South (Sea), while horizontal avenues alternate East (Besòs) / West (Llobregat).
+            </span>
+            <span data-lang="ja">
+              <strong>1本ごとの一方通行システム（Cerdà Alternating System）：</strong>バルセロナの都市構造を忠実に再現。南北（山海方向）および東西（河川方向）の道路が1本おきに進行方向を反転し、車両は逆走できないベクトル規則に従います。
+            </span>
+          </li>
+          <li>
+            <span data-lang="es">
+              <strong>Diferenciación de Agentes (Tráfico Pasante vs. Local):</strong> El 85% de los vehículos representan tráfico de paso regional (color azul), obligados a utilizar las arterias perimetrales a 50 km/h cuando la superilla está activa. El 15% restante corresponde a residentes y mercancías locales (color amarillo), con autorización para penetrar a 10 km/h en bucle.
+            </span>
+            <span data-lang="ca">
+              <strong>Tipologia d'Agents (Trànsit de Pas vs. Veïnal):</strong> El 85% del flux és trànsit passatger regional (blau), canalitzat per les artèries a 50 km/h. El 15% són veïns i distribució local (groc), que poden accedir als carrers pacificats a 10 km/h en bucle.
+            </span>
+            <span data-lang="en">
+              <strong>Agent Categorization (Through vs. Local Traffic):</strong> 85% of vehicles represent regional through-traffic (blue turtles), constrained to 50 km/h perimeter arterials when superblocks are enabled. The remaining 15% model residents and freight deliveries (yellow turtles), permitted to enter pacified loops at 10 km/h.
+            </span>
+            <span data-lang="ja">
+              <strong>エージェントの分類（通過交通 vs 地区内居住・荷解き交通）：</strong>全体の85%を都市通過車両（水色）として設定し、スーパーブロック化時は外周幹線（50km/h）へ強制誘導。残り15%は地区内住民・配達車（黄色）として緑道（10km/h）への進入を許可。
+            </span>
+          </li>
+          <li>
+            <span data-lang="es">
+              <strong>Detección Visual de Cuellos de Botella:</strong> Los vehículos aplican un modelo de persecución (Car-following) con distancias de seguridad y detección de semáforos. Cuando la velocidad cae por debajo de 0.05 parches/tick debido a colas de espera, el vehículo muta a color <strong>rojo</strong>, permitiendo geolocalizar instantáneamente los embotellamientos.
+            </span>
+            <span data-lang="ca">
+              <strong>Detecció Visual de Colls d'Ampolla:</strong> Quan la velocitat d'un vehicle baixa de 0.05 per aturades en semàfors o cues, l'agent canvia a color <strong>vermell</strong>, identificant de forma visual els punts de retenció crítica.
+            </span>
+            <span data-lang="en">
+              <strong>Bottleneck Visual Telemetry:</strong> Vehicles employ safety headway car-following and traffic-signal recognition. When vehicle speed drops below 0.05 patches/tick due to queueing, the agent dynamically turns **red**, spotlighting congestion bottlenecks in real time.
+            </span>
+            <span data-lang="ja">
+              <strong>ボトルネックの視覚的テレメトリ：</strong>車間追従モデルおよび信号認識を実装。信号待ちや追従停止で速度が0.05未満に低下した車両は瞬時に<strong>「赤色」</strong>へと変色し、交差点の渋滞発生箇所をリアルタイムに視覚化。
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 3: Scenario Analysis (3 Images) -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">3. Cartografía Experimental: Comparativa de 3 Escenarios de Cobertura</span>
+          <span data-lang="ca">3. Cartografia Experimental: Comparativa de 3 Escenaris de Cobertura</span>
+          <span data-lang="en">3. Simulation Results: Comparative Analysis across 3 Coverage Scenarios</span>
+          <span data-lang="ja">3. 実験結果の比較分析：3つのスーパーブロック導入シナリオ</span>
+        </h2>
+        
+        <p>
+          <span data-lang="es">
+            A continuación se contrastan los tres escenarios empíricos capturados desde el entorno de simulación NetLogo:
+          </span>
+          <span data-lang="ca">
+            A continuació es contrasten els tres escenaris empírics capturats des de l'entorn de simulació NetLogo:
+          </span>
+          <span data-lang="en">
+            Below is the comparative empirical evaluation across three operational scenarios captured in NetLogo:
+          </span>
+          <span data-lang="ja">
+            NetLogo環境から書き出した3つの代表的シナリオのシミュレーション結果を以下に比較・検証します：
+          </span>
+        </p>
+
+        <!-- Image 1: Coverage 0% -->
+        <div class="slide-container" style="margin-bottom: 2.5rem;">
+          <img src="../images/projects/barcelona-superblocks/simulation_coverage_0.png" alt="Escenario Baseline 0% Superilles" style="border: 1px solid #334155; border-radius: 8px;">
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 1 · Escenario Base (Cobertura 0% - Eixample Convencional):</strong> Todas las vías son transitables a 50 km/h. El espacio peatonal ganado es del 0.0%. Aunque el tráfico parece disperso, las colas en la arteria izquierda generan una congestión del 63.2% con velocidad media de 13.5 km/h, exponiendo todas las viviendas al impacto directo de vehículos.</span>
+            <span data-lang="ca"><strong>Figura 1 · Escenari Base (Cobertura 0% - Eixample Convencional):</strong> Tots els carrers són transitables a 50 km/h. Espai pacificat: 0.0%. El trànsit s'infiltra a la xarxa residencial generant una congestió del 63.2% i velocitat mitjana de 13.5 km/h.</span>
+            <span data-lang="en"><strong>Figure 1 · Baseline Scenario (0% Coverage - Conventional Eixample):</strong> All streets permit through-traffic at 50 km/h. Pedestrian space is 0.0%. While vehicles are spread across the grid, arterial signal queues cause 63.2% congestion and 13.5 km/h average speed, degrading environmental quality across all domestic street fronts.</span>
+            <span data-lang="ja"><strong>図1・ベースラインシナリオ（導入率0%・従来のバルセロナ街区）：</strong>すべての通りが時速50km/hで通過可能。歩行者空間率は0.0%。車が全域に分散しているように見えますが、左端の幹線で信号待ちによる渋滞率63.2%、平均速度13.5km/hが発生し、すべての生活道路が騒音と排ガスに曝露されています。</span>
+          </div>
+        </div>
+
+        <!-- Image 2: Coverage 100% -->
+        <div class="slide-container" style="margin-bottom: 2.5rem;">
+          <img src="../images/projects/barcelona-superblocks/simulation_coverage_100.png" alt="Escenario 100% Superilles Colapso Arterial" style="border: 1px solid #334155; border-radius: 8px;">
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 2 · Escenario de Cierre Total Sin Absorción (Cobertura 100%):</strong> Éxito rotundo en el interior de las superilles (verde), donde se alcanza un 59.6% de superficie pacificada libre de coches pasantes. Sin embargo, al desviar todo el flujo a la cruceta perimetral de arterias grises, se produce un colapso masivo en cadena (líneas rojas continuas), disparando la congestión al 74.7% y hundiendo la velocidad a 6.4 km/h (colapso de red).</span>
+            <span data-lang="ca"><strong>Figura 2 · Escenari de Tancament Total Sense Absorció (Cobertura 100%):</strong> Èxit absolut a l'interior pacificat (59.6% d'espai alliberat en verd). No obstant, la canalització massiva cap a les artèries perimetrals col·lapsa la xarxa arterial: congestió del 74.7% i velocitat desplomada a 6.4 km/h.</span>
+            <span data-lang="en"><strong>Figure 2 · Complete Closure Scenario (100% Coverage):</strong> Outstanding success inside superblock cells (green), reclaiming 59.6% of street area for pedestrian life. However, diverting all regional trips onto perimeter cross-arterials triggers catastrophic queue spillback (74.7% congestion, average speed drops to 6.4 km/h).</span>
+            <span data-lang="ja"><strong>図2・全面導入シナリオ（導入率100%・外周幹線のボトルネック）：</strong>スーパーブロック内部（緑色）では通過交通が完全排除され、街路の59.6%が安全な歩行者空間として解放されました。しかし、逃げ場を失った大量の車両が外周の幹線十字路（グレー）に集中した結果、赤い車列が数珠つなぎとなり、渋滞率は74.7%まで急増、平均速度は6.4km/h（歩行速度並み）に激減しました。</span>
+          </div>
+        </div>
+
+        <!-- Image 3: Coverage 50% & Evaporation -->
+        <div class="slide-container" style="margin-bottom: 2.5rem;">
+          <img src="../images/projects/barcelona-superblocks/simulation_coverage_50.png" alt="Escenario 50% Superilles con Evaporación" style="border: 1px solid #334155; border-radius: 8px;">
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 3 · Escenario Estratégico (Cobertura 50% con Evaporación de Demanda):</strong> Implementación por fases combinada con un 50% de tasa de evaporación (trasvase modal hacia Metro TMB y Bicing). Se pacifican 4 superbloques completos (33.7% de superficie peatonal) mientras el tráfico perimetral fluye con agilidad: la congestión se mantiene en apenas un 21.7% y la velocidad media sube a 17.3 km/h.</span>
+            <span data-lang="ca"><strong>Figura 3 · Escenari Estratègic (Cobertura 50% amb Evaporació de Demanda):</strong> Fases progressives acompanyades de transferència modal cap al metro i la bicicleta. S'allibera el 33.7% d'espai urbà amb una congestió reduïda al 21.7% i velocitat de 17.3 km/h.</span>
+            <span data-lang="en"><strong>Figure 3 · Strategic Phased Scenario (50% Coverage + Traffic Evaporation):</strong> Phased implementation paired with a 50% evaporation rate (modal shift to Metro & cycling). Reclaims 33.7% of street area while maintaining arterial equilibrium: congestion stays low at 21.7% and average speed recovers to 17.3 km/h.</span>
+            <span data-lang="ja"><strong>図3・戦略的段階導入シナリオ（導入率50%＋交通の蒸発）：</strong>段階的整備と50%の蒸発率（地下鉄メトロや自転車道Bicingへの転換）を組み合わせた状態。4基のスーパーブロック（33.7%の歩行者空間）を確保しつつ、外周道路の渋滞率はわずか21.7%に抑制され、平均速度17.3km/hの良好な流動性を維持できています。</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Quantitative Table & Findings -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">4. Matriz Comparativa y Diagnóstico Cuantitativo</span>
+          <span data-lang="ca">4. Matriu Comparativa i Diagnòstic Quantitatiu</span>
+          <span data-lang="en">4. Quantitative Matrix & Empirical Diagnostics</span>
+          <span data-lang="ja">4. 定量比較マトリクスと実証診断</span>
+        </h2>
+
+        <div style="overflow-x: auto; margin-bottom: 2rem;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left;">
+            <thead>
+              <tr style="background: #1e293b; color: #f8fafc; border-bottom: 2px solid #334155;">
+                <th style="padding: 12px;">Parámetro / Métrica</th>
+                <th style="padding: 12px;">Baseline (0% SB)</th>
+                <th style="padding: 12px;">Cierre Radical (100% SB)</th>
+                <th style="padding: 12px; background: rgba(2, 132, 199, 0.2);">Equilibrio Óptimo (50% SB)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #334155;">
+                <td style="padding: 10px; font-weight: bold;">Superficie Peatonal / Pacificada</td>
+                <td style="padding: 10px;">0.0%</td>
+                <td style="padding: 10px; color: #10b981; font-weight: bold;">59.6%</td>
+                <td style="padding: 10px; color: #10b981;">33.7%</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #334155;">
+                <td style="padding: 10px; font-weight: bold;">Velocidad Media de Red</td>
+                <td style="padding: 10px;">13.5 km/h</td>
+                <td style="padding: 10px; color: #ef4444; font-weight: bold;">6.4 km/h (-53%)</td>
+                <td style="padding: 10px; color: #38bdf8; font-weight: bold;">17.3 km/h (+28%)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #334155;">
+                <td style="padding: 10px; font-weight: bold;">Índice de Congestión en Colas</td>
+                <td style="padding: 10px;">63.2%</td>
+                <td style="padding: 10px; color: #ef4444; font-weight: bold;">74.7%</td>
+                <td style="padding: 10px; color: #38bdf8; font-weight: bold;">21.7% (-66%)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #334155;">
+                <td style="padding: 10px; font-weight: bold;">Índice Estimado de Emisiones CO<sub>2</sub></td>
+                <td style="padding: 10px;">19.9</td>
+                <td style="padding: 10px; color: #ef4444;">23.8 (ralentí extremo)</td>
+                <td style="padding: 10px; color: #10b981; font-weight: bold;">4.6 (-77%)</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; font-weight: bold;">Distribución Espacial del Conflicto</td>
+                <td style="padding: 10px;">Generalizada en toda la malla</td>
+                <td style="padding: 10px;">Hiperconcentrada en arterias</td>
+                <td style="padding: 10px;">Fluida y canalizada</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <span data-lang="es">
+            <strong>El Fenómeno de la "Evaporación de Tráfico" (Cairns &amp; Goodwin):</strong><br>
+            La simulación en NetLogo reproduce computacionalmente una de las leyes empíricas más reconocidas del urbanismo de transporte: el tráfico rodado no se comporta como un líquido incompresible que se trasvasa íntegramente a vías adyacentes al cerrar un conducto. Al reducir la capacidad vial de forma estructural, entre un 15% y un 30% de los desplazamientos motorizados "se evaporan": los usuarios cambian a transporte público de alta capacidad (Metro, tranvía), micromovilidad ciclista, reorganizan sus horarios o realizan viajes de proximidad a pie.
+          </span>
+          <span data-lang="ca">
+            <strong>El Fenomen de l'"Evaporació de Trànsit":</strong><br>
+            La simulació verifica que el trànsit no és un líquid incompressible. Quan es redueix la capacitat de l'espai viari, entre un 15% i un 30% dels viatges privats desapareixen: es produeix un transvasament modal cap al transport públic i la mobilitat activa, reorganitzant la demanda urbana.
+          </span>
+          <span data-lang="en">
+            <strong>The "Traffic Evaporation" Dynamic (Cairns et al.):</strong><br>
+            The NetLogo model demonstrates computationally that urban traffic is not an incompressible fluid. When roadway capacity is systematically reclaimed, 15% to 30% of car trips do not merely reroute—they "evaporate" through modal shift to rail transit, cycling, temporal rescheduling, or walking.
+          </span>
+          <span data-lang="ja">
+            <strong>「交通の蒸発（Traffic Evaporation）」の数理的実証：</strong><br>
+            本シミュレーションは、ケアンズ（Cairns et al.）やルエダが提唱する交通工学の実証法則を計算論的に裏付けています。車線を減らしたとき、車は単に隣の道へ100%迂回するのではなく、総交通需要の15〜30%がメトロやトラム、自転車、徒歩へ転換し「蒸発」します。この蒸発を伴わない閉鎖（図2）は外周の壊滅的渋滞を招きますが、適切なモーダルシフトと連動させた場合（図3）、交通容量の均衡と歩行者空間の創出が完全に両立します。
+          </span>
+        </p>
+      </section>
+
+      <!-- Section 5: Urban Planning Recommendations -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">5. Recomendaciones de Planificación y Conclusiones</span>
+          <span data-lang="ca">5. Conclusions i Recomanacions de Planificació</span>
+          <span data-lang="en">5. Policy Recommendations & Strategic Takeaways</span>
+          <span data-lang="ja">5. 都市政策への提言と総括</span>
+        </h2>
+
+        <p>
+          <span data-lang="es">
+            A partir de las dinámicas emergentes registradas en los experimentos de simulación, se extraen tres directrices operativas clave para la implementación real de supermanzanas en ciudades de trama reticular:
+          </span>
+          <span data-lang="ca">
+            A partir de les dinàmiques observades en la simulació, s'extreuen tres directrius fonamentals per a la implantació de superilles en ciutats reticulars:
+          </span>
+          <span data-lang="en">
+            Based on the emergent dynamics observed in the simulations, three strategic policy guidelines emerge for implementing superblocks across grid-based metropolises:
+          </span>
+          <span data-lang="ja">
+            シミュレーション実験から得られた創発的ダイナミクスに基づき、格子状都市におけるスーパーブロック導入に向けた3つの政策的提言を導出しました：
+          </span>
+        </p>
+
+        <ul class="article-list">
+          <li>
+            <span data-lang="es">
+              <strong>1. Implementación Escalonada (Phasing) vs. Cierre Masivo:</strong> Las superilles no deben ejecutarse simultáneamente en todo el tejido sin una calibración previa. Como demuestra el Escenario 2, un despliegue total sin medidas complementarias genera una onda de choque de congestión en las arterias que anula la ganancia ambiental por emisiones en ralentí.
+            </span>
+            <span data-lang="ca">
+              <strong>1. Desplegament Progressiu (Fases):</strong> Com demostra l'Escenari 2, un tancament massiu simultani provoca el col·lapse de les artèries perimetrals. Cal actuar per fases acompanyades de transport públic.
+            </span>
+            <span data-lang="en">
+              <strong>1. Strategic Phasing vs. Abrupt Blanket Closure:</strong> Superblocks must not be deployed simultaneously across an entire district without prior corridor calibration. As Scenario 2 revealed, unmitigated closures create queue spillbacks that erase localized air quality gains through idling emissions.
+            </span>
+            <span data-lang="ja">
+              <strong>1. 段階的整備（Phasing）の必須性：</strong>都市全域を一斉に閉鎖するのではなく、回廊ごとに段階的に整備を進める必要があります。シナリオ2が示す通り、補完策なき一斉導入は幹線道路に激しいショックウェーブを生み、アイドリング排ガスによって街区内部の環境改善効果を相殺してしまいます。
+            </span>
+          </li>
+          <li>
+            <span data-lang="es">
+              <strong>2. Sincronización Arterial (Green Wave):</strong> En las vías perimetrales que asumen el tráfico pasante (calles Aragó, Gran Via), se requiere una reprogramación de los ciclos semafóricos (prolongando la fase verde en la dirección dominante) para maximizar la capacidad de desagüe y prevenir el retroceso de colas hacia las bocacalles.
+            </span>
+            <span data-lang="ca">
+              <strong>2. Sincronització Semafòrica (Ona Verda):</strong> Cal optimitzar la capacitat de desaigüe dels carrers perimetrals mitjançant cicles semafòrics sincronitzats per evitar el col·lapse dels creuaments.
+            </span>
+            <span data-lang="en">
+              <strong>2. Arterial Signal Coordination (Green Wave):</strong> High-capacity perimeter streets carrying diverted through-traffic require adaptive traffic-signal timing (lengthening arterial green phases) to maximize intersection throughput and prevent intersection gridlock.
+            </span>
+            <span data-lang="ja">
+              <strong>2. 幹線道路の信号最適化（グリーンウェーブ）：</strong>通過交通を受け持つ外周幹線（アラゴ通り等）において、青信号の配分時間を延伸・同期させ、交差点のハケ能力を極大化して交差点内デッドロックを防止する必要があります。
+            </span>
+          </li>
+          <li>
+            <span data-lang="es">
+              <strong>3. Gestión Integral de la Demanda (TDM):</strong> La pacificación física debe subordinarse a la creación de alternativas reales: aparcamientos disuasorios en borde metropolitano (Park &amp; Ride), ampliación de carriles bus segregados en las arterias y fomento de tarifas integradas de transporte metropolitano.
+            </span>
+            <span data-lang="ca">
+              <strong>3. Gestió de la Demanda de Transport (TDM):</strong> La pacificació viària requereix aparcaments d'enllaç perifèrics (Park &amp; Ride), xarxa ciclista segregada i reforç de la xarxa ortogonal de bus TMB.
+            </span>
+            <span data-lang="en">
+              <strong>3. Integrated Travel Demand Management (TDM):</strong> Spatial street pacification must be coupled with structural transit alternatives: peripheral park-and-ride hubs, dedicated arterial bus rapid corridors, and high-frequency active mobility networks.
+            </span>
+            <span data-lang="ja">
+              <strong>3. 統合的交通需要マネジメント（TDM）：</strong>街路の歩行者化は、都市外縁部のパーク＆ライド駐車場、幹線バス専用レーンの増強、自転車シェア網の拡充といった「代替交通インフラ」の先行整備と完全にパッケージ化して実施されるべきです。
+            </span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+
+    <!-- Sidebar Technical Spec Card -->
+    <aside class="project-sidebar">
+      <div class="project-sidebar-card">
+        <h3>
+          <span data-lang="es">Ficha Técnica</span>
+          <span data-lang="ca">Fitxa Tècnica</span>
+          <span data-lang="en">Technical Spec Sheet</span>
+          <span data-lang="ja">テクニカルシート</span>
+        </h3>
+        
+        <ul class="sidebar-bullets">
+          <li>
+            <span data-lang="es"><strong>Ámbito de Estudio:</strong> Trama Cerdà del Eixample (Barcelona) — Sector representativo de 9 &times; 9 manzanas (81 manzanas).</span>
+            <span data-lang="ca"><strong>Àmbit d'Estudi:</strong> Trama Cerdà de l'Eixample (Barcelona) — Sector de 9 &times; 9 illes (81 illes).</span>
+            <span data-lang="en"><strong>Study Area:</strong> Cerdà Eixample Grid (Barcelona) — 9 &times; 9 blocks sector (81 city blocks).</span>
+            <span data-lang="ja"><strong>対象地域：</strong>バルセロナ・アシャンプラ地区（セルダグリッド 9&times;9＝81街区）</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Software y Modelización:</strong> NetLogo 7.0.4, Python 3.11, JavaScript / HTML5 Canvas.</span>
+            <span data-lang="ca"><strong>Programari:</strong> NetLogo 7.0.4, Python 3.11, JavaScript / HTML5 Canvas.</span>
+            <span data-lang="en"><strong>Software:</strong> NetLogo 7.0.4, Python 3.11, JavaScript / HTML5 Canvas.</span>
+            <span data-lang="ja"><strong>使用ツール：</strong>NetLogo 7.0.4、Python 3.11、HTML5 Canvas</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Metodología:</strong> Simulación Basada en Agentes (ABM), Micro-simulación de Tráfico, Dinámica de Evaporación de Tráfico.</span>
+            <span data-lang="ca"><strong>Metodologia:</strong> Simulació Basada en Agents (ABM), Microsimulació de Trànsit, Evaporació de la Demanda.</span>
+            <span data-lang="en"><strong>Methodology:</strong> Agent-Based Modeling (ABM), Micro-Traffic Simulation, Traffic Evaporation Dynamics.</span>
+            <span data-lang="ja"><strong>解析手法：</strong>マルチエージェントシミュレーション（ABM）、交通流動マイクロモデル、需要蒸発ダイナミクス</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Métricas Analizadas:</strong> Porcentaje de espacio pacificado (%), velocidad media de red (km/h), índice de colas/congestión (%), emisiones relativas de CO<sub>2</sub>.</span>
+            <span data-lang="ca"><strong>Mètriques:</strong> Espai pacificat (%), velocitat mitjana (km/h), cua/congestió (%), emissions CO<sub>2</sub>.</span>
+            <span data-lang="en"><strong>Key Metrics:</strong> Reclaimed pedestrian area (%), network avg speed (km/h), queue congestion index (%), relative CO<sub>2</sub> index.</span>
+            <span data-lang="ja"><strong>評価指標：</strong>歩行者空間率（%）、平均走行速度（km/h）、渋滞ボトルネック率（%）、推定CO<sub>2</sub>排出指数</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Marco Teórico:</strong> Urbanismo Ecosistémico (Salvador Rueda, BCNecologia), Teoría de Evaporación de Tráfico (Cairns, Hass-Klau &amp; Goodwin).</span>
+            <span data-lang="ca"><strong>Marc Teòric:</strong> Urbanisme Ecosistèmic (Salvador Rueda), Evaporació de Trànsit (Cairns &amp; Goodwin).</span>
+            <span data-lang="en"><strong>Theoretical Framework:</strong> Ecosystemic Urbanism (Salvador Rueda), Traffic Evaporation Theory (Cairns &amp; Goodwin).</span>
+            <span data-lang="ja"><strong>理論的枠組：</strong>生態学的都市計画（サルバドール・ルエダ）、交通の蒸発理論（ケアンズ＆グッドウィン）</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Autora:</strong> Sana Kamiya.</span>
+            <span data-lang="ca"><strong>Autora:</strong> Sana Kamiya.</span>
+            <span data-lang="en"><strong>Author:</strong> Sana Kamiya.</span>
+            <span data-lang="ja"><strong>分析・作成：</strong>神谷 さな（Sana Kamiya）</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="padding: 0;">
+      <p>&copy; 2026 Sana Kamiya. GIS & Urban Design Portfolio.</p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About Me</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../portfolio.html">Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
