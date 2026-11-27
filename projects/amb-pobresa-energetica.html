@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sana Kamiya | Pobresa Energètica a l'Àrea Metropolitana de Barcelona (AMB / IVAC)</title>
+  <meta name="description" content="Anàlisi espacial de la pobresa energètica a les 2.089 seccions censals de l'Àrea Metropolitana de Barcelona (AMB) a partir de les dades dels Serveis Socials (2018) i l'indicador S6 de l'IVAC.">
+  <link rel="canonical" href="https://sanachavez79-k.github.io/portafolio/projects/amb-pobresa-energetica.html">
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sanachavez79-k.github.io/portafolio/projects/amb-pobresa-energetica.html">
+  <meta property="og:title" content="Vulnerabilitat Social i Pobresa Energètica a l'AMB | Sana Kamiya">
+  <meta property="og:description" content="Distribució territorial de la pobresa energètica a 2.089 seccions censals de l'Àrea Metropolitana de Barcelona. Metodologia IVAC (Base 100) i dades dels Serveis Socials de l'AMB.">
+  <meta property="og:image" content="https://sanachavez79-k.github.io/portafolio/images/projects/amb-pobresa-energetica/amb_s6_full_card.jpg">
+  <meta property="og:image:secure_url" content="https://sanachavez79-k.github.io/portafolio/images/projects/amb-pobresa-energetica/amb_s6_full_card.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pobresa Energètica a l'AMB | Sana Kamiya">
+  <meta name="twitter:description" content="Cartografia de la vulnerabilitat energètica a l'Àrea Metropolitana de Barcelona (#30DaysMapChallenge / QGIS).">
+  <meta name="twitter:image" content="https://sanachavez79-k.github.io/portafolio/images/projects/amb-pobresa-energetica/amb_s6_full_card.jpg">
+  
+  <link rel="stylesheet" href="../styles/style.css?v=2.1">
+  <script src="../js/lang.js" defer></script>
+</head>
+<body class="lang-ca">
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="../index.html">Sana Kamiya</a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html">
+              <span data-lang="es">Inicio</span>
+              <span data-lang="ca">Inici</span>
+              <span data-lang="en">Home</span>
+              <span data-lang="ja">ホーム</span>
+            </a>
+          </li>
+          <li>
+            <a href="../about.html">
+              <span data-lang="es">Sobre Mí</span>
+              <span data-lang="ca">Sobre Mi</span>
+              <span data-lang="en">About</span>
+              <span data-lang="ja">プロフィール</span>
+            </a>
+          </li>
+          <li>
+            <a href="../resume.html">
+              <span data-lang="es">Currículum</span>
+              <span data-lang="ca">Currículum</span>
+              <span data-lang="en">Resume</span>
+              <span data-lang="ja">履歴書</span>
+            </a>
+          </li>
+          <li>
+            <a href="../portfolio.html">
+              <span data-lang="es">Portafolio</span>
+              <span data-lang="ca">Portafoli</span>
+              <span data-lang="en">Portfolio</span>
+              <span data-lang="ja">ポートフォリオ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang-select="es">ES</button>
+        <button class="lang-btn active" data-lang-select="ca">CA</button>
+        <button class="lang-btn" data-lang-select="en">EN</button>
+        <button class="lang-btn" data-lang-select="ja">JA</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Header Banner -->
+  <section class="project-detail-header">
+    <h1 class="font-serif">
+      <span data-lang="es">Vulnerabilidad Social y Pobreza Energética en el Área Metropolitana de Barcelona (AMB)</span>
+      <span data-lang="ca">Vulnerabilitat Social i Pobresa Energètica a l'Àrea Metropolitana de Barcelona (AMB)</span>
+      <span data-lang="en">Social Vulnerability and Energy Poverty in the Barcelona Metropolitan Area (AMB)</span>
+      <span data-lang="ja">バルセロナ大都市圏（AMB）における社会的脆弱性とエネルギー貧困</span>
+    </h1>
+    
+    <div class="project-meta-badges">
+      <span class="badge">QGIS 3.44</span>
+      <span class="badge">#30DaysMapChallenge</span>
+      <span class="badge">Àrea Metropolitana de Barcelona (2.089 seccions)</span>
+      <span class="badge" style="background: rgba(178, 52, 40, 0.2); color: #d58563; font-weight: bold;">
+        <span data-lang="es">Serveis Socials AMB (2018) & IVAC</span>
+        <span data-lang="ca">Serveis Socials AMB (2018) & IVAC</span>
+        <span data-lang="en">AMB Social Services (2018) & IVAC</span>
+        <span data-lang="ja">福祉行政データ & IVAC 指標 S6</span>
+      </span>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container project-layout">
+    
+    <article class="project-body">
+      
+      <!-- Overview Section -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">1. Contexto Territorial y Metodología (Base 100)</span>
+          <span data-lang="ca">1. Context Territorial i Metodologia (Base 100)</span>
+          <span data-lang="en">1. Territorial Context and Base 100 Methodology</span>
+          <span data-lang="ja">1. 対象領域と分析メソドロジー（Base 100標準化）</span>
+        </h2>
+        <p>
+          <span data-lang="es">
+            La pobreza energética constituye una de las dimensiones más críticas de la vulnerabilidad socio-climática en el sur de Europa. Este estudio analiza la distribución espacial del <strong>Indicador S6 (Porcentaje de hogares en situación de pobreza energética)</strong> a través de las 2.089 secciones censales de los 36 municipios del Área Metropolitana de Barcelona (AMB). 
+            La fuente de partida son los registros de intervención de los <strong>Servicios Sociales Básicos del AMB (2018)</strong> en el marco de la <em>Ley 24/2015</em> de medidas urgentes para evitar los cortes de suministros básicos (luz, agua y gas). Para posibilitar una comparación metropolitana rigurosa, los datos se han estandarizado mediante la metodología del <strong>Índice de Vulnerabilidad al Cambio Climático (IVAC)</strong> desarrollada por el <em>Institut Metròpoli</em>, tomando como referencia la <strong>media metropolitana del AMB = 100 (Base 100)</strong>.
+          </span>
+          <span data-lang="ca">
+            La pobresa energètica és una de les dimensions més crítiques de la vulnerabilitat socioclimàtica al Mediterrani urbà. Aquest projecte cartografia la distribució espacial de l'<strong>Indicador S6 (Percentatge de llars en situació de pobresa energètica)</strong> a escala de secció censal (2.089 seccions dels 36 municipis de l'AMB).
+            La font primària correspon als informes d'atenció dels <strong>Serveis Socials Bàsics de l'AMB (2018)</strong> sota l'empara de la <em>Llei 24/2015</em> per evitar talls de subministraments bàsics. Mitjançant la metodologia de l'<strong>Índex de Vulnerabilitat al Canvi Climàtic (IVAC)</strong> desenvolupat per l'<em>Institut Metròpoli</em>, les dades s'han indexat prenent la <strong>mitjana metropolitana de l'AMB = 100 (Base 100)</strong>, permetent identificar amb precisió els barris que superen àmpliament la mitjana de l'entorn metropolità.
+          </span>
+          <span data-lang="en">
+            Energy poverty represents one of the most critical dimensions of urban climate vulnerability across Southern Europe. This study maps the spatial distribution of <strong>Indicator S6 (Percentage of Energy Poverty Households)</strong> across 2,089 census tracts in the 36 municipalities of the Barcelona Metropolitan Area (AMB).
+            The primary data source is the administrative intervention records of <strong>AMB Basic Social Services (2018)</strong> under Catalan <em>Law 24/2015</em> for preventing residential utility shut-offs (electricity, water, and gas). Following the <strong>Climate Change Vulnerability Index (IVAC)</strong> framework developed by the <em>Institut Metròpoli</em>, the raw household percentages are standardized to a <strong>Metropolitan Average = 100 (Base 100)</strong>, enabling direct cross-territorial comparison.
+          </span>
+          <span data-lang="ja">
+            エネルギー貧困は、地中海都市域における気候・社会脆弱性の中で最も深刻な課題の一つである。本研究では、バルセロナ大都市圏（AMB）全36自治体・2,089の国勢調査区（seccions censals）を対象に、<strong>指標 S6「エネルギー貧困世帯割合」</strong>の空間分布を可視化した。
+            一次データは、光熱・水道のライフライン停止を防ぐカタルーニャ州法（<em>Llei 24/2015</em>）に基づき各自治体の基礎社会福祉課が把握した<strong>AMB福祉サービス報告書（2018年）</strong>の介入申請記録である。Institut Metròpoliが開発した気候変動脆弱性指標（IVAC）のメソドロジーに基づき、<strong>AMB圏全体の平均値を100（Base 100）</strong>として標準化することで、大都市圏内での相対的な困窮度を客観的に比較可能としている。
+          </span>
+        </p>
+      </section>
+
+      <!-- Main Map Visual Display -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">2. Cartografía de Síntesis: Pobreza Energética en el AMB</span>
+          <span data-lang="ca">2. Cartografia de Síntesi: Pobresa Energètica a l'AMB</span>
+          <span data-lang="en">2. Master Cartography: Energy Poverty in the AMB</span>
+          <span data-lang="ja">2. 総合解析図：バルセロナ大都市圏エネルギー貧困マップ</span>
+        </h2>
+        
+        <div class="slide-container">
+          <a href="../images/projects/amb-pobresa-energetica/amb_s6_map_full.png" target="_blank" title="Veure imatge a màxima resolució (300 DPI)">
+            <img src="../images/projects/amb-pobresa-energetica/amb_s6_map_web.jpg" alt="Cartografia Pobresa Energètica a l'AMB (IVAC S6)" class="slide-image">
+          </a>
+          <div class="slide-caption">
+            <span data-lang="es"><strong>Figura 1:</strong> Cartografía vectorial en tema oscuro elaborada en QGIS (EPSG:25831 / ETRS89 UTM 31N). Secciones censales clasificadas en 5 intervalos de Jenks mediante la paleta otoñal de tonos teja y burdeos (Alabastro &lt;93.0 a Burdeos Oscuro &gt;118.0). Cuadro de detalle (Focus Inset) en el Eje Besòs y Glòries.</span>
+            <span data-lang="ca"><strong>Figura 1:</strong> Cartografia vectorial en tema fosc elaborada amb QGIS (EPSG:25831 / ETRS89 UTM 31N). Seccions censals classificades en 5 talls de Jenks amb la paleta elegant de tons teula i bordeus (Alabastre &lt;93.0 fins a Bordeus Fosc &gt;118.0). Finestra de detall (Focus) a l'Eix Besòs i Glòries.</span>
+            <span data-lang="en"><strong>Figure 1:</strong> Vectorial dark-theme cartography in QGIS (EPSG:25831 / ETRS89 UTM 31N). Census tracts classified into 5 Jenks natural breaks using an architectural terracotta & bordeaux palette (Alabaster &lt;93.0 to Deep Bordeaux &gt;118.0). Inset zoom focusing on the Besòs River axis and Glòries.</span>
+            <span data-lang="ja"><strong>図1：</strong>QGISにて作成したベクター主題図（ETRS89 UTM 31N / EPSG:25831）。ダークスレート背景にテラコッタ＆ボルドーの5段階ジェンクス自然分類（アラバスター 93以下 〜 最深ボルドー 118超）。右上にはベソス軸およびグローリエス再開発地区の拡大インセットを配置。</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Findings & Spatial Analysis -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">3. Diagnóstico Territorial y Hallazgos Principales</span>
+          <span data-lang="ca">3. Diagnòstic Territorial i Conclusions Principals</span>
+          <span data-lang="en">3. Spatial Diagnostics and Key Findings</span>
+          <span data-lang="ja">3. 空間分析から得られた主要な知見</span>
+        </h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+          <div style="background: rgba(213, 133, 99, 0.08); border: 1px solid rgba(213, 133, 99, 0.3); border-radius: 8px; padding: 1rem;">
+            <div style="font-size: 1.8rem; font-weight: bold; color: #d58563;">Base 100</div>
+            <div style="font-size: 0.85rem; color: #8b949e; margin-top: 0.25rem;">
+              <span data-lang="es">Media metropolitana AMB (Rango: 88,0 – 177,0)</span>
+              <span data-lang="ca">Mitjana metropolitana AMB (Rang: 88,0 – 177,0)</span>
+              <span data-lang="en">AMB Metropolitan Mean (Range: 88.0 – 177.0)</span>
+              <span data-lang="ja">大都市圏基準値（範囲：88.0〜177.0）</span>
+            </div>
+          </div>
+          <div style="background: rgba(178, 52, 40, 0.08); border: 1px solid rgba(178, 52, 40, 0.3); border-radius: 8px; padding: 1rem;">
+            <div style="font-size: 1.8rem; font-weight: bold; color: #b23428;">109,5</div>
+            <div style="font-size: 0.85rem; color: #8b949e; margin-top: 0.25rem;">
+              <span data-lang="es">Media municipal máxima (Sant Adrià de Besòs)</span>
+              <span data-lang="ca">Mitjana municipal màxima (Sant Adrià de Besòs)</span>
+              <span data-lang="en">Highest municipal average (Sant Adrià de Besòs)</span>
+              <span data-lang="ja">自治体平均の最高値（サン・アドリア）</span>
+            </div>
+          </div>
+          <div style="background: rgba(80, 11, 26, 0.2); border: 1px solid rgba(178, 52, 40, 0.4); border-radius: 8px; padding: 1rem;">
+            <div style="font-size: 1.8rem; font-weight: bold; color: #ff6b6b;">&gt; 118,0</div>
+            <div style="font-size: 0.85rem; color: #8b949e; margin-top: 0.25rem;">
+              <span data-lang="es">Umbral de vulnerabilidad extrema (La Mina: 142)</span>
+              <span data-lang="ca">Llindar de vulnerabilitat extrema (La Mina: 142)</span>
+              <span data-lang="en">Extreme vulnerability threshold (La Mina: 142)</span>
+              <span data-lang="ja">極限脆弱性しきい値（ラ・ミナ地区：142）</span>
+            </div>
+          </div>
+          <div style="background: rgba(244, 241, 235, 0.05); border: 1px solid rgba(244, 241, 235, 0.2); border-radius: 8px; padding: 1rem;">
+            <div style="font-size: 1.8rem; font-weight: bold; color: #f4f1eb;">2.089</div>
+            <div style="font-size: 0.85rem; color: #8b949e; margin-top: 0.25rem;">
+              <span data-lang="es">Secciones censales analizadas en el AMB</span>
+              <span data-lang="ca">Seccions censals analitzades a l'AMB</span>
+              <span data-lang="en">Census tracts analyzed across the AMB</span>
+              <span data-lang="ja">AMB圏域解析国勢調査区数</span>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          <span data-lang="es">
+            <strong>1. La fractura del Eje Besòs:</strong> Los mayores focos de pobreza energética se concentran de manera continua a lo largo del Besòs: barrios como Sant Roc y Llefià en Badalona, Fondo en Santa Coloma de Gramenet, y Ciutat Meridiana, Roquetes y Torre Baró en el distrito barcelonés de Nou Barris. Se trata de tejidos residenciales de alta densidad construidos en las décadas de 1960 y 1970 sin estándares de aislamiento térmico.<br><br>
+            <strong>2. Dualidad interna en Sant Adrià de Besòs:</strong> Presenta la media municipal más alta de toda la metrópoli (109,5). Sin embargo, la desagregación espacial muestra una polarización extrema: mientras los distritos del norte se sitúan en torno a la media (97–105), el barrio de La Mina (DC06) se dispara por encima de los 140 puntos, duplicando el riesgo promedio del AMB.<br><br>
+            <strong>3. Bolsas residuales en transformación urbana:</strong> En sectores inmersos en intensa renovación urbana como Glòries (sección 0801910042 / S6 = 130), conviven nuevas promociones y oficinas tecnológicas con bolsas residuales de infravivienda y población anciana de rentas bajas con alta dependencia de subsidios sociales.
+          </span>
+          <span data-lang="ca">
+            <strong>1. La fractura de l'Eix Besòs:</strong> La concentració més gran de pobresa energètica es produeix al llarg del continu urbà del riu Besòs: barris com Sant Roc i Llefià a Badalona, Fondo a Santa Coloma de Gramenet, i Ciutat Meridiana, Roquetes i Torre Baró a Nou Barris (Barcelona). Són polígons d'habitatge massiu aixecats entre el 1960 i el 1975 sense aïllament tèrmic.<br><br>
+            <strong>2. Dualitat interna a Sant Adrià de Besòs:</strong> Registra la mitjana municipal més alta de tota la metròpoli (109,5). No obstant això, l'anàlisi espacial revela una bretxa interna majúscula: mentre Sant Adrià Nord se situa a l'entorn de la mitjana (97–105), el sector de la Mina (DC06) supera els 140 punts, multiplicant el risc metropolità.<br><br>
+            <strong>3. Bosses residuals en transformació urbana:</strong> En àrees d'intensa regeneració urbana com la plaça de les Glòries (secció 0801910042 / S6 = 130), es constata la coexistència de noves oficines i habitatges del 22@ amb nuclis residuals d'edificació envellida i llars d'edat avançada amb alta sol·licitud d'ajuts bàsics.
+          </span>
+          <span data-lang="en">
+            <strong>1. The Besòs Corridor Divide:</strong> The sharpest agglomeration of extreme energy poverty forms an uninterrupted corridor along the Besòs River: Sant Roc and Llefià in Badalona, Fondo in Santa Coloma de Gramenet, and Nou Barris in Barcelona. These districts feature dense 1960s-1970s housing blocks constructed without thermal insulation.<br><br>
+            <strong>2. Internal Dualism in Sant Adrià de Besòs:</strong> While recording the highest municipal average in the AMB (109.5), spatial breakdown reveals severe internal segregation: northern sectors remain near the average (97–105), whereas La Mina (DC06) exceeds 140 index points.<br><br>
+            <strong>3. Vulnerability in Urban Renewal Hubs:</strong> In fast-transforming nodes like Glòries (tract 0801910042 / S6 = 130), high-tech 22@ developments sit adjacent to vulnerable unrenovated tenements and low-income elderly households reliant on utility protection schemes.
+          </span>
+          <span data-lang="ja">
+            <strong>1. ベソス回廊における集積：</strong>エネルギー貧困の最大クラスはベソス川下流沿いに連続して集積している。バダロナ市のSant Roc・Llefià、サンタ・クローマ市のFondo、バルセロナ市Nou Barris区の各地区は、1960〜70年代の断熱基準以前の集合住宅が高密度に密集し、高い脆弱性を示している。<br><br>
+            <strong>2. サン・アドリア・デ・ベソス内部の二極分化：</strong>大都市圏36自治体中最高の市平均値（109.5）を示すが、北部居住区が平均並み（97〜105）であるのに対し、南部La Mina地区（DC06）は指数140を超え、大都市圏平均の1.4倍に達する極端な地域格差を内包している。<br><br>
+            <strong>3. 再開発拠点における残存脆弱性：</strong>大規模な都市更新が進むGlòries地区東部（国勢調査区 0801910042 / S6 = 130）のように、スマートシティ開発の至近に未改修住宅と低所得高齢単身層が残存する局所的ホットスポットも確認できる。
+          </span>
+        </p>
+      </section>
+
+      <!-- Planning and Climate Justice Relevance -->
+      <section class="project-section">
+        <h2>
+          <span data-lang="es">4. Implicaciones para la Planificación y la Justicia Climática</span>
+          <span data-lang="ca">4. Implicacions per a la Planificació i la Justícia Climàtica</span>
+          <span data-lang="en">4. Implications for Urban Planning and Climate Justice</span>
+          <span data-lang="ja">4. 都市計画および「気候正義」への政策的示唆</span>
+        </h2>
+        <p>
+          <span data-lang="es">
+            Tradicionalmente, la pobreza energética se ha evaluado como incapacidad de mantener la vivienda a temperatura adecuada en invierno. Sin embargo, en el contexto de la emergencia climática mediterránea, las <strong>olas de calor estivales prolongadas</strong> han convertido la <em>pobreza energética de verano</em> en un riesgo letal: la imposibilidad de refrigerar activamente viviendas con alta inercia térmica genera estrés fisiológico prolongado y exceso de mortalidad residencial.
+            Este mapa constituye una herramienta analítica indispensable para priorizar territorialmente los fondos de rehabilitación energética (Next Generation EU), la creación de <strong>refugios climáticos de proximidad</strong> y el despliegue de <strong>comunidades energéticas locales</strong> en los barrios que soportan la mayor carga de vulnerabilidad.
+          </span>
+          <span data-lang="ca">
+            Històricament, la pobresa energètica s'ha vinculat a la manca de calefacció a l'hivern. Tanmateix, davant l'augment d'onades de calor extremes a l'estiu, la <em>pobresa energètica d'estiu</em> s'ha convertit en una amenaça sanitària crítica: la manca d'aïllament i de sistemes de climatització passiva provoca estrès tèrmic continuat en llars vulnerables.
+            La cartografia d'aquest indicador és una eina clau per orientar els fons de rehabilitació d'habitatges (Next Generation EU), prioritzar la implantació de <strong>refugis climàtics</strong> i promoure <strong>comunitats solars ciutadanes</strong> allà on la justícia climàtica és més urgent.
+          </span>
+          <span data-lang="en">
+            While energy poverty has traditionally focused on winter heating deficits, climate change in the Mediterranean has elevated <em>summer energy poverty</em> into a life-threatening crisis. Prolonged heatwaves, combined with substandard building envelopes and lack of mechanical or passive cooling, cause chronic indoor heat stress and excess mortality.
+            This fine-grain spatial mapping serves as an actionable policy tool for directing public retrofit subsidies (Next Generation EU), locating <strong>urban climate shelters</strong>, and deploying <strong>community solar microgrids</strong> to advance climate justice where it is needed most.
+          </span>
+          <span data-lang="ja">
+            エネルギー貧困は従来「冬の暖房不足」を中心に議論されてきたが、近年の地中海性熱波の長期化・激甚化に伴い、「夏の室内熱ストレス」が住民の健康を脅かす重大な気候リスクとなっている。断熱性能の著しく劣る住宅でエアコン等の能動的冷房を稼働できない世帯において、夜間熱帯夜の継続による過剰死亡率の上昇が懸念されている。
+            本主題図は、EU復興基金（Next Generation EU）による住宅省エネ改修助成の優先投入地域選定や、公的気候シェルター（Refugis Climàtics）の最適配置、共同太陽光発電（Comunitats Energètiques）の重点導入を進めるための基盤エビデンスとなる。
+          </span>
+        </p>
+      </section>
+
+    </article>
+
+    <!-- Sidebar Technical Information -->
+    <aside class="project-sidebar">
+      <div class="sidebar-card">
+        <h3 class="font-serif">
+          <span data-lang="es">Ficha Técnica</span>
+          <span data-lang="ca">Fitxa Tècnica</span>
+          <span data-lang="en">Technical Spec Sheet</span>
+          <span data-lang="ja">テクニカルシート</span>
+        </h3>
+        
+        <ul class="sidebar-bullets">
+          <li>
+            <span data-lang="es"><strong>Ámbito:</strong> 36 municipios del Área Metropolitana de Barcelona (AMB).</span>
+            <span data-lang="ca"><strong>Àmbit:</strong> 36 municipis de l'Àrea Metropolitana de Barcelona (AMB).</span>
+            <span data-lang="en"><strong>Scope:</strong> 36 municipalities of the Barcelona Metropolitan Area (AMB).</span>
+            <span data-lang="ja"><strong>対象地域：</strong>バルセロナ大都市圏（AMB）全36自治体</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Unidad espacial:</strong> 2.089 Secciones Censales (10 dígitos).</span>
+            <span data-lang="ca"><strong>Unitat espacial:</strong> 2.089 Seccions Censals (10 dígits).</span>
+            <span data-lang="en"><strong>Spatial Unit:</strong> 2,089 Census Tracts (10-digit code).</span>
+            <span data-lang="ja"><strong>空間単位：</strong>2,089 国勢調査区（10桁コード）</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Métrica:</strong> Indicador S6 (Base 100 = Media metropolitana).</span>
+            <span data-lang="ca"><strong>Mètrica:</strong> Indicador S6 (Base 100 = Mitjana metropolitana).</span>
+            <span data-lang="en"><strong>Metric:</strong> Indicator S6 (Base 100 = AMB Mean).</span>
+            <span data-lang="ja"><strong>指標基準：</strong>指標 S6（大都市圏平均＝100）</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Software:</strong> QGIS 3.44 'Solothurn', PyQGIS, GeoPandas.</span>
+            <span data-lang="ca"><strong>Software:</strong> QGIS 3.44 'Solothurn', PyQGIS, GeoPandas.</span>
+            <span data-lang="en"><strong>Software:</strong> QGIS 3.44 'Solothurn', PyQGIS, GeoPandas.</span>
+            <span data-lang="ja"><strong>使用ツール：</strong>QGIS 3.44、PyQGIS、GeoPandas</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Proyección cartográfica:</strong> ETRS89 / UTM zone 31N (EPSG:25831).</span>
+            <span data-lang="ca"><strong>Projecció cartogràfica:</strong> ETRS89 / UTM zone 31N (EPSG:25831).</span>
+            <span data-lang="en"><strong>CRS:</strong> ETRS89 / UTM zone 31N (EPSG:25831).</span>
+            <span data-lang="ja"><strong>座標参照系：</strong>ETRS89 / UTM 31N (EPSG:25831)</span>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Fuentes de datos:</strong></span>
+            <span data-lang="ca"><strong>Fonts de dades:</strong></span>
+            <span data-lang="en"><strong>Data Sources:</strong></span>
+            <span data-lang="ja"><strong>データ出典：</strong></span>
+            <ul style="margin-top: 0.25rem; padding-left: 1rem;">
+              <li>Serveis Socials de l'AMB (2018 / Llei 24/2015)</li>
+              <li>IVAC - Institut Metròpoli & AMB (2022)</li>
+              <li>Cartografia de Seccions Censals AMB & ICGC</li>
+            </ul>
+          </li>
+          <li>
+            <span data-lang="es"><strong>Evento:</strong> #30DaysMapChallenge 2026.</span>
+            <span data-lang="ca"><strong>Esdeveniment:</strong> #30DaysMapChallenge 2026.</span>
+            <span data-lang="en"><strong>Event:</strong> #30DaysMapChallenge 2026.</span>
+            <span data-lang="ja"><strong>イベント：</strong>#30DaysMapChallenge 2026</span>
+          </li>
+        </ul>
+
+        <div style="margin-top: 1.5rem; text-align: center;">
+          <a href="../images/projects/amb-pobresa-energetica/amb_s6_map_full.png" target="_blank" class="btn-primary" style="display: block; width: 100%; box-sizing: border-box;">
+            <span data-lang="es">Descargar Mapa 300 DPI</span>
+            <span data-lang="ca">Descarregar Mapa 300 DPI</span>
+            <span data-lang="en">Download 300 DPI Map</span>
+            <span data-lang="ja">高解像度マップ（300 DPI）</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="padding: 0;">
+      <p>&copy; 2026 Sana Kamiya. GIS & Urban Design Portfolio.</p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About Me</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../portfolio.html">Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
